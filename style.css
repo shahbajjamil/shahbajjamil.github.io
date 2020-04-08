@@ -48,7 +48,7 @@ footer{
     margin: auto;
     padding: 0 20px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
   }
@@ -60,7 +60,7 @@ footer{
   
   .social-media a{
     color: #001a21;
-    margin-right: 25px;
+    margin: 0 15px;
     font-size: 22px;
     text-decoration: none;
     transition: .3s linear;
@@ -99,7 +99,7 @@ footer{
   
     .left-col{
       width: 100%;
-      text-align: center;
+      text-align: center; 
     }
   }
   
