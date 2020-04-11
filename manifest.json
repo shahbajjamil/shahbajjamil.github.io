@@ -1,0 +1,15 @@
+{
+  "name": "Shahbaj Jamil",
+  "short_name": "Upr!s!ng",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "white",
+  "theme-color": "black",
+  "description": "This is Portfoli app",
+  "icon": [
+    {
+      "src": "logo2.png",
+      "sizes": "500x500"
+    }
+  ]
+}
