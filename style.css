@@ -13,6 +13,7 @@ body {
   background-size: cover;
   background-attachment: scroll;
   background-position: center;
+ 
 }
 
 /* ------header-------- */
@@ -135,11 +136,9 @@ footer {
 }
 
 
-@media screen and (max-width: 465px) {
-  body {
-    background-image: url("pimg-1x.jpg");
-  }
-}
+/* @media screen and (max-width: 465px) {
+ 
+} */
 
 @media screen and (max-width: 700px) {
   body > header {
@@ -160,6 +159,10 @@ footer {
 }
 
 @media (max-width: 858px) {
+  body {
+    background-image: url("pimg-1x.jpg");
+  }
+
   .ptext {
     display: none;
   }
@@ -198,5 +201,4 @@ footer {
   #check:checked ~ ul {
     left: 0;
   }
-
 }
