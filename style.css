@@ -82,11 +82,20 @@ a.active,
 .ptext a:hover {
   color: #fc5c65;
 }
+/* main index page */
 .page-content {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+/* contact page */
+.contactpage-content {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
 }
 
 /* -----footer----- */
