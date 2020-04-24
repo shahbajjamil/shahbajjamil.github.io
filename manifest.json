@@ -8,22 +8,22 @@
   "description": "This is Portfoli app",
   "icon": [
     {
-      "src": "logo2.png",
+      "src": "image/logo2.png",
       "sizes": "500x500",
       "type": "images/png"
     },
     {
-      "src": "logo2.png",
+      "src": "image/logo2.png",
       "sizes": "192x192",
       "type": "images/png"
     },
     {
-      "src": "logo2.png",
+      "src": "image/logo2.png",
       "sizes": "128x128",
       "type": "images/png"
     },
     {
-      "src": "logo2.png",
+      "src": "image/logo2.png",
       "sizes": "144x144",
       "type": "images/png"
     }

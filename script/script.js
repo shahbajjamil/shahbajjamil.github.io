@@ -8,6 +8,6 @@ function counter() {
             $('.preloader').addClass('active')
 
         }
-    },60)
+    },30)
 }
 counter()

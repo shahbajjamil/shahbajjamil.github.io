@@ -12,7 +12,7 @@ body {
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
   margin: 0;
   padding: 0;
-  background-image: url("pimg1.jpg");
+  background-image: url("image/pimg1.jpg");
   background-size: cover;
   background-attachment: scroll;
   background-position: center;
@@ -193,7 +193,7 @@ footer {
 
 @media (max-width: 858px) {
   body {
-    background-image: url("pimg-1x.jpg");
+    background-image: url("image/pimg-1x.jpg");
   }
   
   .logo {
