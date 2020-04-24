@@ -31,12 +31,12 @@ body {
 
 ul {
   float: right;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 ul li {
    display: inline-block;
    line-height: 40px;
-   margin:0 5px;
+   margin: 15px;
 }
 nav ul li a {
   color: black;
