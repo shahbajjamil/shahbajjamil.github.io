@@ -233,7 +233,7 @@ a span:nth-child(4)
 
 /* main index page */
 .page-content {
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -243,6 +243,7 @@ a span:nth-child(4)
   align-items: center;
   justify-content: center;
   background: #000;
+  /* height: 50vh; */
 }
 #dev p {
   padding: 20px;
