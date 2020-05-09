@@ -12,7 +12,7 @@ function counter() {
 }
 counter()
 
-const TypeWriter = function(txtElement, words, wait = 3000) {
+const TypeWriter = function(txtElement, words, wait = 2500) {
     this.txtElement = txtElement;
     this.words = words;
     this.txt = '';
