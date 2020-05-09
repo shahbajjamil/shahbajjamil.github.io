@@ -127,20 +127,14 @@ a.active,
     opacity: 1;
   }
 }
-/* contact page */
-.contactpage-content {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color:white;
-}
+
 /* ------typing----------- */
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  background: #f1f1f1;
+  height: 50vh;
   padding: 3rem;
 }
 
