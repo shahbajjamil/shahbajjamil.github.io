@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
 * {
   padding: 0;
@@ -6,7 +6,7 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
-  font-family: 'Poppins', serif;
+  font-family: 'Poppins', sans-serif;
 }
 body {
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
@@ -34,7 +34,7 @@ body {
   content: 'Loading';
   position: absolute;
   font-size: 12em;
-  font-weight: 900;
+  font-weight: 800;
   text-transform: uppercase;
   color: rgba(255, 255, 255, .03);
 }
@@ -129,27 +129,40 @@ a.active,
 }
 
 /* ------typing----------- */
-.container {
+.banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: #f1f1f1;
-  height: 50vh;
+  height: 100vh;
   padding: 3rem;
 }
-.container h1, small {
+.banner h1, small {
   line-height: 70px;
   font-size: 55px;
+  font-family: 'Poppins', serif;
 }
-.container h1 {
+.banner h1 {
   font-weight: 600;
 }
-.container h1 small {
+.banner h1 small {
   font-weight: 400;
 }
-.container h2 {
+.banner h2 {
   font-size: 32px;
 font-weight: 600;
+}
+.banner .txt {
+  border-right: 0.2rem solid #000;
+  animation: cur .7s infinite;
+}
+@keyframes cur {
+  0% {
+      border-right-color: #000;
+  }
+  100% {
+     border-right-color: transparent;
+  }
 }
 
 /* -------ptext-> btn-------- */
@@ -399,5 +412,17 @@ footer {
   }
   .counter{
   font-size: 9em;
+  }
+  /* ------banner--------- */
+  .banner{
+    height: 70vh;
+    padding: 0.5rem;
+  }
+  .banner h1, small {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .banner h2 {
+    font-size: 22px;
   }
 }
