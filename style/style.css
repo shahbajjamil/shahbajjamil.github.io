@@ -169,6 +169,21 @@ font-weight: 600;
   }
 }
 /* ------About Me------ */
+.main-about {
+  padding-top: 1rem !important;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.main-about h3 {
+  font-size: 45px;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 600;
+  border-bottom: 2px solid rgb(236, 66, 117);
+  display: inline-block;
+  line-height: 1;
+}
 .card {
     
   display: flex;
@@ -180,7 +195,8 @@ font-weight: 600;
   max-width: 50%;
   position: relative;
   width: 100%;
-  padding: 15px;
+  padding-right: 15px;
+  /* padding-left: 15px; */
   
 }
 .card .imgbx img {
@@ -194,7 +210,8 @@ font-weight: 600;
   max-width: 50%;
   position: relative;
   width: 100%;
-  padding: 15px;
+  /* padding-right: 15px; */
+  padding-left: 15px;
 }
 
 /* -------ptext-> btn-------- */
@@ -462,10 +479,12 @@ footer {
   .card .imgbx {
     flex: none;
     max-width: 100%;
+    padding: 0;
   }
   .card .content {
       flex: none;
       max-width: 100%;
+      padding: 0;
   }
 }
 
