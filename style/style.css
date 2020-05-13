@@ -254,8 +254,8 @@ font-weight: 600;
 }
 .bottomfield {
   margin-top: 0 !important;
-  flex: 0 0 25%;
-  max-width: 25%;
+  flex: 0 0 25%;   /* ratio */
+  max-width: 25%;   /*ratio*/
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -551,6 +551,11 @@ footer {
       margin-bottom: 3rem !important;
       margin-top: 3rem !important;
   }
+  .bottomfield {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 3rem !important;
+}
 }
 
 @media (max-width: 800px) {
