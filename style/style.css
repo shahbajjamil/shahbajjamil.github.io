@@ -168,6 +168,34 @@ font-weight: 600;
      border-right-color: transparent;
   }
 }
+/* ------About Me------ */
+.card {
+    
+  display: flex;
+  flex-wrap: wrap;
+  /* background: #fff; */
+}
+.card .imgbx {
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  
+}
+.card .imgbx img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+.card .content {
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+  padding: 15px;
+}
 
 /* -------ptext-> btn-------- */
 .page-content {
@@ -430,6 +458,14 @@ footer {
   }
   .banner h2 {
     font-size: 22px;
+  }
+  .card .imgbx {
+    flex: none;
+    max-width: 100%;
+  }
+  .card .content {
+      flex: none;
+      max-width: 100%;
   }
 }
 
