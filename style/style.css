@@ -466,18 +466,22 @@ footer {
 /* ------button to top------- */
 #movetop {
   position: fixed;
+  display: none;
   right: 20px;
   bottom: 20px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background: rgb(234, 238, 10);
-  /* border: none; */
-  /* outline: none; */
+  border: none;
+  outline: none;
   cursor: pointer;
   font-size: 25px;
-  opacity: .8;
-  /* transition: all 20.5s ease-out 20s; */
+  opacity: .7;
+  box-shadow: 0 0 10px #000;
+}
+#movetop:active {
+  opacity: 1;
 }
 
 @media (max-width: 991px) {

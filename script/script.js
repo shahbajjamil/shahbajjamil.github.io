@@ -77,3 +77,17 @@ function inti() {
      
     new TypeWriter(txtElement, words, wait);
 }
+
+
+btnTop = document.querySelector("#movetop");
+btnTop.addEventListener('click',function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        btnTop.style.display = "block";
+        } else {
+        btnTop.style.display = "none";
+        }
+};      
