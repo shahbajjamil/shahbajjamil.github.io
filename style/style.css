@@ -82,9 +82,14 @@ nav ul li a {
 }
 a.active,
 .navlist a:hover {
-  background: #fc5c65;
+  color: #fc5c65;
   transition: .5s;
 }
+
+/* a.active,
+.navlist a:hover {
+  border-bottom: 2px solid #fc5c65;
+} */
 .checkbtn {
   font-size: 20px;
   color: black;
