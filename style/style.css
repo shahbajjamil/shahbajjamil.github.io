@@ -434,7 +434,10 @@ footer {
 }
 .logo {
   width: 180px;
-  margin: 0 15px;
+  /* margin: 0 15px; */
+}
+.imglogo {
+  text-align: center;
 }
 .imglogo a {
   text-decoration: none;
