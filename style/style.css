@@ -8,6 +8,9 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+a, a:link, a:visited {
+  color: inherit
+}
 html {
   scroll-behavior: smooth;
 }
@@ -421,11 +424,11 @@ a span:nth-child(4)
   padding-top: 1rem !important;
   padding-right: 15px;
   padding-left: 15px;
+  background: #c8bd84;;
 }
 .container-contact {
   padding: auto;
   margin: auto;
-  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -436,15 +439,18 @@ a span:nth-child(4)
   height: 100px;
   padding: 20px;
   margin: 30px;
-  background: yellow;
-  font-size: 22px;
+  background: rgb(197, 197, 152);
+  font-size: 35px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   text-transform: capitalize;
   border-radius: 10px;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s;
+}
+.container-contact p {
+  font-size: 25px;
 }
 .container-contact a:hover {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
