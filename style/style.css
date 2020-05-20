@@ -177,12 +177,12 @@ font-weight: 600;
   }
 }
 /* ------About Me------ */
-.main-about {
+#about {
   padding-top: 1rem !important;
   padding-right: 15px;
   padding-left: 15px;
 }
-.main-about h3 {
+.containerHead h3 {
   font-size: 45px;
   margin-bottom: 40px;
   text-align: center;
@@ -417,10 +417,15 @@ a span:nth-child(4)
     }
 }
 /* ------contact------ */
+#contact {
+  padding-top: 1rem !important;
+  padding-right: 15px;
+  padding-left: 15px;
+}
 .container-contact {
-  padding: 15px;
+  padding: auto;
   margin: auto;
-  background: #5ab378;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -437,7 +442,12 @@ a span:nth-child(4)
   align-items: center;
   justify-content: space-between;
   text-transform: capitalize;
-
+  border-radius: 10px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s;
+}
+.container-contact a:hover {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 /* -----footer----- */
 footer {
