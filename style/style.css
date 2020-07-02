@@ -360,9 +360,9 @@ h6 span {
   background-size: 1rem 1rem;
 }
 
-.box {
-  padding-left: 3rem !important;
-  padding-right: 3rem !important;
+.MyHobbies .box {
+  padding-left: 3rem ;
+  padding-right: 3rem ;
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -768,5 +768,8 @@ footer {
 @media (max-width: 400px) {
   .banner-view {
     background-position: -400px 0;
+  }
+  .MyHobbies .box {
+    padding: 0;
   }
 }
