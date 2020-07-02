@@ -287,6 +287,90 @@ font-weight: 600;
   color: rgba(255, 255, 255, 0.72);
 }
 
+/* ---------My Skill And hobbies------ */
+.MySkillHobbies {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.MySkill {
+  /* order: 2; */
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+.MySkill h4,
+.MyHobbies h4 {
+  font-size: 30px;
+  line-height: 35px;
+  color: #232527;
+  padding-bottom: 0em;
+  position: relative;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+h6 {
+  font-size: 17px;
+  color: #777;
+  margin-bottom: 0.6em;
+  text-transform: capitalize;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h6 span {
+  float: right;
+  font-size: 0.9em;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.progress {
+  height: 10px;
+  margin-bottom: 2.5em;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 0.75rem;
+  display: flex;
+}
+.bar {
+  background-color: #29a19c !important;
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 1rem 1rem;
+
+  
+}
+
+.MyHobbies {
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+
+
 /* -------ptext-> btn-------- */
 .page-content {
   min-height: 400px;
