@@ -292,10 +292,9 @@ font-weight: 600;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  box-sizing: border-box;
 }
 
-.MySkill {
+.MySkill, .MyHobbies {
   /* order: 2; */
   flex: 0 0 50%;
   max-width: 50%;
@@ -303,7 +302,8 @@ font-weight: 600;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  box-sizing: border-box;
+  margin-bottom: 3rem !important;
+  margin-top: 3rem !important;
 }
 .MySkill h4,
 .MyHobbies h4 {
@@ -359,15 +359,6 @@ h6 span {
   
 }
 
-.MyHobbies {
-  flex: 0 0 50%;
-  max-width: 50%;
-  position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  box-sizing: border-box;
-}
 
 
 
@@ -712,7 +703,12 @@ footer {
     flex: 0 0 100%;
     max-width: 100%;
     margin-top: 3rem !important;
-}
+  }
+  .MySkill,
+  .MyHobbies {
+    flex: none;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 800px) {
