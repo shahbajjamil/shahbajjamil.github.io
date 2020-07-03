@@ -305,8 +305,8 @@ small {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-bottom: 3rem !important;
-  margin-top: 3rem !important;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 .MySkill h4,
 .MyHobbies h4 {
@@ -729,6 +729,9 @@ footer {
   .MyHobbies {
     flex: none;
     max-width: 100%;
+  }
+  .MyHobbies {
+    margin: 0;
   }
 }
 
