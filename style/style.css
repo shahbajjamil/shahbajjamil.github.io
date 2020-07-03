@@ -358,20 +358,14 @@ h6 span {
     transparent
   );
   background-size: 1rem 1rem;
-}
-.progress .bar:nth-child(1) {
-  background-color: #a16d29;
-}
-.progress .bar:nth-child(2) {
-  background-color: #298fa1;
+  border-radius: 5px;
+
 }
 
 .MyHobbies .box {
-  
   padding: 0 3rem;
   display: flex;
   flex-wrap: wrap;
-  
   margin: auto -15px;
 }
 .hobbies-box {
