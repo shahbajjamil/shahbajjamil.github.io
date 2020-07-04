@@ -5,8 +5,12 @@
   margin: 0;
   text-decoration: none;
   list-style: none;
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
 a,
 a:link,
@@ -334,6 +338,25 @@ h6 span {
   font-size: 0.9em;
   font-weight: 600;
   line-height: 1.2;
+}
+
+h6:nth-of-type(1) span {
+  color: #29a143;
+}
+h6:nth-of-type(2) span {
+  color: #e25c0e;
+}
+h6:nth-of-type(3) span {
+  color: #a19f29;
+}
+h6:nth-of-type(4) span {
+  color: #a12987;
+}
+h6:nth-of-type(5) span {
+  color: #c41616;
+}
+h6:nth-of-type(6) span {
+  color: #29a19c;
 }
 
 .progress {
