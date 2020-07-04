@@ -1,93 +1,82 @@
 function counter() {
-    var count = setInterval(function(){
-        var c = parseInt($('.counter').text());
-        $('.counter').text((++c).toString());
-        if (c == 100){
-            clearInterval(count);
-            $('.counter').addClass('hide')
-            $('.preloader').addClass('active')
-
-        }
-    },30)
-}
-counter()
-
-const TypeWriter = function(txtElement, words, wait = 2500) {
-    this.txtElement = txtElement;
-    this.words = words;
-    this.txt = '';
-    this.wordIndex = 0;
-    this.wait = parseInt(wait, 10);
-    this.type();
-    this.isDeleting = false ;
-}
-
- 
-TypeWriter.prototype.type = function() {
-     
-     
-    const current = this.wordIndex % this.words.length;
-     
-    const fullTxt = this.words[current];
-
-     
-    if(this.isDeleting) {
-         
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-
-    } else {
-         
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
+  var count = setInterval(function () {
+    var c = parseInt($(".counter").text());
+    $(".counter").text((++c).toString());
+    if (c == 100) {
+      clearInterval(count);
+      $(".counter").addClass("hide");
+      $(".preloader").addClass("active");
     }
-     
-    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-
-     
-    let typeSpeed = 300;
-
-    if(this.isDeleting) {
-        typeSpeed /= 2;
-    }
-
-     
-    if(! this.isDeleting && this.txt === fullTxt) {
-         
-        typeSpeed = this.wait;
-         
-        this.isDeleting = true;
-    } else if(this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-         
-        this.wordIndex++;
-         
-        typeSpeed = 500;
-    }
-
-    setTimeout(()=> this.type(), typeSpeed)
+  }, 30);
 }
+counter();
 
- 
-document.addEventListener('DOMContentLoaded', inti);
+const TypeWriter = function (txtElement, words, wait = 2500) {
+  this.txtElement = txtElement;
+  this.words = words;
+  this.txt = "";
+  this.wordIndex = 0;
+  this.wait = parseInt(wait, 10);
+  this.type();
+  this.isDeleting = false;
+};
 
- 
+TypeWriter.prototype.type = function () {
+  const current = this.wordIndex % this.words.length;
+
+  const fullTxt = this.words[current];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+  let typeSpeed = 300;
+
+  if (this.isDeleting) {
+    typeSpeed /= 2;
+  }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    typeSpeed = this.wait;
+
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === "") {
+    this.isDeleting = false;
+
+    this.wordIndex++;
+
+    typeSpeed = 500;
+  }
+
+  setTimeout(() => this.type(), typeSpeed);
+};
+
+document.addEventListener("DOMContentLoaded", inti);
+
 function inti() {
-    const txtElement = document.querySelector('.txt-type');
-    const words = JSON.parse(txtElement.getAttribute('data-words'));
-    const wait = txtElement.getAttribute('data-wait');
-     
-    new TypeWriter(txtElement, words, wait);
-}
+  const txtElement = document.querySelector(".txt-type");
+  const words = JSON.parse(txtElement.getAttribute("data-words"));
+  const wait = txtElement.getAttribute("data-wait");
 
+  new TypeWriter(txtElement, words, wait);
+}
 
 btnTop = document.querySelector("#movetop");
-btnTop.addEventListener('click',function() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+btnTop.addEventListener("click", function () {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 });
 window.onscroll = function () {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        btnTop.style.display = "block";
-        } else {
-        btnTop.style.display = "none";
-        }
-};      
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    btnTop.style.display = "block";
+  } else {
+    btnTop.style.display = "none";
+  }
+};

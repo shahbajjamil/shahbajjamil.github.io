@@ -60,7 +60,8 @@ body {
  10. Button to top
 */
 /* !_____INDEX_____ */
-/* ------loading------ */
+
+/* ------0. Loading Screen------ */
 .preloader {
   position: fixed;
   top: 0;
@@ -98,9 +99,9 @@ body {
   transition: 1s;
   pointer-events: none;
 }
-/* !------loading------ */
+/* !------0. Loading Screen------ */
 
-/* ------header-------- */
+/* -----1. header------- */
 .mainheader {
   background-color: #fff;
   margin: 0px;
@@ -147,11 +148,11 @@ a.active,
 #check {
   display: none;
 }
-/* !------header-------- */
+/* !-----1. header------- */
 
 /* -----body----- */
 /* main index page */
-/* -----website development----- */
+/* -----2. website development---- */
 #dev {
   background: #000;
   /* height: 50vh; */
@@ -168,11 +169,11 @@ a.active,
     opacity: 1;
   }
 }
-/* !-----website development----- */
+/* !-----2. website development---- */
 
-/* ------Main_banner------ */
+/* -----3. Main_banner----- */
 
-/* ------banner-pic------ */
+/* -----3-1. banner-pic----- */
 .banner-view {
   background: url(../image/banner.jpeg) no-repeat right;
   background-position-x: right;
@@ -183,9 +184,9 @@ a.active,
   align-items: center;
   min-height: 700px;
 }
-/* !------banner-pic------ */
+/* !-----3-1. banner-pic----- */
 
-/* ------typing------ */
+/* -----3-2. typing----- */
 .banner {
   display: flex;
   flex-direction: column;
@@ -221,9 +222,10 @@ small {
     border-right-color: transparent;
   }
 }
-/* !------typing------ */
+/* !-----3-2. typing----- */
+/* !-----3. Main_banner----- */
 
-/* ------About Me------ */
+/* -----4. About Me----- */
 #about {
   padding-top: 1rem !important;
   padding-right: 15px;
@@ -268,9 +270,9 @@ small {
   line-height: 28px;
   margin: 30px 0;
 }
-/* !------About Me------ */
+/* !-----4. About Me----- */
 
-/* -------About-Grid------ */
+/* ------5. About-Grid----- */
 .about-grid {
   background-size: cover;
   background-image: linear-gradient(
@@ -324,9 +326,9 @@ small {
   line-height: 26px;
   color: rgba(255, 255, 255, 0.72);
 }
-/* !------About-Grid------ */
+/* !-----5. About-Grid----- */
 
-/* ---------My Skill And hobbies------ */
+/* --------6. My Skill And hobbies----- */
 .MySkillHobbies {
   display: flex;
   flex-wrap: wrap;
@@ -497,9 +499,9 @@ h6:nth-of-type(6) span {
   font-weight: 600;
 }
 
-/* !-----My Skill And hobbies------ */
+/* !----6. My Skill And hobbies----- */
 
-/* -------Repo's-> btn-------- */
+/* ------7. Repo's-> btn------- */
 .page-content {
   min-height: 400px;
   background-color: #050801;
@@ -604,9 +606,9 @@ a span:nth-child(4) {
     bottom: 100%;
   }
 }
-/* !-------Repo's-> btn-------- */
+/* !------7. Repo's-> btn------- */
 
-/* ------Contact Me------ */
+/* -----8. Contact Me----- */
 #contact {
   padding-top: 1rem !important;
   padding-right: 15px;
@@ -662,9 +664,9 @@ a span:nth-child(4) {
 #r {
   color: rgb(255, 68, 68);
 }
-/* !------Contact Me------ */
+/* !-----8. Contact Me----- */
 
-/* -----footer----- */
+/* ----9. footer---- */
 footer {
   background: #fff;
   padding: 30px 0;
@@ -703,9 +705,9 @@ footer {
 .right-col {
   flex-wrap: wrap;
 }
-/* !-----footer----- */
+/* !----9. footer---- */
 
-/* ------Button to top------- */
+/* -----10. Button to top------ */
 #movetop {
   position: fixed;
   display: none;
@@ -725,18 +727,23 @@ footer {
 #movetop:active {
   opacity: 1;
 }
-/* !------Button to top------- */
+/* !-----10. Button to top------ */
 
 @media (max-width: 991px) {
+  /* ------ 3-1. banner-pic--------- */
   .banner-view {
     background-position: -460px 0;
   }
+  /* !------ 3-1. banner-pic--------- */
 }
 
 @media (max-width: 858px) {
   .logo {
     width: 150px;
   }
+
+  /* -----1. header------- */
+
   .checkbtn {
     display: block;
   }
@@ -773,11 +780,15 @@ footer {
     /* left: 0; */
     top: 0;
   }
-  /* ---------------contruction text----------- */
+  /* !-----1. header------- */
+
+  /* ---------------2. website development----------- */
   #dev p {
     font-size: 1em;
   }
-  /* ------footer------ */
+  /* !---------------2. website development----------- */
+
+  /* -----9. footer----- */
   .footer-container {
     max-width: 500px;
   }
@@ -792,14 +803,18 @@ footer {
   .social-media a {
     margin: 0 10px;
   }
-  /* -------looding--------- */
+  /* !-----9. footer----- */
+
+  /* -------0. Loading Screen--------- */
   .preloader::before {
     font-size: 5em;
   }
   .counter {
     font-size: 9em;
   }
-  /* ------banner--------- */
+  /* !-------0. Loading Screen--------- */
+
+  /* ------ 3-1. banner-pic--------- */
   .banner-view {
     background-position: -520px 0;
   }
@@ -814,6 +829,9 @@ footer {
   .banner h2 {
     font-size: 22px;
   }
+  /* !------ 3-1. banner-pic--------- */
+
+  /* -----4. About Me----- */
   .card .imgbx {
     flex: none;
     max-width: 100%;
@@ -826,13 +844,17 @@ footer {
     margin-bottom: 3rem !important;
     margin-top: 3rem !important;
   }
+  /* !-----4. About Me----- */
+
+  /* -----5. About-Grid----- */
   .bottomfield {
     flex: 0 0 100%;
     max-width: 100%;
     margin-top: 3rem !important;
   }
+  /* !-----5. About-Grid----- */
 
-  /* 6. My Skill And hobbies */
+  /* -----6. My Skill And hobbies----- */
   .MySkill,
   .MyHobbies {
     flex: none;
@@ -841,18 +863,26 @@ footer {
   .MyHobbies {
     margin: 0;
   }
+  /* !-----6. My Skill And hobbies----- */
 }
 
 @media (max-width: 800px) {
+  /* ------ 3-1. banner-pic--------- */
+
   .banner-view {
     background-position: -630px 0;
   }
+  /* !------ 3-1. banner-pic--------- */
 }
 @media (max-width: 600px) {
+  /* ------ 3-1. banner-pic--------- */
   .banner-view {
     background-position: -450px 0;
     min-height: 550px;
   }
+  /* !------ 3-1. banner-pic--------- */
+
+  /* -----8. Contact Me----- */
   .container-contact a {
     width: 155px;
     height: 70px;
@@ -869,18 +899,26 @@ footer {
     text-shadow: 1px 2px 13px rgba(0, 0, 0, 0.72);
     margin-bottom: 20px !important;
   }
+  /* !-----8. Contact Me----- */
 }
 @media (max-width: 569px) {
+  /* ------ 3-1. banner-pic--------- */
   .banner-view {
     background-position: -320px 0;
     min-height: 420px;
   }
+  /* !------ 3-1. banner-pic--------- */
 }
 @media (max-width: 400px) {
+  /* ------ 3-1. banner-pic--------- */
   .banner-view {
     background-position: -400px 0;
   }
+  /* !------ 3-1. banner-pic--------- */
+
+  /* -----6. My Skill And hobbies----- */
   .MyHobbies .box {
     padding: 0;
   }
+  /* !-----6. My Skill And hobbies----- */
 }
