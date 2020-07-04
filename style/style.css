@@ -382,8 +382,26 @@ h6:nth-of-type(6) span {
   );
   background-size: 1rem 1rem;
   border-radius: 5px;
-
 }
+
+.progress:nth-of-type(1) .bar {
+  background-color: #29a143;
+}
+.progress:nth-of-type(2) .bar {
+  background-color: #e25c0e;
+}
+.progress:nth-of-type(3) .bar {
+  background-color: #a19f29;
+}
+.progress:nth-of-type(4) .bar {
+  background-color: #a12987;
+}
+.progress:nth-of-type(5) .bar {
+  background-color: #c41616;
+}
+/* .progress:nth-of-type(6) .bar {
+  background-color: #11ca39;
+} */
 
 .MyHobbies .box {
   padding: 0 3rem;
