@@ -428,17 +428,43 @@ h6:nth-of-type(6) span {
   color: #f7f6a3;
   border-radius: 50%;
   margin-bottom: 0.5em;
-  background-color: #222831 !important;
+  background-color: #000000 !important;
 }
+
+.hobbies-box:nth-child(1) span {
+  color: #ecf015;
+}
+.hobbies-box:nth-child(2) span {
+  color: #15f039;
+}
+.hobbies-box:nth-child(3) span {
+  color: #15f0cb;
+}
+.hobbies-box:nth-child(4) span {
+  color: #f09815;
+}
+.hobbies-box:nth-child(5) span {
+  color: #fbff00;
+}
+.hobbies-box:nth-child(6) span {
+  color: #7415f0;
+}
+.hobbies-box:nth-child(7) span {
+  color: #e7589b;
+}
+.hobbies-box:nth-child(8) span {
+  color: #98d87f;
+}
+
 .hobbies-box h5 {
   font-size: 18px;
   line-height: 25px;
-  margin-top: 0;
   margin-bottom: 0.5rem;
   color: #232527;
   font-weight: 600;
-  padding-bottom: 0em;
 }
+
+/* !-----My Skill And hobbies------ */
 
 /* -------ptext-> btn-------- */
 .page-content {
