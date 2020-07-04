@@ -29,6 +29,37 @@ body {
   justify-content: center;
   align-items: center;
 }
+/*----------- headline of each container------------------- */
+.containerHead h3 {
+  font-size: 45px;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 600;
+  border-bottom: 2px solid rgb(236, 66, 117);
+  display: inline-block;
+  line-height: 1;
+}
+/* !----------- headline of each container------------------- */
+
+/* ____INDEX____ */
+/* 
+ -1. Global things (above index)
+  0. Loading Screen
+  1. header
+  2. website development
+  3. Main_banner
+    3-1. banner-pic
+    3-2. typing
+  4. About Me
+  5. About-Grid
+  6. My Skill And hobbies
+  7. Repo's-> btn
+  8. Contact Me
+  9. footer
+ 10. Button to top
+*/
+/* !_____INDEX_____ */
 /* ------loading------ */
 .preloader {
   position: fixed;
@@ -67,6 +98,7 @@ body {
   transition: 1s;
   pointer-events: none;
 }
+/* !------loading------ */
 
 /* ------header-------- */
 .mainheader {
@@ -115,10 +147,11 @@ a.active,
 #check {
   display: none;
 }
+/* !------header-------- */
 
 /* -----body----- */
 /* main index page */
-
+/* -----website development----- */
 #dev {
   background: #000;
   /* height: 50vh; */
@@ -135,7 +168,11 @@ a.active,
     opacity: 1;
   }
 }
-/* -----banner-pic------ */
+/* !-----website development----- */
+
+/* ------Main_banner------ */
+
+/* ------banner-pic------ */
 .banner-view {
   background: url(../image/banner.jpeg) no-repeat right;
   background-position-x: right;
@@ -146,7 +183,9 @@ a.active,
   align-items: center;
   min-height: 700px;
 }
-/* ------typing----------- */
+/* !------banner-pic------ */
+
+/* ------typing------ */
 .banner {
   display: flex;
   flex-direction: column;
@@ -182,17 +221,8 @@ small {
     border-right-color: transparent;
   }
 }
-/*-------------------- headline of each container------------------- */
-.containerHead h3 {
-  font-size: 45px;
-  margin-bottom: 40px;
-  text-align: center;
-  text-transform: capitalize;
-  font-weight: 600;
-  border-bottom: 2px solid rgb(236, 66, 117);
-  display: inline-block;
-  line-height: 1;
-}
+/* !------typing------ */
+
 /* ------About Me------ */
 #about {
   padding-top: 1rem !important;
@@ -238,7 +268,9 @@ small {
   line-height: 28px;
   margin: 30px 0;
 }
-/* -------about-grid------ */
+/* !------About Me------ */
+
+/* -------About-Grid------ */
 .about-grid {
   background-size: cover;
   background-image: linear-gradient(
@@ -292,6 +324,7 @@ small {
   line-height: 26px;
   color: rgba(255, 255, 255, 0.72);
 }
+/* !------About-Grid------ */
 
 /* ---------My Skill And hobbies------ */
 .MySkillHobbies {
@@ -466,7 +499,7 @@ h6:nth-of-type(6) span {
 
 /* !-----My Skill And hobbies------ */
 
-/* -------ptext-> btn-------- */
+/* -------Repo's-> btn-------- */
 .page-content {
   min-height: 400px;
   background-color: #050801;
@@ -571,7 +604,9 @@ a span:nth-child(4) {
     bottom: 100%;
   }
 }
-/* ------contact------ */
+/* !-------Repo's-> btn-------- */
+
+/* ------Contact Me------ */
 #contact {
   padding-top: 1rem !important;
   padding-right: 15px;
@@ -627,6 +662,8 @@ a span:nth-child(4) {
 #r {
   color: rgb(255, 68, 68);
 }
+/* !------Contact Me------ */
+
 /* -----footer----- */
 footer {
   background: #fff;
@@ -666,8 +703,9 @@ footer {
 .right-col {
   flex-wrap: wrap;
 }
+/* !-----footer----- */
 
-/* ------button to top------- */
+/* ------Button to top------- */
 #movetop {
   position: fixed;
   display: none;
@@ -687,6 +725,7 @@ footer {
 #movetop:active {
   opacity: 1;
 }
+/* !------Button to top------- */
 
 @media (max-width: 991px) {
   .banner-view {
@@ -792,6 +831,8 @@ footer {
     max-width: 100%;
     margin-top: 3rem !important;
   }
+
+  /* 6. My Skill And hobbies */
   .MySkill,
   .MyHobbies {
     flex: none;
