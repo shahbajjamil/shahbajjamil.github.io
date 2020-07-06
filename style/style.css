@@ -17,6 +17,14 @@ a:link,
 a:visited {
   color: inherit;
 }
+
+:root {
+  --txt: 17px;
+  --txt-h: 25px;
+  --medium-h: 30px;
+  --large-h: 40px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -31,7 +39,7 @@ body {
 }
 /*----------- headline of each container------------------- */
 .containerHead h3 {
-  font-size: 45px;
+  font-size: var(--large-h);
   margin-bottom: 40px;
   text-align: center;
   text-transform: capitalize;
@@ -228,8 +236,7 @@ small {
 /* -----4. About Me----- */
 #about {
   padding-top: 1rem !important;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 0 15px;
 }
 
 .card {
@@ -259,14 +266,14 @@ small {
   padding-left: 15px;
 }
 .card .content h2 {
-  font-size: 40px;
-  line-height: 52px;
+  font-size: var(--medium-h);
+  /* line-height: 52px; */
   font-weight: 500;
 }
 .card .content p {
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: var(--txt);
   line-height: 28px;
   margin: 30px 0;
 }
@@ -284,23 +291,19 @@ small {
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: center;
   background-attachment: fixed;
-  padding-bottom: 3rem !important;
-  padding-top: 3rem !important;
+  padding: 3rem 0 !important;
 }
 .container-about {
   max-width: 960px;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 .bottomgrid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin: 0 -15px;
 }
 .bottomfield {
   margin-top: 0 !important;
@@ -308,8 +311,7 @@ small {
   max-width: 25%; /*ratio*/
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 0 15px;
 }
 .bottomfield h4 {
   font-size: 24px;
@@ -322,7 +324,7 @@ small {
 .bottomfield p {
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: var(--txt);
   line-height: 26px;
   color: rgba(255, 255, 255, 0.72);
 }
@@ -342,14 +344,13 @@ small {
   max-width: 50%;
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 0 15px;
   margin-bottom: 3rem;
   margin-top: 3rem;
 }
 .MySkill h4,
 .MyHobbies h4 {
-  font-size: 30px;
+  font-size: var(--medium-h);
   line-height: 35px;
   color: #232527;
   padding-bottom: 0em;
@@ -360,7 +361,7 @@ small {
 }
 
 h6 {
-  font-size: 17px;
+  font-size: var(--txt);
   color: #777;
   margin-bottom: 0.6em;
   text-transform: capitalize;
@@ -447,9 +448,7 @@ h6:nth-of-type(6) span {
 .hobbies-box {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-
+  padding: 0 15px;
   flex: 0 0 33.33333%;
   max-width: 33.33333%;
   text-align: center;
@@ -616,7 +615,7 @@ a span:nth-child(4) {
   background: #c8bd84;
 }
 #contact p.shadow {
-  font-size: 25px;
+  font-size: var(--txt-h);
   text-align: center;
   text-shadow: 1px 4px 10px rgba(0, 0, 0, 0.72);
 }
@@ -641,7 +640,7 @@ a span:nth-child(4) {
   transition: box-shadow 0.3s;
 }
 .container-contact p {
-  font-size: 25px;
+  font-size: var(--txt-h);
 }
 .container-contact a:hover {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
