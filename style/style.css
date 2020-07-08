@@ -118,7 +118,7 @@ body {
   justify-content: space-between;
 }
 
-ul {
+/* ul {
   float: right;
   margin-right: 10px;
 }
@@ -138,24 +138,24 @@ a.active,
 .navlist a:hover {
   color: #fc5c65;
   transition: 0.5s;
-}
+} */
 
 /* a.active,
 .navlist a:hover {
   border-bottom: 2px solid #fc5c65;
 } */
-.checkbtn {
+/* .checkbtn {
   font-size: 20px;
   color: black;
   float: right;
   line-height: 30px;
-  margin: 15px; /*positopn of bar */
+  margin: 15px; /*positopn of bar 
   cursor: pointer;
   display: none;
 }
 #check {
   display: none;
-}
+} */
 /* !-----1. header------- */
 
 /* -----body----- */
@@ -742,7 +742,7 @@ footer {
 
   /* -----1. header------- */
 
-  .checkbtn {
+  /* .checkbtn {
     display: block;
   }
   ul {
@@ -750,11 +750,11 @@ footer {
     padding: 0;
     position: absolute;
     width: 100%;
+    background: #fff; */
     /* height: 100vh; */
-    background: #fff;
     /* top:80px; */
     /* left:-100%; */
-    left: 0;
+    /* left: 0;
     margin-top: 80px;
     top: -200%;
     text-align: center;
@@ -775,9 +775,9 @@ footer {
     color: #fc5c65;
   }
   #check:checked ~ ul {
-    /* left: 0; */
+    /* left: 0; 
     top: 0;
-  }
+  } */
   /* !-----1. header------- */
 
   /* ---------------2. website development----------- */
