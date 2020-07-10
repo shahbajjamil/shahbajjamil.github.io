@@ -146,7 +146,7 @@ nav {
   word-spacing: 3px;
   text-transform: uppercase;
   font-size: 17px;
-  padding: 7px 10px;
+  padding: 0 10px;
   border-radius: 3px;
   font-weight: 500;
 }
@@ -217,9 +217,6 @@ a.active,
     transform: translateX(0px);
   }
 }
-
-
- 
 
 /* ul {
   float: right;
@@ -858,7 +855,7 @@ footer {
     right: 0;
     height: 90vh;
     top: 10vh;
-    background: #5d4954;
+    background: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -866,6 +863,10 @@ footer {
     width: 50%;
     transform: translateX(100%);
     transition: transform 0.75s ease-in-out;
+    z-index: 1;
+  }
+  .nav-links a {
+  padding: 10px;
   }
   .nav-links li {
     opacity: 0;
@@ -880,14 +881,15 @@ footer {
     height: 44px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
-    /* border: 3px solid #fff; */
+    /* border: 3px solid #000; */
   }
 
   /* this .nav-active sholud be after @media or last of page ? for me */
   .nav-active {
     transform: translateX(0);
   }
-/* .checkbtn {
+
+  /* .checkbtn {
     display: block;
   }
   ul {
@@ -896,10 +898,10 @@ footer {
     position: absolute;
     width: 100%;
     background: #fff; */
-/* height: 100vh; */
-/* top:80px; */
-/* left:-100%; */
-/* left: 0;
+  /* height: 100vh; */
+  /* top:80px; */
+  /* left:-100%; */
+  /* left: 0;
     margin-top: 80px;
     top: -200%;
     text-align: center;
@@ -923,91 +925,90 @@ footer {
     /* left: 0; 
     top: 0;
   } */
-/* !-----1. header------- */
+  /* !-----1. header------- */
 
-/* ---------------2. website development----------- */
-#dev p {
-  font-size: 1em;
-}
-/* !---------------2. website development----------- */
+  /* ---------------2. website development----------- */
+  #dev p {
+    font-size: 1em;
+  }
+  /* !---------------2. website development----------- */
 
-/* -----9. footer----- */
-.footer-container {
-  max-width: 500px;
-}
-.right-col {
-  width: 100%;
-  font-size: 0.7em;
-}
-.left-col {
-  width: 100%;
-  text-align: center;
-}
-.social-media a {
-  margin: 0 10px;
-}
-/* !-----9. footer----- */
+  /* -----9. footer----- */
+  .footer-container {
+    max-width: 500px;
+  }
+  .right-col {
+    width: 100%;
+    font-size: 0.7em;
+  }
+  .left-col {
+    width: 100%;
+    text-align: center;
+  }
+  .social-media a {
+    margin: 0 10px;
+  }
+  /* !-----9. footer----- */
 
-/* -------0. Loading Screen--------- */
-.preloader::before {
-  font-size: 5em;
-}
-.counter {
-  font-size: 9em;
-}
-/* !-------0. Loading Screen--------- */
+  /* -------0. Loading Screen--------- */
+  .preloader::before {
+    font-size: 5em;
+  }
+  .counter {
+    font-size: 9em;
+  }
+  /* !-------0. Loading Screen--------- */
 
-/* ------ 3-1. banner-pic--------- */
-.banner-view {
-  background-position: -520px 0;
-}
-.banner {
-  padding: 0.5rem;
-}
-.banner h1,
-small {
-  font-size: 40px;
-  line-height: 50px;
-}
-.banner h2 {
-  font-size: 22px;
-}
-/* !------ 3-1. banner-pic--------- */
+  /* ------ 3-1. banner-pic--------- */
+  .banner-view {
+    background-position: -520px 0;
+  }
+  .banner {
+    padding: 0.5rem;
+  }
+  .banner h1,
+  small {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .banner h2 {
+    font-size: 22px;
+  }
+  /* !------ 3-1. banner-pic--------- */
 
-/* -----4. About Me----- */
-.card .imgbx {
-  flex: none;
-  max-width: 100%;
-  padding: 0;
-}
-.card .content {
-  flex: none;
-  max-width: 100%;
-  padding: 0;
-  margin: 3rem 0 !important;
-}
-/* !-----4. About Me----- */
+  /* -----4. About Me----- */
+  .card .imgbx {
+    flex: none;
+    max-width: 100%;
+    padding: 0;
+  }
+  .card .content {
+    flex: none;
+    max-width: 100%;
+    padding: 0;
+    margin: 3rem 0 !important;
+  }
+  /* !-----4. About Me----- */
 
-/* -----5. About-Grid----- */
-.bottomfield {
-  flex: 0 0 100%;
-  max-width: 100%;
-  margin-top: 3rem !important;
-}
-/* !-----5. About-Grid----- */
+  /* -----5. About-Grid----- */
+  .bottomfield {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 3rem !important;
+  }
+  /* !-----5. About-Grid----- */
 
-/* -----6. My Skill And hobbies----- */
-.MySkill,
-.MyHobbies {
-  flex: none;
-  max-width: 100%;
+  /* -----6. My Skill And hobbies----- */
+  .MySkill,
+  .MyHobbies {
+    flex: none;
+    max-width: 100%;
+  }
+  .MyHobbies {
+    margin: 0;
+  }
+  /* !-----6. My Skill And hobbies----- */
 }
-.MyHobbies {
-  margin: 0;
-}
-/* !-----6. My Skill And hobbies----- */
-}
-
 
 @media (max-width: 800px) {
   /* ------ 3-1. banner-pic--------- */
@@ -1065,4 +1066,3 @@ small {
   }
   /* !-----6. My Skill And hobbies----- */
 }
-
