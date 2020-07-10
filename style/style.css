@@ -32,6 +32,10 @@ body {
   margin: 0;
   padding: 0;
 }
+.noscroll {
+  min-height: 100vh;
+  overflow: hidden;
+}
 .flex {
   display: flex;
   justify-content: center;
@@ -115,47 +119,100 @@ body {
   margin: 0px;
   padding: 10px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
 }
 
-ul {
-  float: right;
-  margin-right: 10px;
+nav {
+  /* position: sticky;
+  top: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-ul li {
-  display: inline-block;
-  line-height: 40px;
-  margin: 15px;
+.nav-links {
+  display: flex;
+  justify-content: space-between;
 }
-nav ul li a {
+.nav-links a {
   color: black;
-  font-size: 17px;
-  padding: 7px 10px;
-  border-radius: 3px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  word-spacing: 3px;
   text-transform: uppercase;
+  font-size: 17px;
+  padding: 0 10px;
+  border-radius: 3px;
+  font-weight: 500;
 }
 a.active,
-.navlist a:hover {
+.nav-links a:hover {
   color: #fc5c65;
   transition: 0.5s;
 }
+.burger {
+  display: none;
+}
 
-/* a.active,
-.navlist a:hover {
-  border-bottom: 2px solid #fc5c65;
-} */
-.checkbtn {
-  font-size: 20px;
-  color: black;
-  float: right;
-  line-height: 30px;
-  margin: 15px; /*positopn of bar */
-  cursor: pointer;
-  display: none;
+.centerLine {
+  width: 40px;
+  height: 4px;
+  background: #000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
 }
-#check {
-  display: none;
+.centerLine::before,
+.centerLine::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background: #000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
 }
+.centerLine::before {
+  transform: translateY(-12px);
+}
+.centerLine::after {
+  transform: translateY(12px);
+}
+
+/* Animation */
+.burger.open .centerLine {
+  /* for right */
+  transform: translateX(50px);
+  /* for left */
+  /* transform: translateX(-50px); */
+  background: transparent;
+  box-shadow: none;
+}
+.burger.open .centerLine::before {
+  /* for right */
+  transform: rotate(-45deg) translate(-35px, -35px);
+  /* for left */
+  /* transform: rotate(45deg) translate(35px, -35px); */
+}
+.burger.open .centerLine::after {
+  /* for right */
+  transform: rotate(45deg) translate(-35px, 35px);
+  /* for left */
+  /* transform: rotate(-45deg) translate(35px, 35px); */
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 /* !-----1. header------- */
 
 /* -----body----- */
@@ -741,43 +798,54 @@ footer {
   }
 
   /* -----1. header------- */
+  body {
+    overflow-x: hidden;
+  }
+  .mainheader {
+    max-height: 10vh;
+    justify-content: space-between;
+    margin: auto 20px;
+  }
+  .nav-links {
+    /* display: none; */
+    position: fixed;
+    right: 0;
+    height: 90vh;
+    top: 10vh;
+    background: linear-gradient(#fff, #6cf3f3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.75s ease-in-out;
+    z-index: 1;
+  }
+  .nav-links a {
+    padding: 10px;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    /* border: 3px solid #000; */
+  }
 
-  .checkbtn {
-    display: block;
+  /* this .nav-active sholud be after @media or last of page ? for me */
+  .nav-active {
+    transform: translateX(0);
   }
-  ul {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-    /* height: 100vh; */
-    background: #fff;
-    /* top:80px; */
-    /* left:-100%; */
-    left: 0;
-    margin-top: 80px;
-    top: -200%;
-    text-align: center;
-    transition: all 0.5s;
-    z-index: 100000;
-  }
-  nav ul li {
-    display: block;
-    margin: 45px 0;
-    line-height: 30px;
-  }
-  nav ul li a {
-    font-size: 20px;
-  }
-  .navlist a:hover,
-  a.active {
-    background: none;
-    color: #fc5c65;
-  }
-  #check:checked ~ ul {
-    /* left: 0; */
-    top: 0;
-  }
+
   /* !-----1. header------- */
 
   /* ---------------2. website development----------- */

@@ -1,3 +1,4 @@
+// loading screen
 function counter() {
   var count = setInterval(function () {
     var c = parseInt($(".counter").text());
@@ -10,7 +11,9 @@ function counter() {
   }, 30);
 }
 counter();
+// !loading screen
 
+//  for typing effect
 const TypeWriter = function (txtElement, words, wait = 2500) {
   this.txtElement = txtElement;
   this.words = words;
@@ -64,7 +67,45 @@ function inti() {
 
   new TypeWriter(txtElement, words, wait);
 }
+// ! for typing effect
 
+// nav bar sliding
+const navSlide = () => {
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav-links");
+  const navLinks = document.querySelectorAll(".nav-links li");
+
+  function animationNav() {
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 7 + 0.75
+        }s`;
+      }
+    });
+  }
+  burger.addEventListener("click", function (event) {
+    // Toggle nav
+    nav.classList.toggle("nav-active");
+    // Animate Links
+    animationNav();
+    // burger animation
+    burger.classList.toggle("open");
+    document.body.classList.toggle("noscroll");
+  });
+  nav.addEventListener("click", function (event) {
+    nav.classList.remove("nav-active");
+    animationNav();
+    burger.classList.remove("open");
+    document.body.classList.remove("noscroll");
+  });
+};
+navSlide();
+// ! nav bar sliding
+
+// button move to top
 btnTop = document.querySelector("#movetop");
 btnTop.addEventListener("click", function () {
   document.body.scrollTop = 0;
@@ -80,3 +121,4 @@ window.onscroll = function () {
     btnTop.style.display = "none";
   }
 };
+// ! button move to top
