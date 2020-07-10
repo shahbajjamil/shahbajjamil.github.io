@@ -94,12 +94,15 @@ const navSlide = () => {
     // burger animation
     burger.classList.toggle("open");
     document.body.classList.toggle("noscroll");
+    document.documentElement.classList.toggle("noscroll");
   });
   nav.addEventListener("click", function (event) {
     nav.classList.remove("nav-active");
     animationNav();
     burger.classList.remove("open");
     document.body.classList.remove("noscroll");
+    document.documentElement.classList.remove("noscroll");
+
   });
 };
 navSlide();
