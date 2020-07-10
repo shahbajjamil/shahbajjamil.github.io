@@ -129,14 +129,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background: #5d4954; */
-  /* min-height: 8vh; */
 }
 .nav-links {
   display: flex;
-  /* width: 40%; */
-
-  /* background-color: yellowgreen; */
   justify-content: space-between;
 }
 .nav-links a {
@@ -218,44 +213,6 @@ a.active,
   }
 }
 
-/* ul {
-  float: right;
-  margin-right: 10px;
-}
-ul li {
-  display: inline-block;
-  line-height: 40px;
-  margin: 15px;
-}
-nav ul li a {
-  color: black;
-  font-size: 17px;
-  padding: 7px 10px;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-a.active,
-.navlist a:hover {
-  color: #fc5c65;
-  transition: 0.5s;
-} */
-
-/* a.active,
-.navlist a:hover {
-  border-bottom: 2px solid #fc5c65;
-} */
-/* .checkbtn {
-  font-size: 20px;
-  color: black;
-  float: right;
-  line-height: 30px;
-  margin: 15px; /*positopn of bar 
-  cursor: pointer;
-  display: none;
-}
-#check {
-  display: none;
-} */
 /* !-----1. header------- */
 
 /* -----body----- */
@@ -855,7 +812,7 @@ footer {
     right: 0;
     height: 90vh;
     top: 10vh;
-    background: #fff;
+    background: linear-gradient(#fff, #6cf3f3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -866,7 +823,7 @@ footer {
     z-index: 1;
   }
   .nav-links a {
-  padding: 10px;
+    padding: 10px;
   }
   .nav-links li {
     opacity: 0;
@@ -889,42 +846,6 @@ footer {
     transform: translateX(0);
   }
 
-  /* .checkbtn {
-    display: block;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-    background: #fff; */
-  /* height: 100vh; */
-  /* top:80px; */
-  /* left:-100%; */
-  /* left: 0;
-    margin-top: 80px;
-    top: -200%;
-    text-align: center;
-    transition: all 0.5s;
-    z-index: 100000;
-  }
-  nav ul li {
-    display: block;
-    margin: 45px 0;
-    line-height: 30px;
-  }
-  nav ul li a {
-    font-size: 20px;
-  }
-  .navlist a:hover,
-  a.active {
-    background: none;
-    color: #fc5c65;
-  }
-  #check:checked ~ ul {
-    /* left: 0; 
-    top: 0;
-  } */
   /* !-----1. header------- */
 
   /* ---------------2. website development----------- */
