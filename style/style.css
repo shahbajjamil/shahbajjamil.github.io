@@ -214,10 +214,7 @@ a.active,
   }
 }
 
-/* this .nav-active sholud be after @media or last of page ? for me */
-.nav-active {
-  transform: translateX(0);
-}
+
  
 
 /* ul {
@@ -997,6 +994,10 @@ small {
   margin: 0;
 }
 /* !-----6. My Skill And hobbies----- */
+}
+/* this .nav-active sholud be after @media or last of page ? for me */
+.nav-active {
+  transform: translateX(0);
 }
 
 @media (max-width: 800px) {
