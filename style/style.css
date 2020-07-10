@@ -32,6 +32,10 @@ body {
   margin: 0;
   padding: 0;
 }
+.noscroll {
+  min-height: 100vh;
+  overflow: hidden;
+}
 .flex {
   display: flex;
   justify-content: center;
@@ -879,7 +883,10 @@ footer {
     /* border: 3px solid #fff; */
   }
 
-
+  /* this .nav-active sholud be after @media or last of page ? for me */
+  .nav-active {
+    transform: translateX(0);
+  }
 /* .checkbtn {
     display: block;
   }
@@ -1000,10 +1007,7 @@ small {
 }
 /* !-----6. My Skill And hobbies----- */
 }
-/* this .nav-active sholud be after @media or last of page ? for me */
-.nav-active {
-  transform: translateX(0);
-}
+
 
 @media (max-width: 800px) {
   /* ------ 3-1. banner-pic--------- */
