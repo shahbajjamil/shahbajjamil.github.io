@@ -79,33 +79,92 @@ body {
   top: 0;
   width: 100%;
   height: 100vh;
-  background: #070707;
   z-index: 10000000;
-}
-.preloader::before {
-  content: "Loading";
-  position: absolute;
-  font-size: 12em;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.03);
 }
 .preloader.active {
   transform: translateY(-100vh);
   transition: ease-in-out 2s;
   transition-delay: 1s;
 }
-.counter {
+.scene {
   position: relative;
-  color: #fff;
-  font-size: 16em;
-  font-weight: 700;
-  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #01070a;
 }
+.scene i {
+  position: absolute;
+  top: -250px;
+  background: rgba(255, 255, 255, 0.5);
+  animation: stars linear infinite;
+}
+@keyframes stars {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(200vh);
+  }
+}
+.rocket {
+  position: relative;
+  animation: rocket 0.2s ease infinite;
+}
+@keyframes rocket {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+.rocket::before {
+  content: "";
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 200px;
+  background: linear-gradient(#00d0ff, transparent);
+}
+.rocket::after {
+  content: "";
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 200px;
+  background: linear-gradient(#00d0ff, transparent);
+  filter: blur(20px);
+}
+
+.counter {
+  position: absolute;
+  top: 10px;
+  color: #ecf00f;
+  width: 100%;
+  font-size: 5rem;
+  font-weight: 500;
+}
+.counter::before {
+  content: "Loading...";
+  font-size: 5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #fd093e, #fd0946, #ecf00f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .counter::after {
   content: "%";
-  font-size: 0.5em;
+  font-size: 4rem;
 }
+
 .hide {
   opacity: 0;
   transition: 1s;
@@ -804,7 +863,7 @@ footer {
   .mainheader {
     max-height: 10vh;
     justify-content: space-between;
-    margin: auto 20px;
+    padding: 0 20px;
   }
   .nav-links {
     /* display: none; */
@@ -872,11 +931,17 @@ footer {
   /* !-----9. footer----- */
 
   /* -------0. Loading Screen--------- */
-  .preloader::before {
-    font-size: 5em;
-  }
   .counter {
-    font-size: 9em;
+    top: 50px;
+    font-size: 2em;
+  }
+  .counter::before {
+    position: absolute;
+    top: -35px;
+    font-size: 1em;
+  }
+  .counter::after {
+    font-size: 0.85em;
   }
   /* !-------0. Loading Screen--------- */
 
