@@ -100,10 +100,10 @@ body {
 }
 @keyframes stars {
   0% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
   100% {
-      transform: translateY(200vh);
+    transform: translateY(200vh);
   }
 }
 .rocket {
@@ -111,47 +111,45 @@ body {
   animation: rocket 0.2s ease infinite;
 }
 @keyframes rocket {
-  0%,100% {
-      transform: translateY(-2px);
+  0%,
+  100% {
+    transform: translateY(-2px);
   }
   50% {
-      transform: translateY(2px);
+    transform: translateY(2px);
   }
 }
 .rocket::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -200px;
   left: 50%;
   transform: translateX(-50%);
   width: 10px;
   height: 200px;
-  background: linear-gradient(#00d0ff,transparent);
+  background: linear-gradient(#00d0ff, transparent);
 }
 .rocket::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -200px;
   left: 50%;
   transform: translateX(-50%);
   width: 10px;
   height: 200px;
-  background: linear-gradient(#00d0ff,transparent);
+  background: linear-gradient(#00d0ff, transparent);
   filter: blur(20px);
 }
- 
 
-
-
-/* .preloader.active {
+.preloader.active {
   transform: translateY(-100vh);
   transition: ease-in-out 2s;
   transition-delay: 1s;
-} */
+}
 
 .counter {
   position: relative;
-  color: #fff;
+  color: #ecf00f;
   width: 100%;
   height: 20vh;
   font-size: 5rem;
@@ -164,7 +162,10 @@ body {
   font-size: 5rem;
   font-weight: 500;
   text-transform: uppercase;
-  color: rgba(248, 34, 34, 1);
+  /* color: #f82222; */
+  background: linear-gradient(to right, #fd093e, #fd0946, #ecf00f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .counter::after {
@@ -172,11 +173,11 @@ body {
   font-size: 4rem;
 }
 
-/* .hide {
+.hide {
   opacity: 0;
   transition: 1s;
   pointer-events: none;
-} */
+}
 /* !------0. Loading Screen------ */
 
 /* -----1. header------- */
