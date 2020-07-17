@@ -177,3 +177,36 @@ if (isMobile) {
     "https://api.whatsapp.com/send?phone=+918252643736&text=Hi, Just saw your Webpage!";
 }
 // !WhatsApp toggle
+
+function skill() {
+  const languageName = [
+    "Web Design",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Flutter / Dart",
+    "C / C++",
+  ];
+  const percentage = [70, 80, 50, 20, 50, 90];
+  const skills = document.querySelector(".MySkill");
+
+  for (let i = 0; i < languageName.length; i++) {
+    skills.innerHTML +=
+      "<h6>" +
+      languageName[i] +
+      "<span>" +
+      percentage[i] +
+      "%</span>" +
+      "</h6>" +
+      "<div" +
+      ' class="progress">' +
+      "<div" +
+      ' class="bar" style="width: ' +
+      percentage[i] +
+      '%;">' +
+      "</div>" +
+      "</div>";
+    console.log(i);
+  }
+}
+skill();
