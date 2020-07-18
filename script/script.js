@@ -28,6 +28,8 @@ function counter() {
       clearInterval(count);
       $(".counter").addClass("hide");
       $(".preloader").addClass("active");
+      document.body.classList.remove("noscroll");
+      document.documentElement.classList.remove("noscroll");
     }
   }, 30);
 }
@@ -176,7 +178,6 @@ function skill() {
   ];
   const percentage = [70, 80, 50, 20, 50, 90];
   const skills = document.querySelector(".MySkill");
-
   for (let i = 0; i < languageName.length; i++) {
     skills.innerHTML +=
       "<h6>" +
@@ -216,7 +217,6 @@ function hobbies() {
     "motorcycle",
   ];
   const hobby = document.querySelector(".box");
-  console.log(hobby);
   for (let i = 0; i < hobbyName.length; i++) {
     hobby.innerHTML +=
       '<div class="hobbies-box"><span class="fa fa-' +
