@@ -153,27 +153,78 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(
 var whatsapp = document.getElementById("wp");
 
 if (isMobile) {
-  whatsapp.innerHTML =
-    "<i " +
-    'id="g"' +
-    ' class="fab' +
-    ' fa-whatsapp"></i>' +
-    "<p>" +
-    "WhatsApp" +
-    "</p>";
-
+  whatsapp.innerHTML = '<i id="g" class="fab fa-whatsapp"></i><p>WhatsApp</p>';
   whatsapp.href =
     "https://wa.me/+918252643736/?text=Hi, just saw your webpage!";
 } else {
   whatsapp.innerHTML =
-    "<i " +
-    'id="g"' +
-    ' class="fab' +
-    ' fa-whatsapp"></i>' +
-    "<p>" +
-    "WhatsApp Web" +
-    "</p>";
+    '<i id="g" class="fab fa-whatsapp"></i><p>WhatsApp Web</p>';
   whatsapp.href =
     "https://api.whatsapp.com/send?phone=+918252643736&text=Hi, Just saw your Webpage!";
 }
 // !WhatsApp toggle
+
+// My Skill
+function skill() {
+  const languageName = [
+    "Web Design",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Flutter / Dart",
+    "C / C++",
+  ];
+  const percentage = [70, 80, 50, 20, 50, 90];
+  const skills = document.querySelector(".MySkill");
+
+  for (let i = 0; i < languageName.length; i++) {
+    skills.innerHTML +=
+      "<h6>" +
+      languageName[i] +
+      "<span>" +
+      percentage[i] +
+      "%</span></h6>" +
+      '<div class="progress">' +
+      '<div class="bar" style="width: ' +
+      percentage[i] +
+      '%;"></div></div>';
+  }
+}
+skill();
+// !My Skill
+
+// My Hobbies
+function hobbies() {
+  const hobbyName = [
+    "Coding",
+    "Music",
+    "Traveling",
+    "Swimming",
+    "Painting",
+    "learning",
+    "Photography",
+    "Driving",
+  ];
+  const icon = [
+    "code",
+    "music",
+    "plane",
+    "swimming-pool",
+    "paint-brush",
+    "graduation-cap",
+    "camera",
+    "motorcycle",
+  ];
+  const hobby = document.querySelector(".box");
+  console.log(hobby);
+  for (let i = 0; i < hobbyName.length; i++) {
+    hobby.innerHTML +=
+      '<div class="hobbies-box"><span class="fa fa-' +
+      icon[i] +
+      ' bg-secondary"></span><h5 class="flex">' +
+      hobbyName[i] +
+      "</h5></div>";
+  }
+}
+hobbies();
+// !My Hobbies
