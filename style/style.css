@@ -934,7 +934,7 @@ a span:nth-child(4) {
 }
 /* !-------8. My Work------- */
 
-/* -----8. Contact Me----- */
+/* -----9. Contact Me----- */
 #contact {
   padding-top: 1rem !important;
   padding: 0 15px;
@@ -989,9 +989,9 @@ a span:nth-child(4) {
 #r {
   color: rgb(255, 68, 68);
 }
-/* !-----8. Contact Me----- */
+/* !-----9. Contact Me----- */
 
-/* ----9. footer---- */
+/* ----10. footer---- */
 footer {
   background: #fff;
   padding: 30px 0;
@@ -1030,9 +1030,9 @@ footer {
 .right-col {
   flex-wrap: wrap;
 }
-/* !----9. footer---- */
+/* !----10. footer---- */
 
-/* -----10. Button to top------ */
+/* -----11. Button to top------ */
 #movetop {
   position: fixed;
   display: none;
@@ -1052,7 +1052,7 @@ footer {
 #movetop:active {
   opacity: 1;
 }
-/* !-----10. Button to top------ */
+/* !-----11. Button to top------ */
 
 @media (max-width: 991px) {
   /* ------ 3-1. banner-pic--------- */
@@ -1124,7 +1124,7 @@ footer {
   }
   /* !---------------2. website development----------- */
 
-  /* -----9. footer----- */
+  /* -----10. footer----- */
   .footer-container {
     max-width: 500px;
   }
@@ -1139,7 +1139,7 @@ footer {
   .social-media a {
     margin: 0 10px;
   }
-  /* !-----9. footer----- */
+  /* !-----10. footer----- */
 
   /* -------0. Loading Screen--------- */
   .counter {
@@ -1209,11 +1209,79 @@ footer {
 
 @media (max-width: 800px) {
   /* ------ 3-1. banner-pic--------- */
-
   .banner-view {
     background-position: -630px 0;
   }
   /* !------ 3-1. banner-pic--------- */
+
+  /* -------8. My Work------- */
+  .toggle-button {
+    margin-bottom: 20px;
+  }
+  .toggle-button button {
+    margin: 10px;
+    padding: 5px 10px;
+  }
+
+  .appWork,
+  .webWork {
+    height: 75vh;
+  }
+  .appWork .appSS,
+  .webWork .webSS {
+    flex: none;
+    max-width: 100%;
+  }
+  .appWork .appContent,
+  .webWork .webContent {
+    flex: none;
+    max-width: 100%;
+  }
+  .appWork .appSS img {
+    max-width: 35%;
+  }
+  .webWork .webSS img {
+    max-width: 95%;
+    margin: 0;
+  }
+  .appWork .appContent h2,
+  .webWork .webContent h2 {
+    font-size: 25px;
+    margin: 10px;
+  text-align: center;
+  }
+  .appWork .appContent p,
+  .webWork .webContent p {
+    font-size: 15px;
+    text-align: center;
+    margin: 0 10px;
+    line-height: 20px;
+  }
+  .appContent .button,
+  .webContent .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button {
+    margin-bottom: 10px !important;
+  }
+  .button a {
+    margin: 10px;
+    padding: 5px 10px;
+  }
+
+  #next-btn,
+  #prev-btn {
+    padding: 20px 0;
+  }
+  #next-btn {
+    right: 10px;
+  }
+  #prev-btn {
+    left: 10px;
+  }
+  /* !-------8. My Work------- */
 }
 @media (max-width: 600px) {
   /* ------ 3-1. banner-pic--------- */
@@ -1223,7 +1291,7 @@ footer {
   }
   /* !------ 3-1. banner-pic--------- */
 
-  /* -----8. Contact Me----- */
+  /* -----9. Contact Me----- */
   .container-contact a {
     width: 155px;
     height: 70px;
@@ -1240,7 +1308,7 @@ footer {
     text-shadow: 1px 2px 13px rgba(0, 0, 0, 0.72);
     margin-bottom: 20px !important;
   }
-  /* !-----8. Contact Me----- */
+  /* !-----9. Contact Me----- */
 }
 @media (max-width: 569px) {
   /* ------ 3-1. banner-pic--------- */
@@ -1249,6 +1317,12 @@ footer {
     min-height: 420px;
   }
   /* !------ 3-1. banner-pic--------- */
+}
+
+@media (max-width: 450px) {
+/* -------8. My Work------- */
+
+/* !-------8. My Work------- */
 }
 @media (max-width: 400px) {
   /* ------ 3-1. banner-pic--------- */
