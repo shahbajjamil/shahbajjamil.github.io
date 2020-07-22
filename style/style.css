@@ -1090,8 +1090,8 @@ footer {
     /* display: none; */
     position: fixed;
     right: 0;
-    height: 90vh;
-    top: 10vh;
+    height: 92vh;
+    top: 8vh;
     background: linear-gradient(#fff, #6cf3f3);
     display: flex;
     flex-direction: column;
