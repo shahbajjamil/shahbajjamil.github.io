@@ -734,7 +734,30 @@ a span:nth-child(4) {
   text-align: center;
   margin: 20px auto;
 }
-
+.toggle-button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.toggle-button button {
+  margin: 20px;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 0 3px black;
+  background: #e0dd2493;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.toggle-button button:hover,
+.toggle-button .active {
+  background: #e40825ce;
+  color: #fff;
+  box-shadow: 0 0 10px black;
+}
 .WorkSection {
   position: relative;
   margin: 0 auto;
