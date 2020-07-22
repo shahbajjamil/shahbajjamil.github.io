@@ -230,5 +230,62 @@ hobbies();
 // !My Hobbies
 
 // My Work
+const slideContainer = document.querySelector(".container");
+const slide = document.querySelector(".mywork");
+const nextBtn = document.getElementById("next-btn");
+const prevBtn = document.getElementById("prev-btn");
+const interval = 3000;
+
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+let slideId;
+
+const slideWidth = slides[index].clientWidth;
+// slide.style.transform = `translateX(${-slideWidth * index}px)`;
+
+console.log(slides);
+
+const startSlide = () => {
+  slideId = setInterval(() => {
+    moveToNextSlide();
+  }, interval);
+};
+
+const moveToNextSlide = () => {
+  if (index >= slides.length - 1) {
+    index = -1;
+  }
+  index++;
+  slide.style.transition = ".7s ease-out";
+  slide.style.transform = `translateX(${-slideWidth * index}px)`;
+};
+
+const moveToPreviousSlide = () => {
+  if (index <= 0) {
+    index = slides.length;
+  }
+  index--;
+  slide.style.transition = ".7s ease-out";
+  slide.style.transform = `translateX(${-slideWidth * index}px)`;
+};
+
+slideContainer.addEventListener("mouseenter", () => {
+  clearInterval(slideId);
+});
+
+slideContainer.addEventListener("mouseleave", startSlide);
+prevBtn.addEventListener("click", () => {
+  moveToPreviousSlide();
+  clearInterval(slideId);
+  startSlide();
+} );
+
+nextBtn.addEventListener("click", () => {
+  moveToNextSlide();
+  clearInterval(slideId);
+  startSlide();
+});
+
+startSlide();
 
 // !My Work
