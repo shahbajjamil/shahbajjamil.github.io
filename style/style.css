@@ -879,16 +879,17 @@ a span:nth-child(4) {
 .webWork .webContent p {
   margin: 20px;
 }
-.appContent .button {
+.appContent .button,
+.webContent .button {
   display: flex;
   justify-content: start;
   align-items: center;
 }
-.webContent .button {
+/* .webContent .button {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 .button a {
   margin: 20px;
   padding: 10px 20px;
@@ -1062,6 +1063,15 @@ footer {
   /* !------ 3-1. banner-pic--------- */
 }
 
+@media (max-width: 900px) {
+  /* -------8. My Work------- */
+  .button a {
+    margin: 10px;
+    padding: 5px 10px;
+  }
+  /* !-------8. My Work------- */
+}
+
 @media (max-width: 858px) {
   .logo {
     width: 150px;
@@ -1222,7 +1232,6 @@ footer {
     margin: 10px;
     padding: 5px 10px;
   }
-
   .appWork,
   .webWork {
     height: 75vh;
@@ -1238,17 +1247,17 @@ footer {
     max-width: 100%;
   }
   .appWork .appSS img {
-    max-width: 35%;
+    max-width: 20%;
   }
   .webWork .webSS img {
-    max-width: 95%;
+    max-width: 80%;
     margin: 0;
   }
   .appWork .appContent h2,
   .webWork .webContent h2 {
     font-size: 25px;
     margin: 10px;
-  text-align: center;
+    text-align: center;
   }
   .appWork .appContent p,
   .webWork .webContent p {
@@ -1283,6 +1292,13 @@ footer {
   }
   /* !-------8. My Work------- */
 }
+@media (max-width: 700px) {
+  /* -------8. My Work------- */
+  .appWork .appSS img {
+    max-width: 25%;
+  }
+  /* !-------8. My Work------- */
+}
 @media (max-width: 600px) {
   /* ------ 3-1. banner-pic--------- */
   .banner-view {
@@ -1290,6 +1306,15 @@ footer {
     min-height: 550px;
   }
   /* !------ 3-1. banner-pic--------- */
+
+  /* -------8. My Work------- */
+  .appWork .appSS img {
+    max-width: 28%;
+  }
+  .webWork .webSS img {
+    max-width: 95%;
+  }
+  /* !-------8. My Work------- */
 
   /* -----9. Contact Me----- */
   .container-contact a {
@@ -1320,9 +1345,14 @@ footer {
 }
 
 @media (max-width: 450px) {
-/* -------8. My Work------- */
-
-/* !-------8. My Work------- */
+  /* -------8. My Work------- */
+  .appWork .appSS img {
+    max-width: 35%;
+  }
+  .webWork .webSS img {
+    max-width: 95%;
+  }
+  /* !-------8. My Work------- */
 }
 @media (max-width: 400px) {
   /* ------ 3-1. banner-pic--------- */
