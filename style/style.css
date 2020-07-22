@@ -67,6 +67,7 @@ body {
   5. About-Grid
   6. My Skill And hobbies
   7. Repo's-> btn
+  8. My Work
   8. Contact Me
   9. footer
  10. Button to top
@@ -722,6 +723,10 @@ a span:nth-child(4) {
   }
 }
 /* !------7. Repo's-> btn------- */
+
+/* -------8. My Work------- */
+
+/* !-------8. My Work------- */
 
 /* -----8. Contact Me----- */
 #contact {
