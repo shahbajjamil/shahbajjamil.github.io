@@ -796,7 +796,7 @@ a span:nth-child(4) {
       rgba(0, 0, 0, 0.58),
       rgba(0, 0, 0, 0.18)
     ),
-    url(b.jpg);
+    url(../image/b.jpg);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: center;
   height: 70vh;
@@ -808,7 +808,7 @@ a span:nth-child(4) {
       rgba(0, 0, 0, 0.58),
       rgba(0, 0, 0, 0.18)
     ),
-    url(dell.png);
+    url(../image/slide.jpg);
 }
 .slide:nth-of-type(2) .webWork {
   background-image: linear-gradient(
@@ -817,7 +817,7 @@ a span:nth-child(4) {
       rgba(0, 0, 0, 0.58),
       rgba(0, 0, 0, 0.18)
     ),
-    url(whatsapp1.png);
+    url(../image/slide.jpg);
 }
 
 .appWork .appSS,
@@ -861,6 +861,7 @@ a span:nth-child(4) {
   font-size: var(--medium-h);
   font-weight: 500;
   color: #fff;
+  text-align: start;
 }
 .webWork .webContent h2 {
   margin: 20px;
