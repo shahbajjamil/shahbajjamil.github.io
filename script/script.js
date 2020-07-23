@@ -168,26 +168,25 @@ if (isMobile) {
 
 // My Skill
 function skill() {
-  const languageName = [
-    "Web Design",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Flutter / Dart",
-    "C / C++",
+  const skillData = [
+    ["Web Design", 70],
+    ["HTML", 80],
+    ["CSS", 50],
+    ["JavaScript", 20],
+    ["Flutter / Dart", 50],
+    ["C / C++", 90],
   ];
-  const percentage = [70, 80, 50, 20, 50, 90];
   const skills = document.querySelector(".MySkill");
-  for (let i = 0; i < languageName.length; i++) {
+  for (let i = 0; i < skillData.length; i++) {
     skills.innerHTML +=
       "<h6>" +
-      languageName[i] +
+      skillData[i][0] +
       "<span>" +
-      percentage[i] +
+      skillData[i][1] +
       "%</span></h6>" +
       '<div class="progress">' +
       '<div class="bar" style="width: ' +
-      percentage[i] +
+      skillData[i][1] +
       '%;"></div></div>';
   }
 }
@@ -196,38 +195,30 @@ skill();
 
 // My Hobbies
 function hobbies() {
-  const hobbyName = [
-    "Coding",
-    "Music",
-    "Traveling",
-    "Swimming",
-    "Painting",
-    "learning",
-    "Photography",
-    "Driving",
+  const hobbyData = [
+    ["Coding", "code"],
+    ["Music", "music"],
+    ["Traveling", "plane"],
+    ["Swimming", "swimming-pool"],
+    ["Painting", "paint-brush"],
+    ["learning", "graduation-cap"],
+    ["Photography", "camera"],
+    ["Driving", "motorcycle"],
   ];
-  const icon = [
-    "code",
-    "music",
-    "plane",
-    "swimming-pool",
-    "paint-brush",
-    "graduation-cap",
-    "camera",
-    "motorcycle",
-  ];
+
   const hobby = document.querySelector(".box");
-  for (let i = 0; i < hobbyName.length; i++) {
+  for (let i = 0; i < hobbyData.length; i++) {
     hobby.innerHTML +=
       '<div class="hobbies-box"><span class="fa fa-' +
-      icon[i] +
+      hobbyData[i][1] +
       ' bg-secondary"></span><h5 class="flex">' +
-      hobbyName[i] +
+      hobbyData[i][0] +
       "</h5></div>";
   }
 }
 hobbies();
 // !My Hobbies
+
 
 // My Work
 const slideContainer = document.querySelector(".container");
