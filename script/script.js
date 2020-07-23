@@ -168,26 +168,25 @@ if (isMobile) {
 
 // My Skill
 function skill() {
-  const languageName = [
-    "Web Design",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Flutter / Dart",
-    "C / C++",
+  const skillData = [
+    ["Web Design", 70],
+    ["HTML", 80],
+    ["CSS", 50],
+    ["JavaScript", 20],
+    ["Flutter / Dart", 50],
+    ["C / C++", 90],
   ];
-  const percentage = [70, 80, 50, 20, 50, 90];
   const skills = document.querySelector(".MySkill");
-  for (let i = 0; i < languageName.length; i++) {
+  for (let i = 0; i < skillData.length; i++) {
     skills.innerHTML +=
       "<h6>" +
-      languageName[i] +
+      skillData[i][0] +
       "<span>" +
-      percentage[i] +
+      skillData[i][1] +
       "%</span></h6>" +
       '<div class="progress">' +
       '<div class="bar" style="width: ' +
-      percentage[i] +
+      skillData[i][1] +
       '%;"></div></div>';
   }
 }
