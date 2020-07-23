@@ -221,6 +221,27 @@ hobbies();
 
 
 // My Work
+
+const allWork = document.getElementById("allWork");
+const appWork = document.getElementById("appWork");
+const webWork = document.getElementById("webWork");
+
+allWork.addEventListener("click", () => {
+  allWork.classList.add("active");
+  appWork.classList.remove("active");
+  webWork.classList.remove("active");
+});
+appWork.addEventListener("click", () => {
+  allWork.classList.remove("active");
+  appWork.classList.add("active");
+  webWork.classList.remove("active");
+});
+webWork.addEventListener("click", () => {
+  allWork.classList.remove("active");
+  appWork.classList.remove("active");
+  webWork.classList.add("active");
+});
+
 const slideContainer = document.querySelector(".container");
 const slide = document.querySelector(".mywork");
 const nextBtn = document.getElementById("next-btn");
@@ -234,7 +255,7 @@ let slideId;
 const slideWidth = slides[index].clientWidth;
 // slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
-console.log(slides);
+// console.log(slides);
 
 const startSlide = () => {
   slideId = setInterval(() => {
