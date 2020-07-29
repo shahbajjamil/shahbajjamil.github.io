@@ -198,14 +198,14 @@ skill();
 // My Hobbies
 function hobbies() {
   const hobbyData = [
-    { name: "Coding", icon: "code"},
-    { name: "Music", icon: "music"},
-    { name: "Traveling", icon: "plane"},
-    { name: "Swimming", icon: "swimming-pool"},
-    { name: "Painting", icon: "paint-brush"},
-    { name: "learning", icon: "graduation-cap"},
-    { name: "Photography", icon: "camera"},
-    { name: "Driving", icon: "motorcycle"},
+    { name: "Coding", icon: "code" },
+    { name: "Music", icon: "music" },
+    { name: "Traveling", icon: "plane" },
+    { name: "Swimming", icon: "swimming-pool" },
+    { name: "Painting", icon: "paint-brush" },
+    { name: "learning", icon: "graduation-cap" },
+    { name: "Photography", icon: "camera" },
+    { name: "Driving", icon: "motorcycle" },
   ];
 
   const hobby = document.querySelector(".box");
@@ -225,65 +225,68 @@ hobbies();
 // My Work
 
 const appData = [
-  [
-    "App-UI-1",
-    "image/whatsapp3.gif",
-    "Just simple UI clone of WhatsApp, This app is build with flutter.",
-    "#getapplink",
-    "https://github.com/shahbajjamil",
-  ],
-  [
-    "App-UI-2",
-    "image/whatsapp3.gif",
-    "Just simple UI clone of WhatsApp, This app is build with flutter.",
-    "#getapplink",
-    "https://github.com/shahbajjamil",
-  ],
-  [
-    "App-UI-3",
-    "image/whatsapp3.gif",
-    "Just simple UI clone of WhatsApp, This app is build with flutter.",
-    "#getapplink",
-    "https://github.com/shahbajjamil",
-  ],
-  
+  {
+    name: "App-UI-1",
+    image: "image/mywork/whatsapp3.gif",
+    disc: "Just simple UI clone of WhatsApp, This app is build with flutter.",
+    getLink: "#getapplink",
+    moreLink: "#morelink",
+  },
+  {
+    name: "App-UI-2",
+    image: "image/mywork/whatsapp3.gif",
+    disc: "Just simple UI clone of WhatsApp, This app is build with flutter.",
+    getLink: "#getapplink",
+    moreLink: "#morelink",
+  },
+  {
+    name: "App-UI-3",
+    image: "image/mywork/whatsapp3.gif",
+    disc: "Just simple UI clone of WhatsApp, This app is build with flutter.",
+    getLink: "#getapplink",
+    moreLink: "#morelink",
+  },
+  // {
+  //   name: "App-UI-4",
+  //   image: "image/mywork/whatsapp3.gif",
+  //   disc: "Just simple UI clone of WhatsApp, This app is build with flutter.",
+  //   getLink: "#getapplink",
+  //   moreLink: "#morelink",
+  // },
 ];
 const webData = [
-  [
-    "web-UI-1",
-    "image/dell.png",
-    "Just simple UI clone of web, This app is build with html,css and js.",
-    "#getapplink",
-    "https://github.com/shahbajjamil",
-  ],
-  [
-    "web-UI-2",
-    "image/dell.png",
-    "Just simple UI clone of web, This app is build with html,css and js.",
-    "#getapplink",
-    "https://github.com/shahbajjamil",
-  ],
-  [
-    "web-UI-3",
-    "image/dell.png",
-    "Just simple UI clone of web, This app is build with html,css and js.",
-    "#getapplink",
-    "https://github.com/shahbajjamil",
-  ],
-  [
-    "web-UI-4",
-    "image/dell.png",
-    "Just simple UI clone of web, This app is build with html,css and js.",
-    "#getapplink",
-    "https://github.com/shahbajjamil",
-  ],
-  [
-    "web-UI-5",
-    "image/dell.png",
-    "Just simple UI clone of web, This app is build with html,css and js.",
-    "#getapplink",
-    "https://github.com/shahbajjamil",
-  ],
+  {
+    name: "web-UI-1",
+    image: "image/mywork/dell.png",
+    disc:
+      "Just simple UI clone of web, This app is build with html,css and js.",
+    getLink: "#getapplink",
+    moreLink: "#morelink",
+  },
+  {
+    name: "web-UI-2",
+    image: "image/mywork/dell.png",
+    disc:
+      "Just simple UI clone of web, This app is build with html,css and js.",
+    getLink: "#getapplink",
+    moreLink: "#morelink",
+  },
+  {
+    name: "web-UI-3",
+    image: "image/mywork/dell.png",
+    disc:
+      "Just simple UI clone of web, This app is build with html,css and js.",
+    getLink: "#getapplink",
+    moreLink: "#morelink",
+  },
+  {
+    name: "web-UI-4",
+    image: "image/mywork/dell.png",
+    disc:
+      "Just simple UI clone of web, This app is build with html,css and js.",
+    getLink: "#getapplink",
+    moreLink: "#morelink",
+  },
 ];
 const slideContainer = document.querySelector(".container");
 const slide = document.querySelector(".mywork");
@@ -312,21 +315,21 @@ function AllWorkBuild() {
       myworkBuild.innerHTML +=
         '<div class="slide app"><div class="appWork"><div class="appSS">' +
         "<img src=" +
-        appData[i][1] +
+        appData[i].image +
         " />" +
         '</div><div class="appContent">' +
         "<h2>" +
-        appData[i][0] +
+        appData[i].name +
         "</h2>" +
         "<p>" +
-        appData[i][2] +
+        appData[i].disc +
         "</p>" +
         '<div class="button">' +
         "<a href=" +
-        appData[i][3] +
+        appData[i].getLink +
         ">Get Apk</a>" +
         "<a href=" +
-        appData[i][4] +
+        appData[i].moreLink +
         ">More Info</a>" +
         "</div></div></div></div>";
     }
@@ -334,125 +337,31 @@ function AllWorkBuild() {
       myworkBuild.innerHTML +=
         '<div class="slide web"><div class="webWork"><div class="webSS">' +
         "<img src=" +
-        webData[i][1] +
+        webData[i].image +
         " />" +
         '</div><div class="webContent">' +
         "<h2>" +
-        webData[i][0] +
+        webData[i].name +
         "</h2>" +
         "<p>" +
-        webData[i][2] +
+        webData[i].disc +
         "</p>" +
         '<div class="button">' +
         "<a href=" +
-        webData[i][3] +
+        webData[i].getLink +
         ">View Link</a>" +
         "<a href=" +
-        webData[i][4] +
+        webData[i].moreLink +
         ">More Info</a>" +
         "</div></div></div></div>";
     }
   }
 }
+
 window.onload = function () {
   AllWorkBuild();
   runSlide();
 };
-
-// allWork.addEventListener("click", () => {
-//   allWork.classList.add("active");
-//   appWork.classList.remove("active");
-//   webWork.classList.remove("active");
-//   // app.forEach((e) => {
-//   //   e.classList.remove("hidden");
-//   //   e.classList.add("visible");
-//   // });
-//   // web.forEach((e) => {
-//   //   e.classList.remove("hidden");
-//   //   e.classList.add("visible");
-//   // });
-//   // AllWorkBuild();
-//   // runSlide();
-// });
-// appWork.addEventListener("click", () => {
-//   allWork.classList.remove("active");
-//   appWork.classList.add("active");
-//   webWork.classList.remove("active");
-
-//   myworkBuild.innerHTML = "";
-//   for (let i = 0; i < appData.length; i++) {
-//     myworkBuild.innerHTML +=
-//       '<div class="slide app"><div class="appWork"><div class="appSS">' +
-//       "<img src=" +
-//       appData[i][1] +
-//       " />" +
-//       '</div><div class="appContent">' +
-//       "<h2>" +
-//       appData[i][0] +
-//       "</h2>" +
-//       "<p>" +
-//       appData[i][2] +
-//       "</p>" +
-//       '<div class="button">' +
-//       "<a href=" +
-//       appData[i][3] +
-//       ">Get Apk</a>" +
-//       "<a href=" +
-//       appData[i][4] +
-//       ">More Info</a>" +
-//       "</div></div></div></div>";
-//   }
-
-//   // app.forEach((e) => {
-//   //   e.classList.remove("hidden");
-//   //   e.classList.add("visible");
-//   // });
-//   // web.forEach((e) => {
-//   //   e.classList.add("hidden");
-//   //   e.classList.remove("visible");
-//   // });
-//   runSlide();
-// });
-// webWork.addEventListener("click", () => {
-//   allWork.classList.remove("active");
-//   appWork.classList.remove("active");
-//   webWork.classList.add("active");
-//   // slide.style.transform = `translateX(${0}px)`;
-
-//   myworkBuild.innerHTML = "";
-//   for (let i = 0; i < webData.length; i++) {
-//     myworkBuild.innerHTML +=
-//       '<div class="slide web"><div class="webWork"><div class="webSS">' +
-//       "<img src=" +
-//       webData[i][1] +
-//       " />" +
-//       '</div><div class="webContent">' +
-//       "<h2>" +
-//       webData[i][0] +
-//       "</h2>" +
-//       "<p>" +
-//       webData[i][2] +
-//       "</p>" +
-//       '<div class="button">' +
-//       "<a href=" +
-//       webData[i][3] +
-//       ">View Link</a>" +
-//       "<a href=" +
-//       webData[i][4] +
-//       ">More Info</a>" +
-//       "</div></div></div></div>";
-//   }
-
-//   // web.forEach((e) => {
-//   //   e.classList.remove("hidden");
-//   //   e.classList.add("visible");
-//   // });
-//   // app.forEach((e) => {
-//   //   e.classList.add("hidden");
-//   //   e.classList.remove("visible");
-//   // });
-//   runSlide();
-// });
 
 function runSlide() {
   let slides = document.querySelectorAll(".slide");
@@ -471,9 +380,8 @@ function runSlide() {
     if (index >= slides.length - 1) {
       index = -1;
     }
-    console.log(index);
     index++;
-    console.log(index);
+    // console.log(index);
     slide.style.transition = ".7s ease-out";
     slide.style.transform = `translateX(${-slideWidth * index}px)`;
   };
