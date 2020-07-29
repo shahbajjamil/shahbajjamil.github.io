@@ -246,27 +246,7 @@ const appData = [
     "#getapplink",
     "https://github.com/shahbajjamil",
   ],
-  // [
-  //   "App-UI-4",
-  //   "image/whatsapp3.gif",
-  //   "Just simple UI clone of WhatsApp, This app is build with flutter.",
-  //   "#getapplink",
-  //   "https://github.com/shahbajjamil",
-  // ],
-  // [
-  //   "App-UI-5",
-  //   "image/whatsapp3.gif",
-  //   "Just simple UI clone of WhatsApp, This app is build with flutter.",
-  //   "#getapplink",
-  //   "https://github.com/shahbajjamil",
-  // ],
-  // [
-  //   "App-UI-6",
-  //   "image/whatsapp3.gif",
-  //   "Just simple UI clone of WhatsApp, This app is build with flutter.",
-  //   "#getapplink",
-  //   "https://github.com/shahbajjamil",
-  // ],
+  
 ];
 const webData = [
   [
@@ -379,100 +359,100 @@ window.onload = function () {
   runSlide();
 };
 
-allWork.addEventListener("click", () => {
-  allWork.classList.add("active");
-  appWork.classList.remove("active");
-  webWork.classList.remove("active");
-  // app.forEach((e) => {
-  //   e.classList.remove("hidden");
-  //   e.classList.add("visible");
-  // });
-  // web.forEach((e) => {
-  //   e.classList.remove("hidden");
-  //   e.classList.add("visible");
-  // });
-  AllWorkBuild();
-  runSlide();
-});
-appWork.addEventListener("click", () => {
-  allWork.classList.remove("active");
-  appWork.classList.add("active");
-  webWork.classList.remove("active");
+// allWork.addEventListener("click", () => {
+//   allWork.classList.add("active");
+//   appWork.classList.remove("active");
+//   webWork.classList.remove("active");
+//   // app.forEach((e) => {
+//   //   e.classList.remove("hidden");
+//   //   e.classList.add("visible");
+//   // });
+//   // web.forEach((e) => {
+//   //   e.classList.remove("hidden");
+//   //   e.classList.add("visible");
+//   // });
+//   // AllWorkBuild();
+//   // runSlide();
+// });
+// appWork.addEventListener("click", () => {
+//   allWork.classList.remove("active");
+//   appWork.classList.add("active");
+//   webWork.classList.remove("active");
 
-  myworkBuild.innerHTML = "";
-  for (let i = 0; i < appData.length; i++) {
-    myworkBuild.innerHTML +=
-      '<div class="slide app"><div class="appWork"><div class="appSS">' +
-      "<img src=" +
-      appData[i][1] +
-      " />" +
-      '</div><div class="appContent">' +
-      "<h2>" +
-      appData[i][0] +
-      "</h2>" +
-      "<p>" +
-      appData[i][2] +
-      "</p>" +
-      '<div class="button">' +
-      "<a href=" +
-      appData[i][3] +
-      ">Get Apk</a>" +
-      "<a href=" +
-      appData[i][4] +
-      ">More Info</a>" +
-      "</div></div></div></div>";
-  }
+//   myworkBuild.innerHTML = "";
+//   for (let i = 0; i < appData.length; i++) {
+//     myworkBuild.innerHTML +=
+//       '<div class="slide app"><div class="appWork"><div class="appSS">' +
+//       "<img src=" +
+//       appData[i][1] +
+//       " />" +
+//       '</div><div class="appContent">' +
+//       "<h2>" +
+//       appData[i][0] +
+//       "</h2>" +
+//       "<p>" +
+//       appData[i][2] +
+//       "</p>" +
+//       '<div class="button">' +
+//       "<a href=" +
+//       appData[i][3] +
+//       ">Get Apk</a>" +
+//       "<a href=" +
+//       appData[i][4] +
+//       ">More Info</a>" +
+//       "</div></div></div></div>";
+//   }
 
-  // app.forEach((e) => {
-  //   e.classList.remove("hidden");
-  //   e.classList.add("visible");
-  // });
-  // web.forEach((e) => {
-  //   e.classList.add("hidden");
-  //   e.classList.remove("visible");
-  // });
-  runSlide();
-});
-webWork.addEventListener("click", () => {
-  allWork.classList.remove("active");
-  appWork.classList.remove("active");
-  webWork.classList.add("active");
-  // slide.style.transform = `translateX(${0}px)`;
+//   // app.forEach((e) => {
+//   //   e.classList.remove("hidden");
+//   //   e.classList.add("visible");
+//   // });
+//   // web.forEach((e) => {
+//   //   e.classList.add("hidden");
+//   //   e.classList.remove("visible");
+//   // });
+//   runSlide();
+// });
+// webWork.addEventListener("click", () => {
+//   allWork.classList.remove("active");
+//   appWork.classList.remove("active");
+//   webWork.classList.add("active");
+//   // slide.style.transform = `translateX(${0}px)`;
 
-  myworkBuild.innerHTML = "";
-  for (let i = 0; i < webData.length; i++) {
-    myworkBuild.innerHTML +=
-      '<div class="slide web"><div class="webWork"><div class="webSS">' +
-      "<img src=" +
-      webData[i][1] +
-      " />" +
-      '</div><div class="webContent">' +
-      "<h2>" +
-      webData[i][0] +
-      "</h2>" +
-      "<p>" +
-      webData[i][2] +
-      "</p>" +
-      '<div class="button">' +
-      "<a href=" +
-      webData[i][3] +
-      ">View Link</a>" +
-      "<a href=" +
-      webData[i][4] +
-      ">More Info</a>" +
-      "</div></div></div></div>";
-  }
+//   myworkBuild.innerHTML = "";
+//   for (let i = 0; i < webData.length; i++) {
+//     myworkBuild.innerHTML +=
+//       '<div class="slide web"><div class="webWork"><div class="webSS">' +
+//       "<img src=" +
+//       webData[i][1] +
+//       " />" +
+//       '</div><div class="webContent">' +
+//       "<h2>" +
+//       webData[i][0] +
+//       "</h2>" +
+//       "<p>" +
+//       webData[i][2] +
+//       "</p>" +
+//       '<div class="button">' +
+//       "<a href=" +
+//       webData[i][3] +
+//       ">View Link</a>" +
+//       "<a href=" +
+//       webData[i][4] +
+//       ">More Info</a>" +
+//       "</div></div></div></div>";
+//   }
 
-  // web.forEach((e) => {
-  //   e.classList.remove("hidden");
-  //   e.classList.add("visible");
-  // });
-  // app.forEach((e) => {
-  //   e.classList.add("hidden");
-  //   e.classList.remove("visible");
-  // });
-  runSlide();
-});
+//   // web.forEach((e) => {
+//   //   e.classList.remove("hidden");
+//   //   e.classList.add("visible");
+//   // });
+//   // app.forEach((e) => {
+//   //   e.classList.add("hidden");
+//   //   e.classList.remove("visible");
+//   // });
+//   runSlide();
+// });
 
 function runSlide() {
   let slides = document.querySelectorAll(".slide");
