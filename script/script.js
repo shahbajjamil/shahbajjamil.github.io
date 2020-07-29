@@ -169,24 +169,26 @@ if (isMobile) {
 // My Skill
 function skill() {
   const skillData = [
-    ["Web Design", 70],
-    ["HTML", 80],
-    ["CSS", 50],
-    ["JavaScript", 20],
-    ["Flutter / Dart", 50],
-    ["C / C++", 90],
+    { name: "Web Design", percentage: 70 },
+    { name: "HTML", percentage: 80 },
+    { name: "CSS", percentage: 50 },
+    { name: "JavaScript", percentage: 20 },
+    { name: "Flutter / Dart", percentage: 50 },
+    { name: "C / C++", percentage: 90 },
+    // { name: "Python", percentage: 43 },
   ];
   const skills = document.querySelector(".MySkill");
-  for (let i = 0; i < skillData.length; i++) {
+  // for (let i = 0; i < skillData.length; i++) {
+  for (const item of skillData) {
     skills.innerHTML +=
       "<h6>" +
-      skillData[i][0] +
+      item.name +
       "<span>" +
-      skillData[i][1] +
+      item.percentage +
       "%</span></h6>" +
       '<div class="progress">' +
       '<div class="bar" style="width: ' +
-      skillData[i][1] +
+      item.percentage +
       '%;"></div></div>';
   }
 }
@@ -196,108 +198,328 @@ skill();
 // My Hobbies
 function hobbies() {
   const hobbyData = [
-    ["Coding", "code"],
-    ["Music", "music"],
-    ["Traveling", "plane"],
-    ["Swimming", "swimming-pool"],
-    ["Painting", "paint-brush"],
-    ["learning", "graduation-cap"],
-    ["Photography", "camera"],
-    ["Driving", "motorcycle"],
+    { name: "Coding", icon: "code"},
+    { name: "Music", icon: "music"},
+    { name: "Traveling", icon: "plane"},
+    { name: "Swimming", icon: "swimming-pool"},
+    { name: "Painting", icon: "paint-brush"},
+    { name: "learning", icon: "graduation-cap"},
+    { name: "Photography", icon: "camera"},
+    { name: "Driving", icon: "motorcycle"},
   ];
 
   const hobby = document.querySelector(".box");
-  for (let i = 0; i < hobbyData.length; i++) {
+  // for (let i = 0; i < hobbyData.length; i++) {
+  for (const item of hobbyData) {
     hobby.innerHTML +=
       '<div class="hobbies-box"><span class="fa fa-' +
-      hobbyData[i][1] +
+      item.icon +
       ' bg-secondary"></span><h5 class="flex">' +
-      hobbyData[i][0] +
+      item.name +
       "</h5></div>";
   }
 }
 hobbies();
 // !My Hobbies
 
-
 // My Work
 
-const allWork = document.getElementById("allWork");
-const appWork = document.getElementById("appWork");
-const webWork = document.getElementById("webWork");
-
-allWork.addEventListener("click", () => {
-  allWork.classList.add("active");
-  appWork.classList.remove("active");
-  webWork.classList.remove("active");
-});
-appWork.addEventListener("click", () => {
-  allWork.classList.remove("active");
-  appWork.classList.add("active");
-  webWork.classList.remove("active");
-});
-webWork.addEventListener("click", () => {
-  allWork.classList.remove("active");
-  appWork.classList.remove("active");
-  webWork.classList.add("active");
-});
-
+const appData = [
+  [
+    "App-UI-1",
+    "image/whatsapp3.gif",
+    "Just simple UI clone of WhatsApp, This app is build with flutter.",
+    "#getapplink",
+    "https://github.com/shahbajjamil",
+  ],
+  [
+    "App-UI-2",
+    "image/whatsapp3.gif",
+    "Just simple UI clone of WhatsApp, This app is build with flutter.",
+    "#getapplink",
+    "https://github.com/shahbajjamil",
+  ],
+  [
+    "App-UI-3",
+    "image/whatsapp3.gif",
+    "Just simple UI clone of WhatsApp, This app is build with flutter.",
+    "#getapplink",
+    "https://github.com/shahbajjamil",
+  ],
+  // [
+  //   "App-UI-4",
+  //   "image/whatsapp3.gif",
+  //   "Just simple UI clone of WhatsApp, This app is build with flutter.",
+  //   "#getapplink",
+  //   "https://github.com/shahbajjamil",
+  // ],
+  // [
+  //   "App-UI-5",
+  //   "image/whatsapp3.gif",
+  //   "Just simple UI clone of WhatsApp, This app is build with flutter.",
+  //   "#getapplink",
+  //   "https://github.com/shahbajjamil",
+  // ],
+  // [
+  //   "App-UI-6",
+  //   "image/whatsapp3.gif",
+  //   "Just simple UI clone of WhatsApp, This app is build with flutter.",
+  //   "#getapplink",
+  //   "https://github.com/shahbajjamil",
+  // ],
+];
+const webData = [
+  [
+    "web-UI-1",
+    "image/dell.png",
+    "Just simple UI clone of web, This app is build with html,css and js.",
+    "#getapplink",
+    "https://github.com/shahbajjamil",
+  ],
+  [
+    "web-UI-2",
+    "image/dell.png",
+    "Just simple UI clone of web, This app is build with html,css and js.",
+    "#getapplink",
+    "https://github.com/shahbajjamil",
+  ],
+  [
+    "web-UI-3",
+    "image/dell.png",
+    "Just simple UI clone of web, This app is build with html,css and js.",
+    "#getapplink",
+    "https://github.com/shahbajjamil",
+  ],
+  [
+    "web-UI-4",
+    "image/dell.png",
+    "Just simple UI clone of web, This app is build with html,css and js.",
+    "#getapplink",
+    "https://github.com/shahbajjamil",
+  ],
+  [
+    "web-UI-5",
+    "image/dell.png",
+    "Just simple UI clone of web, This app is build with html,css and js.",
+    "#getapplink",
+    "https://github.com/shahbajjamil",
+  ],
+];
 const slideContainer = document.querySelector(".container");
 const slide = document.querySelector(".mywork");
 const nextBtn = document.getElementById("next-btn");
 const prevBtn = document.getElementById("prev-btn");
 const interval = 3000;
-
-let slides = document.querySelectorAll(".slide");
 let index = 0;
-let slideId;
 
-const slideWidth = slides[index].clientWidth;
-// slide.style.transform = `translateX(${-slideWidth * index}px)`;
+const myworkBuild = document.querySelector(".mywork");
 
-// console.log(slides);
+const allWork = document.getElementById("allWork");
+const appWork = document.getElementById("appWork");
+const webWork = document.getElementById("webWork");
 
-const startSlide = () => {
-  slideId = setInterval(() => {
-    moveToNextSlide();
-  }, interval);
-};
+const app = document.querySelectorAll(".app");
+const web = document.querySelectorAll(".web");
 
-const moveToNextSlide = () => {
-  if (index >= slides.length - 1) {
-    index = -1;
+function AllWorkBuild() {
+  myworkBuild.innerHTML = "";
+  for (
+    let i = 0;
+    i < (appData.length < webData.length ? webData.length : appData.length);
+    i++
+  ) {
+    if (i < appData.length) {
+      myworkBuild.innerHTML +=
+        '<div class="slide app"><div class="appWork"><div class="appSS">' +
+        "<img src=" +
+        appData[i][1] +
+        " />" +
+        '</div><div class="appContent">' +
+        "<h2>" +
+        appData[i][0] +
+        "</h2>" +
+        "<p>" +
+        appData[i][2] +
+        "</p>" +
+        '<div class="button">' +
+        "<a href=" +
+        appData[i][3] +
+        ">Get Apk</a>" +
+        "<a href=" +
+        appData[i][4] +
+        ">More Info</a>" +
+        "</div></div></div></div>";
+    }
+    if (i < webData.length) {
+      myworkBuild.innerHTML +=
+        '<div class="slide web"><div class="webWork"><div class="webSS">' +
+        "<img src=" +
+        webData[i][1] +
+        " />" +
+        '</div><div class="webContent">' +
+        "<h2>" +
+        webData[i][0] +
+        "</h2>" +
+        "<p>" +
+        webData[i][2] +
+        "</p>" +
+        '<div class="button">' +
+        "<a href=" +
+        webData[i][3] +
+        ">View Link</a>" +
+        "<a href=" +
+        webData[i][4] +
+        ">More Info</a>" +
+        "</div></div></div></div>";
+    }
   }
-  index++;
-  slide.style.transition = ".7s ease-out";
-  slide.style.transform = `translateX(${-slideWidth * index}px)`;
+}
+window.onload = function () {
+  AllWorkBuild();
+  runSlide();
 };
 
-const moveToPreviousSlide = () => {
-  if (index <= 0) {
-    index = slides.length;
+allWork.addEventListener("click", () => {
+  allWork.classList.add("active");
+  appWork.classList.remove("active");
+  webWork.classList.remove("active");
+  // app.forEach((e) => {
+  //   e.classList.remove("hidden");
+  //   e.classList.add("visible");
+  // });
+  // web.forEach((e) => {
+  //   e.classList.remove("hidden");
+  //   e.classList.add("visible");
+  // });
+  AllWorkBuild();
+  runSlide();
+});
+appWork.addEventListener("click", () => {
+  allWork.classList.remove("active");
+  appWork.classList.add("active");
+  webWork.classList.remove("active");
+
+  myworkBuild.innerHTML = "";
+  for (let i = 0; i < appData.length; i++) {
+    myworkBuild.innerHTML +=
+      '<div class="slide app"><div class="appWork"><div class="appSS">' +
+      "<img src=" +
+      appData[i][1] +
+      " />" +
+      '</div><div class="appContent">' +
+      "<h2>" +
+      appData[i][0] +
+      "</h2>" +
+      "<p>" +
+      appData[i][2] +
+      "</p>" +
+      '<div class="button">' +
+      "<a href=" +
+      appData[i][3] +
+      ">Get Apk</a>" +
+      "<a href=" +
+      appData[i][4] +
+      ">More Info</a>" +
+      "</div></div></div></div>";
   }
-  index--;
-  slide.style.transition = ".7s ease-out";
-  slide.style.transform = `translateX(${-slideWidth * index}px)`;
-};
 
-slideContainer.addEventListener("mouseenter", () => {
-  clearInterval(slideId);
+  // app.forEach((e) => {
+  //   e.classList.remove("hidden");
+  //   e.classList.add("visible");
+  // });
+  // web.forEach((e) => {
+  //   e.classList.add("hidden");
+  //   e.classList.remove("visible");
+  // });
+  runSlide();
+});
+webWork.addEventListener("click", () => {
+  allWork.classList.remove("active");
+  appWork.classList.remove("active");
+  webWork.classList.add("active");
+  // slide.style.transform = `translateX(${0}px)`;
+
+  myworkBuild.innerHTML = "";
+  for (let i = 0; i < webData.length; i++) {
+    myworkBuild.innerHTML +=
+      '<div class="slide web"><div class="webWork"><div class="webSS">' +
+      "<img src=" +
+      webData[i][1] +
+      " />" +
+      '</div><div class="webContent">' +
+      "<h2>" +
+      webData[i][0] +
+      "</h2>" +
+      "<p>" +
+      webData[i][2] +
+      "</p>" +
+      '<div class="button">' +
+      "<a href=" +
+      webData[i][3] +
+      ">View Link</a>" +
+      "<a href=" +
+      webData[i][4] +
+      ">More Info</a>" +
+      "</div></div></div></div>";
+  }
+
+  // web.forEach((e) => {
+  //   e.classList.remove("hidden");
+  //   e.classList.add("visible");
+  // });
+  // app.forEach((e) => {
+  //   e.classList.add("hidden");
+  //   e.classList.remove("visible");
+  // });
+  runSlide();
 });
 
-slideContainer.addEventListener("mouseleave", startSlide);
-prevBtn.addEventListener("click", () => {
-  moveToPreviousSlide();
-  clearInterval(slideId);
-  startSlide();
-} );
+function runSlide() {
+  let slides = document.querySelectorAll(".slide");
+  let slideId;
+  const slideWidth = slides[index].clientWidth;
 
-nextBtn.addEventListener("click", () => {
-  moveToNextSlide();
-  clearInterval(slideId);
-  startSlide();
-});
+  // moving slide in every 3s
+  const startSlide = () => {
+    slideId = setInterval(() => {
+      moveToNextSlide();
+    }, interval);
+    // console.log(slideId);
+  };
 
-startSlide();
+  const moveToNextSlide = () => {
+    if (index >= slides.length - 1) {
+      index = -1;
+    }
+    console.log(index);
+    index++;
+    console.log(index);
+    slide.style.transition = ".7s ease-out";
+    slide.style.transform = `translateX(${-slideWidth * index}px)`;
+  };
+
+  const moveToPreviousSlide = () => {
+    if (index <= 0) {
+      index = slides.length;
+    }
+    index--;
+    slide.style.transition = ".7s ease-out";
+    slide.style.transform = `translateX(${-slideWidth * index}px)`;
+  };
+
+  slideContainer.addEventListener("mouseenter", () => {
+    // clearInterval(slideId);
+    clrtime();
+  });
+
+  function clrtime() {
+    clearInterval(slideId);
+  }
+
+  slideContainer.addEventListener("mouseleave", startSlide);
+  prevBtn.addEventListener("click", moveToPreviousSlide);
+  nextBtn.addEventListener("click", moveToNextSlide);
+  startSlide();
+}
 
 // !My Work
