@@ -227,8 +227,8 @@ hobbies();
 const appData = [
   {
     name: "WhatsApp-UI-Clone",
-    image: "image/mywork/whatsapp3.gif",
-    disc: "Just simple UI clone of WhatsApp, This app is build with flutter.",
+    image: "image/mywork/whatsapp.gif",
+    disc: "Just simple UI clone of WhatsApp,<br/> This app is build with flutter. More update will coming soon",
     getLink: "#getapplink",
     moreLink: "#morelink",
   },
@@ -245,7 +245,7 @@ const webData = [
   },
   {
     name: "Ramadan Mubarak",
-    image: "image/mywork/Ramdan.png",
+    image: "image/mywork/Ramadan.png",
     disc:
     "A simple Web based Greating for you and your friends, Build with HTML, CSS and Js.",
     getLink: "https://shahbajjamil.github.io/Ramadan-Mubarak-2020/",
