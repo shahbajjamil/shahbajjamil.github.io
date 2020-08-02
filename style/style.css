@@ -67,6 +67,7 @@ body {
   5. About-Grid
   6. My Skill And hobbies
   7. Repo's-> btn
+  8. My Work
   8. Contact Me
   9. footer
  10. Button to top
@@ -723,7 +724,226 @@ a span:nth-child(4) {
 }
 /* !------7. Repo's-> btn------- */
 
-/* -----8. Contact Me----- */
+/* -------8. My Work------- */
+#MyWork {
+  padding-top: 1rem !important;
+}
+.WorkMain {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+#MyWork h3{
+  margin: 0 15px;
+  margin-bottom: 10px;
+}
+/* .WorkMain h2 {
+  text-align: center;
+  margin: 20px auto;
+} */
+.toggle-button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.toggle-button button {
+  margin: 20px;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 0 3px black;
+  background: #e0dd2493;
+  transition: all 0.5s;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.toggle-button button:hover,
+.toggle-button .active {
+  background: #e40825ce;
+  color: #fff;
+  box-shadow: 0 0 10px black;
+}
+.WorkSection {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 10px !important;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  margin: 0 auto;
+  width: 80%;
+  position: relative;
+  overflow: hidden;
+}
+.mywork {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.slide {
+  min-width: 100%;
+}
+.appWork,
+.webWork {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  background-size: cover;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.72),
+      rgba(0, 0, 0, 0.58),
+      rgba(0, 0, 0, 0.18)
+    ),
+    url(../image/b.jpg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center;
+  height: 70vh;
+}
+.slide:nth-of-type(1) .appWork {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.72),
+      rgba(0, 0, 0, 0.58),
+      rgba(0, 0, 0, 0.18)
+    ),
+    url(../image/slide.jpg);
+}
+.slide:nth-of-type(2) .webWork {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.72),
+      rgba(0, 0, 0, 0.58),
+      rgba(0, 0, 0, 0.18)
+    ),
+    url(../image/slide.jpg);
+}
+
+.appWork .appSS,
+.webWork .webSS {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+}
+.webWork .webSS {
+  flex: 0 0 55%;
+  max-width: 55%;
+}
+.appWork .appSS img {
+  max-width: 45%;
+  vertical-align: middle;
+  border-style: none;
+}
+.webWork .webSS img {
+  max-width: 100%;
+  margin-left: 20px;
+  vertical-align: middle;
+  border-style: none;
+}
+.appWork .appContent,
+.webWork .webContent {
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+}
+.webWork .webContent {
+  flex: 0 0 45%;
+  max-width: 45%;
+}
+.appWork .appContent h2,
+.webWork .webContent h2 {
+  font-size: var(--medium-h);
+  font-weight: 500;
+  color: #fff;
+  text-align: start;
+}
+.webWork .webContent h2 {
+  margin: 20px;
+}
+.appWork .appContent p,
+.webWork .webContent p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--txt);
+  line-height: 28px;
+  margin: 30px 0;
+  margin-right: 30px;
+  color: #fff;
+}
+.webWork .webContent p {
+  margin: 20px;
+}
+.appContent .button,
+.webContent .button {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+/* .webContent .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.button a {
+  margin: 20px;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: rgba(224, 36, 67, 0.575);
+  box-shadow: 0 0 10px black;
+  transition: all 0.5s;
+}
+.button a:hover {
+  box-shadow: 0 0 3px black;
+}
+.slide-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+#next-btn,
+#prev-btn {
+  cursor: pointer;
+  background: transparent;
+  font-size: 30px;
+  border: none;
+  padding: 10px;
+  color: #e40825ce;
+  position: absolute;
+}
+
+#next-btn {
+  right: 50px;
+}
+#prev-btn {
+  left: 50px;
+}
+#next-btn:focus,
+#prev-btn:focus {
+  outline: none;
+}
+/* !-------8. My Work------- */
+
+/* -----9. Contact Me----- */
 #contact {
   padding-top: 1rem !important;
   padding: 0 15px;
@@ -778,9 +998,9 @@ a span:nth-child(4) {
 #r {
   color: rgb(255, 68, 68);
 }
-/* !-----8. Contact Me----- */
+/* !-----9. Contact Me----- */
 
-/* ----9. footer---- */
+/* ----10. footer---- */
 footer {
   background: #fff;
   padding: 30px 0;
@@ -819,9 +1039,9 @@ footer {
 .right-col {
   flex-wrap: wrap;
 }
-/* !----9. footer---- */
+/* !----10. footer---- */
 
-/* -----10. Button to top------ */
+/* -----11. Button to top------ */
 #movetop {
   position: fixed;
   display: none;
@@ -841,7 +1061,7 @@ footer {
 #movetop:active {
   opacity: 1;
 }
-/* !-----10. Button to top------ */
+/* !-----11. Button to top------ */
 
 @media (max-width: 991px) {
   /* ------ 3-1. banner-pic--------- */
@@ -849,6 +1069,15 @@ footer {
     background-position: -460px 0;
   }
   /* !------ 3-1. banner-pic--------- */
+}
+
+@media (max-width: 900px) {
+  /* -------8. My Work------- */
+  .button a {
+    margin: 10px;
+    padding: 5px 10px;
+  }
+  /* !-------8. My Work------- */
 }
 
 @media (max-width: 858px) {
@@ -869,8 +1098,8 @@ footer {
     /* display: none; */
     position: fixed;
     right: 0;
-    height: 90vh;
-    top: 10vh;
+    height: 92vh;
+    top: 8vh;
     background: linear-gradient(#fff, #6cf3f3);
     display: flex;
     flex-direction: column;
@@ -913,7 +1142,7 @@ footer {
   }
   /* !---------------2. website development----------- */
 
-  /* -----9. footer----- */
+  /* -----10. footer----- */
   .footer-container {
     max-width: 500px;
   }
@@ -928,7 +1157,7 @@ footer {
   .social-media a {
     margin: 0 10px;
   }
-  /* !-----9. footer----- */
+  /* !-----10. footer----- */
 
   /* -------0. Loading Screen--------- */
   .counter {
@@ -998,11 +1227,85 @@ footer {
 
 @media (max-width: 800px) {
   /* ------ 3-1. banner-pic--------- */
-
   .banner-view {
     background-position: -630px 0;
   }
   /* !------ 3-1. banner-pic--------- */
+
+  /* -------8. My Work------- */
+  .toggle-button {
+    margin-bottom: 20px;
+  }
+  .toggle-button button {
+    margin: 10px;
+    padding: 5px 10px;
+  }
+  .appWork,
+  .webWork {
+    height: 75vh;
+  }
+  .appWork .appSS,
+  .webWork .webSS {
+    flex: none;
+    max-width: 100%;
+  }
+  .appWork .appContent,
+  .webWork .webContent {
+    flex: none;
+    max-width: 100%;
+  }
+  .appWork .appSS img {
+    max-width: 20%;
+  }
+  .webWork .webSS img {
+    max-width: 80%;
+    margin: 0;
+  }
+  .appWork .appContent h2,
+  .webWork .webContent h2 {
+    font-size: 25px;
+    margin: 10px;
+    text-align: center;
+  }
+  .appWork .appContent p,
+  .webWork .webContent p {
+    font-size: 15px;
+    text-align: center;
+    margin: 0 10px;
+    line-height: 20px;
+  }
+  .appContent .button,
+  .webContent .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button {
+    margin-bottom: 10px !important;
+  }
+  .button a {
+    margin: 10px;
+    padding: 5px 10px;
+  }
+
+  #next-btn,
+  #prev-btn {
+    padding: 20px 0;
+  }
+  #next-btn {
+    right: 10px;
+  }
+  #prev-btn {
+    left: 10px;
+  }
+  /* !-------8. My Work------- */
+}
+@media (max-width: 700px) {
+  /* -------8. My Work------- */
+  .appWork .appSS img {
+    max-width: 25%;
+  }
+  /* !-------8. My Work------- */
 }
 @media (max-width: 600px) {
   /* ------ 3-1. banner-pic--------- */
@@ -1012,7 +1315,16 @@ footer {
   }
   /* !------ 3-1. banner-pic--------- */
 
-  /* -----8. Contact Me----- */
+  /* -------8. My Work------- */
+  .appWork .appSS img {
+    max-width: 28%;
+  }
+  .webWork .webSS img {
+    max-width: 95%;
+  }
+  /* !-------8. My Work------- */
+
+  /* -----9. Contact Me----- */
   .container-contact a {
     width: 155px;
     height: 70px;
@@ -1029,7 +1341,7 @@ footer {
     text-shadow: 1px 2px 13px rgba(0, 0, 0, 0.72);
     margin-bottom: 20px !important;
   }
-  /* !-----8. Contact Me----- */
+  /* !-----9. Contact Me----- */
 }
 @media (max-width: 569px) {
   /* ------ 3-1. banner-pic--------- */
@@ -1038,6 +1350,17 @@ footer {
     min-height: 420px;
   }
   /* !------ 3-1. banner-pic--------- */
+}
+
+@media (max-width: 450px) {
+  /* -------8. My Work------- */
+  .appWork .appSS img {
+    max-width: 35%;
+  }
+  .webWork .webSS img {
+    max-width: 95%;
+  }
+  /* !-------8. My Work------- */
 }
 @media (max-width: 400px) {
   /* ------ 3-1. banner-pic--------- */
