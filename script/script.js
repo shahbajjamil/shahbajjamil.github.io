@@ -226,65 +226,29 @@ hobbies();
 
 const appData = [
   {
-    name: "App-UI-1",
+    name: "WhatsApp-UI-Clone",
     image: "image/mywork/whatsapp3.gif",
     disc: "Just simple UI clone of WhatsApp, This app is build with flutter.",
     getLink: "#getapplink",
     moreLink: "#morelink",
   },
-  {
-    name: "App-UI-2",
-    image: "image/mywork/whatsapp3.gif",
-    disc: "Just simple UI clone of WhatsApp, This app is build with flutter.",
-    getLink: "#getapplink",
-    moreLink: "#morelink",
-  },
-  {
-    name: "App-UI-3",
-    image: "image/mywork/whatsapp3.gif",
-    disc: "Just simple UI clone of WhatsApp, This app is build with flutter.",
-    getLink: "#getapplink",
-    moreLink: "#morelink",
-  },
-  // {
-  //   name: "App-UI-4",
-  //   image: "image/mywork/whatsapp3.gif",
-  //   disc: "Just simple UI clone of WhatsApp, This app is build with flutter.",
-  //   getLink: "#getapplink",
-  //   moreLink: "#morelink",
-  // },
+  
 ];
 const webData = [
   {
-    name: "web-UI-1",
-    image: "image/mywork/dell.png",
+    name: "Eid Mubarak",
+    image: "image/mywork/Eid.png",
     disc:
-      "Just simple UI clone of web, This app is build with html,css and js.",
-    getLink: "#getapplink",
+      "A simple Web based Greating for you and your friends, Build with HTML, CSS and Js.",
+    getLink: "https://shahbajjamil.github.io/Eid-Mubarak-2020/",
     moreLink: "#morelink",
   },
   {
-    name: "web-UI-2",
-    image: "image/mywork/dell.png",
+    name: "Ramadan Mubarak",
+    image: "image/mywork/Ramdan.png",
     disc:
-      "Just simple UI clone of web, This app is build with html,css and js.",
-    getLink: "#getapplink",
-    moreLink: "#morelink",
-  },
-  {
-    name: "web-UI-3",
-    image: "image/mywork/dell.png",
-    disc:
-      "Just simple UI clone of web, This app is build with html,css and js.",
-    getLink: "#getapplink",
-    moreLink: "#morelink",
-  },
-  {
-    name: "web-UI-4",
-    image: "image/mywork/dell.png",
-    disc:
-      "Just simple UI clone of web, This app is build with html,css and js.",
-    getLink: "#getapplink",
+    "A simple Web based Greating for you and your friends, Build with HTML, CSS and Js.",
+    getLink: "https://shahbajjamil.github.io/Ramadan-Mubarak-2020/",
     moreLink: "#morelink",
   },
 ];
@@ -349,7 +313,7 @@ function AllWorkBuild() {
         '<div class="button">' +
         "<a href=" +
         webData[i].getLink +
-        ">View Link</a>" +
+        ' target="_blank" rel="noopener noreferrer">View Link</a>' +
         "<a href=" +
         webData[i].moreLink +
         ">More Info</a>" +
