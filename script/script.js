@@ -166,61 +166,7 @@ if (isMobile) {
 }
 // !WhatsApp toggle
 
-// My Skill
-function skill() {
-  const skillData = [
-    { name: "Web Design", percentage: 70 },
-    { name: "HTML", percentage: 80 },
-    { name: "CSS", percentage: 50 },
-    { name: "JavaScript", percentage: 20 },
-    { name: "Flutter / Dart", percentage: 50 },
-    { name: "C / C++", percentage: 90 },
-    // { name: "Python", percentage: 43 },
-  ];
-  const skills = document.querySelector(".MySkill");
-  // for (let i = 0; i < skillData.length; i++) {
-  for (const item of skillData) {
-    skills.innerHTML +=
-      "<h6>" +
-      item.name +
-      "<span>" +
-      item.percentage +
-      "%</span></h6>" +
-      '<div class="progress">' +
-      '<div class="bar" style="width: ' +
-      item.percentage +
-      '%;"></div></div>';
-  }
-}
-skill();
-// !My Skill
 
-// My Hobbies
-function hobbies() {
-  const hobbyData = [
-    { name: "Coding", icon: "code" },
-    { name: "Music", icon: "music" },
-    { name: "Traveling", icon: "plane" },
-    { name: "Swimming", icon: "swimming-pool" },
-    { name: "Painting", icon: "paint-brush" },
-    { name: "learning", icon: "graduation-cap" },
-    { name: "Photography", icon: "camera" },
-    { name: "Driving", icon: "motorcycle" },
-  ];
-
-  const hobby = document.querySelector(".box");
-  // for (let i = 0; i < hobbyData.length; i++) {
-  for (const item of hobbyData) {
-    hobby.innerHTML +=
-      '<div class="hobbies-box"><span class="fa fa-' +
-      item.icon +
-      ' bg-secondary"></span><h5 class="flex">' +
-      item.name +
-      "</h5></div>";
-  }
-}
-hobbies();
-// !My Hobbies
 
 // My Work
 
