@@ -330,7 +330,10 @@ window.onload = function () {
 function runSlide() {
   let slides = document.querySelectorAll(".slide");
   let slideId;
-  const slideWidth = slides[index].clientWidth;
+  // const slideWidth = slides[index].clientWidth;
+const slideWidth = slides[index].getBoundingClientRect().width;
+
+  console.log(slideWidth);
 
   // moving slide in every 3s
   const startSlide = () => {
