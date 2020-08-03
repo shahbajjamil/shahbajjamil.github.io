@@ -1233,6 +1233,9 @@ footer {
   /* !------ 3-1. banner-pic--------- */
 
   /* -------8. My Work------- */
+  .WorkMain {
+    width: 100vw;
+  }
   .toggle-button {
     margin-bottom: 20px;
   }
