@@ -229,7 +229,7 @@ const appData = [
     name: "WhatsApp-UI-Clone",
     image: "image/mywork/whatsapp.gif",
     disc: "Just simple UI clone of WhatsApp,<br/> This app is build with flutter. More update will coming soon",
-    getLink: "#getapplink",
+    getLink: "download/WhatsApp-UI-Clone.apk",
     moreLink: "#morelink",
   },
   
@@ -291,7 +291,7 @@ function AllWorkBuild() {
         '<div class="button">' +
         "<a href=" +
         appData[i].getLink +
-        ">Get Apk</a>" +
+        ' download>Get Apk</a>' +
         "<a href=" +
         appData[i].moreLink +
         ">More Info</a>" +
