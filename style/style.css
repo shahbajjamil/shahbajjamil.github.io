@@ -733,7 +733,7 @@ a span:nth-child(4) {
   height: 100vh;
   overflow: hidden;
 }
-#MyWork h3{
+#MyWork h3 {
   margin: 0 15px;
   margin-bottom: 10px;
 }
@@ -816,7 +816,7 @@ a span:nth-child(4) {
       rgba(0, 0, 0, 0.58),
       rgba(0, 0, 0, 0.18)
     ),
-    url(../image/slide.jpg);
+    url(https://images.wallpaperscraft.com/image/flight_balloon_sky_86980_1280x720.jpg);
 }
 .slide:nth-of-type(2) .webWork {
   background-image: linear-gradient(
@@ -825,7 +825,34 @@ a span:nth-child(4) {
       rgba(0, 0, 0, 0.58),
       rgba(0, 0, 0, 0.18)
     ),
-    url(../image/slide.jpg);
+    url(https://images.wallpaperscraft.com/image/sea_aerial_view_coast_180728_1280x720.jpg);
+}
+.slide:nth-of-type(3) .webWork {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.72),
+      rgba(0, 0, 0, 0.58),
+      rgba(0, 0, 0, 0.18)
+    ),
+    url(https://images.wallpaperscraft.com/image/paragliding_sky_flight_91710_1280x720.jpg);
+}
+.slide:nth-of-type(4) .webWork {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.72),
+      rgba(0, 0, 0, 0.58),
+      rgba(0, 0, 0, 0.18)
+    ),
+    url(https://images.wallpaperscraft.com/image/stars_milky_way_space_116893_1280x720.jpg);
+}
+.slide:nth-of-type(5) .webWork {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.72),
+      rgba(0, 0, 0, 0.58),
+      rgba(0, 0, 0, 0.18)
+    ),
+    url(https://images.wallpaperscraft.com/image/boat_mountains_lake_135258_1280x720.jpg);
 }
 
 .appWork .appSS,
