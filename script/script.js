@@ -228,11 +228,12 @@ const appData = [
   {
     name: "WhatsApp-UI-Clone",
     image: "image/mywork/whatsapp.gif",
-    disc: "Just simple UI clone of WhatsApp,<br/> This app is build with flutter. More update will coming soon",
+    disc:
+      "Just simple UI clone of WhatsApp,<br/> This app is build with flutter. More update will coming soon",
     getLink: "download/WhatsApp-UI-Clone.apk",
     moreLink: "#morelink",
+    notify: "Version 1.0.0 Release",
   },
-  
 ];
 const webData = [
   {
@@ -247,7 +248,7 @@ const webData = [
     name: "Ramadan Mubarak",
     image: "image/mywork/Ramadan.png",
     disc:
-    "A simple Web based Greating for you and your friends, Build with HTML, CSS and Js.",
+      "A simple Web based Greating for you and your friends, Build with HTML, CSS and Js.",
     getLink: "https://shahbajjamil.github.io/Ramadan-Mubarak-2020/",
     moreLink: "#morelink",
   },
@@ -264,9 +265,6 @@ const myworkBuild = document.querySelector(".mywork");
 const allWork = document.getElementById("allWork");
 const appWork = document.getElementById("appWork");
 const webWork = document.getElementById("webWork");
-
-const app = document.querySelectorAll(".app");
-const web = document.querySelectorAll(".web");
 
 function AllWorkBuild() {
   myworkBuild.innerHTML = "";
@@ -285,13 +283,16 @@ function AllWorkBuild() {
         "<h2>" +
         appData[i].name +
         "</h2>" +
+        '<div class="shiny"><span>' +
+        appData[i].notify +
+        "</span></div> " +
         "<p>" +
         appData[i].disc +
         "</p>" +
         '<div class="button">' +
         "<a href=" +
         appData[i].getLink +
-        ' download>Get Apk</a>' +
+        " download>Get Apk</a>" +
         "<a href=" +
         appData[i].moreLink +
         ">More Info</a>" +
@@ -319,8 +320,10 @@ function AllWorkBuild() {
         ">More Info</a>" +
         "</div></div></div></div>";
     }
+
   }
 }
+        
 
 window.onload = function () {
   AllWorkBuild();
@@ -331,7 +334,7 @@ function runSlide() {
   let slides = document.querySelectorAll(".slide");
   let slideId;
   // const slideWidth = slides[index].clientWidth;
-const slideWidth = slides[index].getBoundingClientRect().width;
+  const slideWidth = slides[index].getBoundingClientRect().width;
 
   console.log(slideWidth);
 
