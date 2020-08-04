@@ -257,7 +257,7 @@ const slideContainer = document.querySelector(".container");
 const slide = document.querySelector(".mywork");
 const nextBtn = document.getElementById("next-btn");
 const prevBtn = document.getElementById("prev-btn");
-const interval = 3000;
+const interval = 5000;
 let index = 0;
 
 const myworkBuild = document.querySelector(".mywork");
