@@ -12,339 +12,386 @@
 
  -->
 
- <!DOCTYPE html>
- <html class="noscroll" lang="en">
-   <head>
-     <meta charset="utf-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1" />
-     <meta
-       name="keywords"
-       content="portfolio, shahbaj jamil, md shahbaj jamil, web developer, web designer"
-     />
- 
-     <title>Shahbaj Jamil</title>
-     <link rel="icon" href="image/logo2.png" type="images/png" />
-     <link rel="manifest" href="manifest.webmanifest" />
-     <meta name="theme-color" content="black" />
-     <meta name="apple-moblie-web-app-capable" content="yes" />
-     <meta name="apple-moblie-web-app-status-bar" content="black-translucent" />
-     <meta name="apple-moblie-web-app-title" content="Upr!s!ng" />
-     <link rel="apple-touch-icon" href="image/logo2.png" />
- 
-     <!-- <link rel="stylesheet" href="style/style.css" /> -->
-     <style>
-       @import url("style/style.css");
-     </style>
-     <link
-       rel="stylesheet"
-       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-     />
-     <!-- Global site tag (gtag.js) - Google Analytics -->
-     <script
-       async
-       src="https://www.googletagmanager.com/gtag/js?id=UA-162844375-1"
-     ></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag() {
-         dataLayer.push(arguments);
-       }
-       gtag("js", new Date());
- 
-       gtag("config", "UA-162844375-1");
-     </script>
-     <!-- Global site tag (gtag.js) - Google Analytics -->
-     <script
-       async
-       src="https://www.googletagmanager.com/gtag/js?id=UA-162849464-1"
-     ></script>
-     <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag() {
-         dataLayer.push(arguments);
-       }
-       gtag("js", new Date());
- 
-       gtag("config", "UA-162849464-1");
-     </script>
-   </head>
- 
-   <body class="noscroll">
-     <div class="preloader">
-       <div class="scene flex">
-         <div class="rocket">
-           <img src="image/rocket.png" alt="rocket" />
-         </div>
-       </div>
-       <div class="counter flex">0</div>
-     </div>
-     <header class="mainheader">
-       <div class="hlogo">
-         <a href="https://shahbajjamil.github.io">
-           <img src="image/logo.png" alt="logo" class="logo"
-         /></a>
-       </div>
-       <nav>
-         <ul class="nav-links">
-           <li><a class="active" href="index.html">HOME</a></li>
-           <li><a href="#about">ABOUT</a></li>
-           <li><a href="#repo">REPO's</a></li>
-           <li><a href="#MySkillHobbies">FUN FACT's</a></li>
-           <li><a href="#MyWork">MY WORk</a></li>
-           <li><a href="#contact">CONTACT</a></li>
-         </ul>
-         <div class="burger">
-           <div class="centerLine"></div>
-         </div>
-       </nav>
-     </header>
- 
-     <div class="banner-view">
-       <div class="banner">
-         <h1>
-           <small>Hello, I'm</small><br />
-           MD Shahbaj Jamil
-         </h1>
-         <h2>
-           A
-           <span
-             class="txt-type"
-             data-wait="2500"
-             data-words='["Designer", "Web Developer", "Android Developer", "Programmer"]'
-           >
-           </span>
-         </h2>
-       </div>
-     </div>
-     <div class="containerHead" id="about">
-       <h3>About me</h3>
-       <div class="about-me">
-         <div class="card">
-           <div class="imgbx">
-             <img src="image/about.jpg" />
-           </div>
-           <div class="content">
-             <h2>Why hire me for your next project?</h2>
-             <p>
-               I love to work in User Experience & User Interface designing.
-               Because I love to solve the design problem and find easy and
-               better solutions to solve it. I always try my best to make good
-               user interface with the best user experience. I have been working
-               as a Visual designer from.
-             </p>
-           </div>
-         </div>
-       </div>
-     </div>
-     <div class="about-grid">
-       <div class="container-about">
-         <div class="bottomgrid">
-           <div class="bottomfield">
-             <h4>Visual Design</h4>
-             <p>
-               Donec et venenatis libero. Fusceing dapibus pulvinar tincidunt.
-               Proin maximus ipsum ut scelerisque.
-             </p>
-           </div>
-           <div class="bottomfield">
-             <h4>Interactive Design</h4>
-             <p>
-               Donec et venenatis libero. Fusceing dapibus pulvinar tincidunt.
-               Proin maximus ipsum ut scelerisque.
-             </p>
-           </div>
-           <div class="bottomfield">
-             <h4>Animation</h4>
-             <p>
-               Donec et venenatis libero. Fusceing dapibus pulvinar tincidunt.
-               Proin maximus ipsum ut scelerisque.
-             </p>
-           </div>
-         </div>
-       </div>
-     </div>
- 
-     <div id="MySkillHobbies" class="MySkillHobbies">
-       <div class="MySkill">
-         <h4>My Skills</h4>
-       </div>
-       <div class="MyHobbies">
-         <h4>My Hobbies</h4>
-         <div class="box flex"></div>
-       </div>
-     </div>
- 
-     <div id="repo" class="page-content flex">
-       <div class="ptext flex">
-         <a
-           href="http://testfortry.epizy.com/repo.html"
-           target="_blank"
-           rel="noopener noreferrer"
-         >
-           <span></span>
-           <span></span>
-           <span></span>
-           <span></span>
-           Repo's
-         </a>
-       </div>
-     </div>
- 
-     <div id="MyWork" class="WorkMain containerHead">
-       <h3>My Work</h3>
-       <div class="toggle-button">
-         <button id="allWork" class="active">All Work</button>
-         <!-- <button id="appWork">App Work</button>
+<!DOCTYPE html>
+<html class="" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="portfolio, shahbaj jamil, md shahbaj jamil, web developer, web designer"
+    />
+
+    <title>Shahbaj Jamil</title>
+    <link rel="icon" href="image/logo2.png" type="images/png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="black" />
+    <meta name="apple-moblie-web-app-capable" content="yes" />
+    <meta name="apple-moblie-web-app-status-bar" content="black-translucent" />
+    <meta name="apple-moblie-web-app-title" content="Upr!s!ng" />
+    <link rel="apple-touch-icon" href="image/logo2.png" />
+
+    <!-- <link rel="stylesheet" href="style/style.css" /> -->
+    <style>
+      @import url("style/style.css");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-162844375-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-162844375-1");
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-162849464-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-162849464-1");
+    </script>
+  </head>
+
+  <body class="">
+    <div class="preloader active">
+      <div class="scene flex">
+        <div class="rocket">
+          <img src="image/rocket.png" alt="rocket" />
+        </div>
+      </div>
+      <div class="counter flex">0</div>
+    </div>
+    <header class="mainheader">
+      <div class="hlogo">
+        <a href="https://shahbajjamil.github.io">
+          <img src="image/logo.png" alt="logo" class="logo"
+        /></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a class="active" href="index.html"
+              >HOME
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#about"
+              >ABOUT
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#repo"
+              >REPO's
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#MySkillHobbies"
+              >FUN FACT's
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#MyWork"
+              >MY WORk
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact"
+              >CONTACT
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </li>
+        </ul>
+        <div class="burger">
+          <div class="centerLine"></div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="banner-view">
+      <div class="banner">
+        <h1>
+          <small>Hello, I'm</small><br />
+          MD Shahbaj Jamil
+        </h1>
+        <h2>
+          A
+          <span
+            class="txt-type"
+            data-wait="2500"
+            data-words='["Designer", "Web Developer", "Android Developer", "Programmer"]'
+          >
+          </span>
+        </h2>
+      </div>
+    </div>
+    <div class="containerHead" id="about">
+      <h3>About me</h3>
+      <div class="about-me">
+        <div class="card">
+          <div class="imgbx">
+            <img src="image/about.jpg" />
+          </div>
+          <div class="content">
+            <h2>Why hire me for your next project?</h2>
+            <p>
+              I love to work in User Experience & User Interface designing.
+              Because I love to solve the design problem and find easy and
+              better solutions to solve it. I always try my best to make good
+              user interface with the best user experience. I have been working
+              as a Visual designer from.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-grid">
+      <div class="container-about">
+        <div class="bottomgrid">
+          <div class="bottomfield">
+            <h4>Visual Design</h4>
+            <p>
+              Donec et venenatis libero. Fusceing dapibus pulvinar tincidunt.
+              Proin maximus ipsum ut scelerisque.
+            </p>
+          </div>
+          <div class="bottomfield">
+            <h4>Interactive Design</h4>
+            <p>
+              Donec et venenatis libero. Fusceing dapibus pulvinar tincidunt.
+              Proin maximus ipsum ut scelerisque.
+            </p>
+          </div>
+          <div class="bottomfield">
+            <h4>Animation</h4>
+            <p>
+              Donec et venenatis libero. Fusceing dapibus pulvinar tincidunt.
+              Proin maximus ipsum ut scelerisque.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="MySkillHobbies" class="MySkillHobbies">
+      <div class="MySkill">
+        <h4>My Skills</h4>
+      </div>
+      <div class="MyHobbies">
+        <h4>My Hobbies</h4>
+        <div class="box flex"></div>
+      </div>
+    </div>
+
+    <div id="repo" class="page-content flex">
+      <div class="ptext flex">
+        <a
+          href="http://testfortry.epizy.com/repo.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Repo's
+        </a>
+      </div>
+    </div>
+
+    <div id="MyWork" class="WorkMain containerHead">
+      <h3>My Work</h3>
+      <div class="toggle-button">
+        <button id="allWork" class="active">All Work</button>
+        <!-- <button id="appWork">App Work</button>
          <button id="webWork">Web Work</button> -->
-       </div>
-       <div class="WorkSection">
-         <button class="slide-controls" id="prev-btn">
-           <i class="fas fa-chevron-left"></i>
-         </button>
- 
-         <div class="container">
-           <div class="mywork"></div>
-         </div>
- 
-         <button class="slide-controls" id="next-btn">
-           <i class="fas fa-chevron-right"></i>
-         </button>
-       </div>
-     </div>
- 
-     <div id="dev" class="flex">
-       <p>This website is under construction</p>
-     </div>
-     <div id="contact" class="containerHead">
-       <h3>Contact Me</h3>
-       <div>
-         <p class="shadow">
-           Would you like to work together?<br />Feel free to reach me using the
-           links below.
-         </p>
-       </div>
-       <div class="container-contact flex">
-         <a
-           href="https://www.facebook.com/shahbaj.jamil"
-           target="_blank"
-           rel="noopener noreferrer"
-         >
-           <i id="b" class="fab fa-facebook-f"></i>
-           <p>facebook</p>
-         </a>
-         <a
-           href="https://www.instagram.com/shahbaj_jamil"
-           target="_blank"
-           rel="noopener noreferrer"
-         >
-           <i id="p" class="fab fa-instagram"></i>
-           <p>Instagram</p>
-         </a>
-         <a
-           href="mailto:shahbajjamil2014@gmail.com?subject=Hi, just saw your webpage!"
-           target="_blank"
-           rel="noopener noreferrer"
-         >
-           <i id="r" class="fa fa-envelope"></i>
-           <p>Email</p>
-         </a>
-         <a
-           href="https://twitter.com/JamilShahbaj"
-           target="_blank"
-           rel="noopener noreferrer"
-         >
-           <i id="lb" class="fab fa-twitter"></i>
-           <p>Twitter</p>
-         </a>
-         <a
-           href="https://www.linkedin.com/in/md-shahbaj-jamil"
-           target="_blank"
-           rel="noopener noreferrer"
-         >
-           <i id="b" class="fab fa-linkedin"></i>
-           <p>linkedin</p>
-         </a>
-         <a
-           href="https://github.com/shahbajjamil"
-           target="_blank"
-           rel="noopener noreferrer"
-         >
-           <i id="bl" class="fab fa-github"></i>
-           <p>gitHub</p>
-         </a>
-         <a
-           id="wp"
-           href="https://wa.me/+918252643736/?text=Hi, just saw your webpage!"
-           target="_blank"
-           rel="noopener noreferrer"
-         >
-           <!-- <i id="g" class="fab fa-whatsapp"></i>
+      </div>
+      <div class="WorkSection">
+        <button class="slide-controls" id="prev-btn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="container">
+          <div class="mywork"></div>
+        </div>
+
+        <button class="slide-controls" id="next-btn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="dev" class="flex">
+      <p>This website is under construction</p>
+    </div>
+    <div id="contact" class="containerHead">
+      <h3>Contact Me</h3>
+      <div>
+        <p class="shadow">
+          Would you like to work together?<br />Feel free to reach me using the
+          links below.
+        </p>
+      </div>
+      <div class="container-contact flex">
+        <a
+          href="https://www.facebook.com/shahbaj.jamil"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i id="b" class="fab fa-facebook-f"></i>
+          <p>facebook</p>
+        </a>
+        <a
+          href="https://www.instagram.com/shahbaj_jamil"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i id="p" class="fab fa-instagram"></i>
+          <p>Instagram</p>
+        </a>
+        <a
+          href="mailto:shahbajjamil2014@gmail.com?subject=Hi, just saw your webpage!"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i id="r" class="fa fa-envelope"></i>
+          <p>Email</p>
+        </a>
+        <a
+          href="https://twitter.com/JamilShahbaj"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i id="lb" class="fab fa-twitter"></i>
+          <p>Twitter</p>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/md-shahbaj-jamil"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i id="b" class="fab fa-linkedin"></i>
+          <p>linkedin</p>
+        </a>
+        <a
+          href="https://github.com/shahbajjamil"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i id="bl" class="fab fa-github"></i>
+          <p>gitHub</p>
+        </a>
+        <a
+          id="wp"
+          href="https://wa.me/+918252643736/?text=Hi, just saw your webpage!"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <!-- <i id="g" class="fab fa-whatsapp"></i>
            <p>whatsApp</p> -->
-         </a>
-       </div>
-     </div>
- 
-     <footer>
-       <div class="footer-container flex">
-         <div class="left-col">
-           <div class="imglogo">
-             <a href="https://shahbajjamil.github.io">
-               <img src="image/logo.png" alt="logo" class="logo"
-             /></a>
-           </div>
-           <div class="social-media">
-             <a
-               href="https://www.facebook.com/shahbaj.jamil"
-               target="_blank"
-               rel="noopener noreferrer"
-               ><i class="fab fa-facebook-f"></i
-             ></a>
-             <a
-               href="https://www.instagram.com/shahbaj_jamil"
-               target="_blank"
-               rel="noopener noreferrer"
-               ><i class="fab fa-instagram"></i
-             ></a>
-             <a
-               href="https://twitter.com/JamilShahbaj"
-               target="_blank"
-               rel="noopener noreferrer"
-               ><i class="fab fa-twitter"></i
-             ></a>
-             <a
-               href="mailto:shahbajjamil2014@gmail.com?subject=Hi, just saw your webpage!"
-               target="_blank"
-               rel="noopener noreferrer"
-             >
-               <i class="fa fa-envelope"></i>
-             </a>
-             <a
-               href="https://www.linkedin.com/in/md-shahbaj-jamil"
-               target="_blank"
-               rel="noopener noreferrer"
-               ><i class="fab fa-linkedin"></i
-             ></a>
-             <a
-               href="https://github.com/shahbajjamil"
-               target="_blank"
-               rel="noopener noreferrer"
-               ><i class="fab fa-github"></i
-             ></a>
-           </div>
-         </div>
- 
-         <div class="right-col flex">
-           <p>© 2020 Created By MD Shahbaj Jamil All Right Reserved.</p>
-         </div>
-       </div>
-     </footer>
- 
-     <button id="movetop">
-       <span class="fa fa-angle-up"></span>
-     </button>
- 
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-     <script src="script/script.js"></script>
-   </body>
- </html>
- 
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container flex">
+        <div class="left-col">
+          <div class="imglogo">
+            <a href="https://shahbajjamil.github.io">
+              <img src="image/logo.png" alt="logo" class="logo"
+            /></a>
+          </div>
+          <div class="social-media">
+            <a
+              href="https://www.facebook.com/shahbaj.jamil"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/shahbaj_jamil"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://twitter.com/JamilShahbaj"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="mailto:shahbajjamil2014@gmail.com?subject=Hi, just saw your webpage!"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa fa-envelope"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/md-shahbaj-jamil"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://github.com/shahbajjamil"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="right-col flex">
+          <p>© 2020 Created By MD Shahbaj Jamil All Right Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <button id="movetop">
+      <span class="fa fa-angle-up"></span>
+    </button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+  </body>
+</html>

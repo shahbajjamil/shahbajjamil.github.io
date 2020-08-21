@@ -93,8 +93,8 @@ function inti() {
 // ! for typing effect
 
 // nav bar sliding
+const burger = document.querySelector(".burger");
 const navSlide = () => {
-  const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
   const navLinks = document.querySelectorAll(".nav-links li");
 
@@ -131,12 +131,16 @@ navSlide();
 // ! nav bar sliding
 
 // button move to top
-btnTop = document.querySelector("#movetop");
+const btnTop = document.querySelector("#movetop");
+// const header = document.querySelector("header");
+
 btnTop.addEventListener("click", function () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
 window.onscroll = function () {
+  burger.classList.toggle("stickyToggel", window.scrollY > 400);
+
   if (
     document.body.scrollTop > 100 ||
     document.documentElement.scrollTop > 100
