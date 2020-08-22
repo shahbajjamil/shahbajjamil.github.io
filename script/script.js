@@ -104,27 +104,27 @@ const navSlide = () => {
         link.style.animation = "";
       } else {
         link.style.animation = `navLinkFade 0.5s ease forwards ${
-          index / 7 + 0.75
+          index / 6 + 0.1
         }s`;
       }
     });
   }
-  burger.addEventListener("click", function (event) {
+  burger.addEventListener("click", function () {
     // Toggle nav
     nav.classList.toggle("nav-active");
     // Animate Links
     animationNav();
     // burger animation
     burger.classList.toggle("open");
-    document.body.classList.toggle("noscroll");
-    document.documentElement.classList.toggle("noscroll");
+    // document.body.classList.toggle("noscroll");
+    // document.documentElement.classList.toggle("noscroll");
   });
-  nav.addEventListener("click", function (event) {
+  nav.addEventListener("click", function () {
     nav.classList.remove("nav-active");
     animationNav();
     burger.classList.remove("open");
-    document.body.classList.remove("noscroll");
-    document.documentElement.classList.remove("noscroll");
+    // document.body.classList.remove("noscroll");
+    // document.documentElement.classList.remove("noscroll");
   });
 };
 navSlide();
@@ -132,14 +132,69 @@ navSlide();
 
 // button move to top
 const btnTop = document.querySelector("#movetop");
-// const header = document.querySelector("header");
+
+const homeNav = document.getElementById("HOME-NAV");
+const aboutNav = document.getElementById("ABOUT-NAV");
+const factNav = document.getElementById("FACT-NAV");
+const repoNav = document.getElementById("REPO-NAV");
+const workNav = document.getElementById("WORK-NAV");
+const contactNav = document.getElementById("CONTACT-NAV");
 
 btnTop.addEventListener("click", function () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
 window.onscroll = function () {
-  burger.classList.toggle("stickyToggel", window.scrollY > 400);
+  burger.classList.toggle(
+    "stickyToggel",
+    window.scrollY < 450 && window.scrollY > 40
+  );
+
+  var positionTop = document.documentElement.scrollTop;
+  // console.log(positionTop);
+  if (positionTop > 4144-236) { //4144
+    homeNav.classList.remove("active");
+    aboutNav.classList.remove("active");
+    factNav.classList.remove("active");
+    repoNav.classList.remove("active");
+    workNav.classList.remove("active");
+    contactNav.classList.add("active");
+  } else if (positionTop > 3439-236) { //3439
+    homeNav.classList.remove("active");
+    aboutNav.classList.remove("active");
+    factNav.classList.remove("active");
+    repoNav.classList.remove("active");
+    workNav.classList.add("active");
+    contactNav.classList.remove("active");
+  } else if (positionTop > 3039-236) { //3039
+    homeNav.classList.remove("active");
+    aboutNav.classList.remove("active");
+    factNav.classList.remove("active");
+    repoNav.classList.add("active");
+    workNav.classList.remove("active");
+    contactNav.classList.remove("active");
+  } else if (positionTop > 1950-236) { //1950
+    homeNav.classList.remove("active");
+    aboutNav.classList.remove("active");
+    factNav.classList.add("active");
+    repoNav.classList.remove("active");
+    workNav.classList.remove("active");
+    contactNav.classList.remove("active");
+  } else if (positionTop > 477-236) { //477
+    homeNav.classList.remove("active");
+    aboutNav.classList.add("active");
+    factNav.classList.remove("active");
+    repoNav.classList.remove("active");
+    workNav.classList.remove("active");
+    contactNav.classList.remove("active");
+  } else if (positionTop > 0) {
+    homeNav.classList.add("active");
+    aboutNav.classList.remove("active");
+    factNav.classList.remove("active");
+    repoNav.classList.remove("active");
+    workNav.classList.remove("active");
+    contactNav.classList.remove("active");
+  }
 
   if (
     document.body.scrollTop > 100 ||
@@ -324,10 +379,8 @@ function AllWorkBuild() {
         ">More Info</a>" +
         "</div></div></div></div>";
     }
-
   }
 }
-        
 
 window.onload = function () {
   AllWorkBuild();
@@ -340,7 +393,7 @@ function runSlide() {
   // const slideWidth = slides[index].clientWidth;
   const slideWidth = slides[index].getBoundingClientRect().width;
 
-  console.log(slideWidth);
+  // console.log(slideWidth);
 
   // moving slide in every 3s
   const startSlide = () => {
