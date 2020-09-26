@@ -100,31 +100,39 @@ const navSlide = () => {
 
   function animationNav() {
     navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = "";
-      } else {
+      if (burger.classList.contains("open")) {
         link.style.animation = `navLinkFade 0.5s ease forwards ${
           index / 6 + 0.1
         }s`;
+      } else {
+        link.style.animation = "";
       }
     });
   }
   burger.addEventListener("click", function () {
     // Toggle nav
     nav.classList.toggle("nav-active");
-    // Animate Links
-    animationNav();
     // burger animation
     burger.classList.toggle("open");
+    // Animate Links
+    animationNav();
     // document.body.classList.toggle("noscroll");
     // document.documentElement.classList.toggle("noscroll");
   });
   nav.addEventListener("click", function () {
     nav.classList.remove("nav-active");
-    animationNav();
     burger.classList.remove("open");
+    animationNav();
     // document.body.classList.remove("noscroll");
     // document.documentElement.classList.remove("noscroll");
+  });
+  // for closing nav on clicking on body
+  document.body.addEventListener("click", function (e) {
+    if (e.target != burger && e.target != burger.children[0]) {
+      nav.classList.remove("nav-active");
+      burger.classList.remove("open");
+      animationNav();
+    }
   });
 };
 navSlide();
@@ -152,35 +160,40 @@ window.onscroll = function () {
 
   var positionTop = document.documentElement.scrollTop;
   // console.log(positionTop);
-  if (positionTop > 4144-236) { //4144
+  if (positionTop > 4144 - 236) {
+    //4144
     homeNav.classList.remove("active");
     aboutNav.classList.remove("active");
     factNav.classList.remove("active");
     repoNav.classList.remove("active");
     workNav.classList.remove("active");
     contactNav.classList.add("active");
-  } else if (positionTop > 3439-236) { //3439
+  } else if (positionTop > 3439 - 236) {
+    //3439
     homeNav.classList.remove("active");
     aboutNav.classList.remove("active");
     factNav.classList.remove("active");
     repoNav.classList.remove("active");
     workNav.classList.add("active");
     contactNav.classList.remove("active");
-  } else if (positionTop > 3039-236) { //3039
+  } else if (positionTop > 3039 - 236) {
+    //3039
     homeNav.classList.remove("active");
     aboutNav.classList.remove("active");
     factNav.classList.remove("active");
     repoNav.classList.add("active");
     workNav.classList.remove("active");
     contactNav.classList.remove("active");
-  } else if (positionTop > 1950-236) { //1950
+  } else if (positionTop > 1950 - 236) {
+    //1950
     homeNav.classList.remove("active");
     aboutNav.classList.remove("active");
     factNav.classList.add("active");
     repoNav.classList.remove("active");
     workNav.classList.remove("active");
     contactNav.classList.remove("active");
-  } else if (positionTop > 477-236) { //477
+  } else if (positionTop > 477 - 236) {
+    //477
     homeNav.classList.remove("active");
     aboutNav.classList.add("active");
     factNav.classList.remove("active");
