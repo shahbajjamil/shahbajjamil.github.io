@@ -299,7 +299,7 @@ hobbies();
 const appData = [
   {
     name: "WhatsApp-UI-Clone",
-    image: "image/mywork/whatsapp.gif",
+    image: "image/mywork/wp.gif",
     disc:
       "Just simple UI clone of WhatsApp,<br/> This app is build with flutter.<br/>+ loading screen.<br/> More update will coming soon",
     getLink: "download/WhatsApp-UI-Clone.apk",
