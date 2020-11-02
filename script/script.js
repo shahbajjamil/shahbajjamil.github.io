@@ -282,6 +282,15 @@ const appData = [
     moreLink: "#morelink",
     notify: "Version 1.0.1 Release",
   },
+  {
+    name: "Tap 2 Chat",
+    image: "image/mywork/new.png",
+    disc:
+      "Make life more simple,<br/> This app is build with flutter.<br/> More update will coming soon",
+    getLink: "#",
+    moreLink: "#morelink",
+    notify: "coming soon...",
+  },
 ];
 const webData = [
   {
