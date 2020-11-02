@@ -302,7 +302,7 @@ const appData = [
     image: "image/mywork/wp.gif",
     disc:
       "Just simple UI clone of WhatsApp,<br/> This app is build with flutter.<br/>+ loading screen.<br/> More update will coming soon",
-    getLink: "download/WhatsApp-UI-Clone.apk",
+    getLink: "download/whatsApp-UI-Clone(1.0.1).apk",
     moreLink: "#morelink",
     notify: "Version 1.0.1 Release",
   },
