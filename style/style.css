@@ -871,7 +871,7 @@ h6:nth-of-type(6) span {
     url(../image/b.jpg);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: center;
-  height: 70vh;
+  height: 85vh;
 }
 .slide:nth-of-type(1) .appWork {
   background-image: linear-gradient(
@@ -1391,7 +1391,7 @@ footer {
   }
   .appWork,
   .webWork {
-    height: 75vh;
+    height: 85vh;
   }
   .appWork .appSS,
   .webWork .webSS {

@@ -301,10 +301,10 @@ const appData = [
     name: "WhatsApp-UI-Clone",
     image: "image/mywork/whatsapp.gif",
     disc:
-      "Just simple UI clone of WhatsApp,<br/> This app is build with flutter. More update will coming soon",
+      "Just simple UI clone of WhatsApp,<br/> This app is build with flutter.<br/>+ loading screen.<br/> More update will coming soon",
     getLink: "download/WhatsApp-UI-Clone.apk",
     moreLink: "#morelink",
-    notify: "Version 1.0.0 Release",
+    notify: "Version 1.0.1 Release",
   },
 ];
 const webData = [
