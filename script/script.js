@@ -277,19 +277,19 @@ const appData = [
     name: "WhatsApp-UI-Clone",
     image: "image/mywork/wp.gif",
     disc:
-      "Just simple UI clone of WhatsApp,<br/> This app is build with flutter.<br/>+ loading screen.<br/> More update will coming soon",
+      "Simple UI clone of WhatsApp,<br/> This app is build with flutter.<br/>+ loading screen.<br/> More update will coming soon",
     getLink: "download/whatsApp-UI-Clone(1.0.1).apk",
     moreLink: "#morelink",
     notify: "Version 1.0.1 Release",
   },
   {
     name: "Tap 2 Chat",
-    image: "image/mywork/new.png",
+    image: "image/mywork/t2c.gif",
     disc:
-      "Make life more simple,<br/> This app is build with flutter.<br/> More update will coming soon",
-    getLink: "#",
+      "Make life more simple,<br/>Send message on WhatsApp without saving phone number,<br/>This app is build with flutter. More update will coming soon",
+    getLink: "download/Tap2Chat.apk",
     moreLink: "#morelink",
-    notify: "coming soon...",
+    notify: "Version 1.0.0 Release",
   },
 ];
 const webData = [
@@ -297,7 +297,7 @@ const webData = [
     name: "Eid Mubarak",
     image: "image/mywork/Eid.png",
     disc:
-      "A simple Web based Greating for you and your friends, Build with HTML, CSS and Js.",
+      "A simple Web based Greating for you and your friends,<br/>Build with HTML, CSS and Js.",
     getLink: "https://shahbajjamil.github.io/Eid-Mubarak-2020/",
     moreLink: "#morelink",
   },
@@ -305,7 +305,7 @@ const webData = [
     name: "Ramadan Mubarak",
     image: "image/mywork/Ramadan.png",
     disc:
-      "A simple Web based Greating for you and your friends, Build with HTML, CSS and Js.",
+      "A simple Web based Greating for you and your friends,<br/>Build with HTML, CSS and Js.",
     getLink: "https://shahbajjamil.github.io/Ramadan-Mubarak-2020/",
     moreLink: "#morelink",
   },
