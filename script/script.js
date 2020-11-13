@@ -289,7 +289,7 @@ const appData = [
       "Make life more simple,<br/>Send message on WhatsApp without saving phone number,<br/>This app is build with flutter. More update will coming soon",
     getLink: "download/Tap2Chat.apk",
     moreLink: "#morelink",
-    notify: "Version 1.0.0 Release",
+    notify: "Version 1.1.0 Release",
   },
 ];
 const webData = [
