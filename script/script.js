@@ -286,10 +286,10 @@ const appData = [
     name: "Tap 2 Chat",
     image: "image/mywork/t2c.gif",
     disc:
-      "Make life more simple,<br/>Send message on WhatsApp without saving phone number,<br/>This app is build with flutter. More update will coming soon",
+      "Make life more simple,<br/>Send message on WhatsApp without saving phone number & status download<br/>This app is build with flutter. More update will coming soon",
     getLink: "download/Tap2Chat.apk",
     moreLink: "#morelink",
-    notify: "Version 1.3.0 Release",
+    notify: "Version 2.0.0 Release",
   },
 ];
 const webData = [
