@@ -203,12 +203,12 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(
 var whatsapp = document.getElementById("wp");
 
 if (isMobile) {
-  whatsapp.innerHTML = '<i id="g" class="fab fa-whatsapp"></i><p>WhatsApp</p>';
+  // whatsapp.innerHTML = '<i id="g" class="fab fa-whatsapp"></i><p>WhatsApp</p>';
   whatsapp.href =
     "https://wa.me/+918252643736/?text=Hi, just saw your webpage!";
 } else {
-  whatsapp.innerHTML =
-    '<i id="g" class="fab fa-whatsapp"></i><p>WhatsApp Web</p>';
+  // whatsapp.innerHTML =
+  //   '<i id="g" class="fab fa-whatsapp"></i><p>WhatsApp Web</p>';
   whatsapp.href =
     "https://api.whatsapp.com/send?phone=+918252643736&text=Hi, Just saw your Webpage!";
 }
