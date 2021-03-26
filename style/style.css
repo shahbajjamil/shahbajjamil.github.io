@@ -1194,7 +1194,7 @@ section .color:nth-child(3) {
 }
 .contactDoor img {
   width: 100%;
-  /* height: 90vh; */
+  height: 100vh;
 }
 .contactDoor img:nth-child(2) {
   z-index: 1;
