@@ -1,390 +1,1008 @@
-<!-- 
-   @@@@@@   @@@  @@@   @@@@@@   @@@  @@@  @@@@@@@    @@@@@@        @@@          @@@   @@@@@@   @@@@@@@@@@   @@@  @@@
-@@@@@@@   @@@  @@@  @@@@@@@@  @@@  @@@  @@@@@@@@  @@@@@@@@       @@@          @@@  @@@@@@@@  @@@@@@@@@@@  @@@  @@@
-!@@       @@!  @@@  @@!  @@@  @@!  @@@  @@!  @@@  @@!  @@@       @@!          @@!  @@!  @@@  @@! @@! @@!  @@!  @@!
-!@!       !@!  @!@  !@!  @!@  !@!  @!@  !@   @!@  !@!  @!@       !@!          !@!  !@!  @!@  !@! !@! !@!  !@!  !@!
-!!@@!!    @!@!@!@!  @!@!@!@!  @!@!@!@!  @!@!@!@   @!@!@!@!       !!@          !!@  @!@!@!@!  @!! !!@ @!@  !!@  @!!
- !!@!!!   !!!@!!!!  !!!@!!!!  !!!@!!!!  !!!@!!!!  !!!@!!!!       !!!          !!!  !!!@!!!!  !@!   ! !@!  !!!  !!!
-     !:!  !!:  !!!  !!:  !!!  !!:  !!!  !!:  !!!  !!:  !!!       !!:          !!:  !!:  !!!  !!:     !!:  !!:  !!:
-    !:!   :!:  !:!  :!:  !:!  :!:  !:!  :!:  !:!  :!:  !:!  !!:  :!:     !!:  :!:  :!:  !:!  :!:     :!:  :!:   :!:
-:::: ::   ::   :::  ::   :::  ::   :::   :: ::::  ::   :::  ::: : ::     ::: : ::  ::   :::  :::     ::    ::   :: ::::
-:: : :     :   : :   :   : :   :   : :  :: : ::    :   : :   : :::        : :::     :   : :   :      :    :    : :: : :
-
- -->
-
 <!DOCTYPE html>
-<html class="noscroll" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="keywords"
-      content="portfolio, shahbaj jamil, md shahbaj jamil, web developer, web designer"
-    />
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MD Shahbaj Jamil — Flutter Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* ==================== THEME VARIABLES ==================== */
+    :root {
+      --bg: #f5f3ee;
+      --bg2: #eceae3;
+      --surface: #ffffff;
+      --surface2: #f0ede6;
+      --text: #1a1814;
+      --text2: #5c574e;
+      --accent: #e8440a;
+      --accent2: #f5a623;
+      --border: rgba(26,24,20,0.1);
+      --shadow: rgba(26,24,20,0.08);
+      --nav-bg: rgba(245,243,238,0.85);
+      --card-bg: #ffffff;
+      --tag-bg: rgba(232,68,10,0.08);
+      --tag-text: #e8440a;
+    }
+    [data-theme="dark"] {
+      --bg: #0f0e0c;
+      --bg2: #181612;
+      --surface: #1e1c18;
+      --surface2: #252220;
+      --text: #f0ede6;
+      --text2: #9e9a91;
+      --accent: #ff5e1f;
+      --accent2: #f5a623;
+      --border: rgba(240,237,230,0.1);
+      --shadow: rgba(0,0,0,0.3);
+      --nav-bg: rgba(15,14,12,0.85);
+      --card-bg: #1e1c18;
+      --tag-bg: rgba(255,94,31,0.12);
+      --tag-text: #ff7a45;
+    }
 
-    <title>Shahbaj Jamil</title>
-    <link rel="icon" href="image/logo2.png" type="images/png" />
-    <link rel="manifest" href="manifest.webmanifest" />
-    <meta name="theme-color" content="black" />
-    <meta name="apple-moblie-web-app-capable" content="yes" />
-    <meta name="apple-moblie-web-app-status-bar" content="black-translucent" />
-    <meta name="apple-moblie-web-app-title" content="Upr!s!ng" />
-    <link rel="apple-touch-icon" href="image/logo2.png" />
+    /* ==================== RESET & BASE ==================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-    <!-- <link rel="stylesheet" href="style/style.css" /> -->
-    <style>
-      @import url("style/style.css");
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-162844375-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+    /* ==================== SCROLLBAR ==================== */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
 
-      gtag("config", "UA-162844375-1");
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-162849464-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+    /* ==================== LOADER ==================== */
+    #loader {
+      position: fixed; inset: 0; z-index: 9999;
+      background: var(--bg);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 24px;
+      transition: opacity 0.6s, visibility 0.6s;
+    }
+    #loader.hidden { opacity: 0; visibility: hidden; }
+    .loader-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-weight: 900;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .loader-name span { color: var(--accent); }
+    .loader-bar-wrap {
+      width: 200px; height: 2px;
+      background: var(--border);
+      border-radius: 1px; overflow: hidden;
+    }
+    .loader-bar {
+      height: 100%; width: 0%;
+      background: var(--accent);
+      border-radius: 1px;
+      animation: loadFill 1.8s cubic-bezier(.4,0,.2,1) forwards;
+    }
+    @keyframes loadFill { to { width: 100%; } }
+    .loader-pct {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text2);
+      letter-spacing: 0.1em;
+    }
 
-      gtag("config", "UA-162849464-1");
-    </script>
-  </head>
+    /* ==================== NAV ==================== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 0 clamp(1rem, 5vw, 3rem);
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background 0.3s;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900; font-size: 1.3rem;
+      letter-spacing: -0.03em;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links {
+      display: flex; align-items: center; gap: clamp(1rem, 2.5vw, 2rem);
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.82rem; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--text2);
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 1.5px; background: var(--accent);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+    .nav-links a.active { color: var(--text); }
+    .nav-right { display: flex; align-items: center; gap: 12px; }
 
-  <body class="noscroll">
-    <div class="preloader">
-      <div class="scene flex">
-        <div class="rocket">
-          <img src="image/rocket.png" alt="rocket" />
-        </div>
-      </div>
-      <div class="counter flex">0</div>
-    </div>
-    <header id="top" class="mainheader">
-      <div class="hlogo">
-        <a href="https://shahbajjamil.github.io">
-          <img src="image/logo.png" alt="logo" class="logo"
-        /></a>
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li>
-            <a id="HOME-NAV" class="active" href="#top"
-              >HOME
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-          <li>
-            <a id="ABOUT-NAV" href="#about"
-              >ABOUT
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-          <li>
-            <a id="FACT-NAV" href="#MySkillHobbies"
-              >FUN FACT's
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-          <li>
-            <a id="REPO-NAV" href="#repo"
-              >REPO's
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-          <li>
-            <a id="WORK-NAV" href="#MyWork"
-              >MY WORk
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-          <li>
-            <a id="CONTACT-NAV" href="#contact"
-              >CONTACT
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-        </ul>
-        <div class="burger">
-          <div class="centerLine"></div>
-        </div>
-      </nav>
-    </header>
+    /* Theme Toggle */
+    .theme-toggle {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1.5px solid var(--border);
+      background: var(--surface2); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text2); font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+    .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
 
-    <div class="banner-view">
-      <div class="banner">
-        <h1>
-          <small>Hello, I'm</small><br />
-          MD Shahbaj Jamil
-        </h1>
-        <h2>
-          A
-          <span
-            class="txt-type"
-            data-wait="2500"
-            data-words='["Designer", "Web Developer", "Android Developer", "Programmer"]'
-          >
-          </span>
-        </h2>
-      </div>
-    </div>
-    <div class="containerHead" id="about">
-      <h3>About me</h3>
-      <div class="about-me">
-        <div class="card">
-          <div class="imgbx">
-            <img src="image/about.jpg" />
-          </div>
-          <div class="content">
-            <h2>Why hire me for your next project?</h2>
-            <p>
-              I love to work in User Experience & User Interface designing.
-              Because I love to solve the design problem and find easy and
-              better solutions to solve it. I always try my best to make good
-              user interface with the best user experience. I have been working
-              as a Visual designer from.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="about-grid">
-      <div class="container-about">
-        <div class="bottomgrid">
-          <div class="bottomfield">
-            <h4>Visual Design</h4>
-            <p>
-              Donec et venenatis libero. Fusceing dapibus pulvinar tincidunt.
-              Proin maximus ipsum ut scelerisque.
-            </p>
-          </div>
-          <div class="bottomfield">
-            <h4>Interactive Design</h4>
-            <p>
-              Donec et venenatis libero. Fusceing dapibus pulvinar tincidunt.
-              Proin maximus ipsum ut scelerisque.
-            </p>
-          </div>
-          <div class="bottomfield">
-            <h4>Animation</h4>
-            <p>
-              Donec et venenatis libero. Fusceing dapibus pulvinar tincidunt.
-              Proin maximus ipsum ut scelerisque.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    /* Resume Button */
+    .btn-resume {
+      padding: 8px 18px; border-radius: 6px;
+      background: var(--accent); color: #fff;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em;
+      transition: opacity 0.2s, transform 0.2s;
+      white-space: nowrap;
+    }
+    .btn-resume:hover { opacity: 0.88; transform: translateY(-1px); }
 
-    <div id="MySkillHobbies" class="MySkillHobbies">
-      <div class="MySkill">
-        <h4>My Skills</h4>
-      </div>
-      <div class="MyHobbies">
-        <h4>My Hobbies</h4>
-        <div class="box flex"></div>
-      </div>
-    </div>
+    /* Hamburger */
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px; background: none; border: none;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--text); border-radius: 1px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    <div id="repo" class="page-content flex">
-      <div class="ptext flex">
-        <a
-          href="http://testfortry.epizy.com/repo.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Repo's
-        </a>
-      </div>
-    </div>
+    /* Mobile Menu */
+    .mobile-menu {
+      display: none; position: fixed;
+      top: 64px; left: 0; right: 0; bottom: 0;
+      background: var(--bg); z-index: 99;
+      padding: 2rem;
+      flex-direction: column; gap: 2rem;
+      transform: translateX(100%);
+      transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+    }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu a {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 700;
+      color: var(--text2); transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--accent); }
 
-    <div id="MyWork" class="WorkMain containerHead">
-      <h3>My Work</h3>
-      <div class="toggle-button">
-        <!-- <button id="allWork" class="active">All Work</button> -->
-        <!-- <button id="appWork">App Work</button>
-         <button id="webWork">Web Work</button> -->
-      </div>
-      <div class="WorkSection">
-        <button class="slide-controls" id="prev-btn">
-          <i class="fas fa-chevron-left"></i>
-        </button>
+    /* ==================== HERO ==================== */
+    #hero {
+      min-height: 100vh; padding-top: 64px;
+      display: flex; align-items: center;
+      padding-left: clamp(1.5rem, 8vw, 7rem);
+      padding-right: clamp(1.5rem, 5vw, 3rem);
+      position: relative; overflow: hidden;
+    }
+    .hero-bg-text {
+      position: absolute; right: -2rem; top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(8rem, 20vw, 18rem);
+      font-weight: 900; color: transparent;
+      -webkit-text-stroke: 1px var(--border);
+      user-select: none; pointer-events: none;
+      white-space: nowrap; line-height: 1;
+    }
+    .hero-content { max-width: 700px; position: relative; z-index: 1; }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--tag-bg); color: var(--tag-text);
+      border: 1px solid currentColor;
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 1.5rem;
+      opacity: 0; animation: fadeUp 0.6s 0.2s forwards;
+    }
+    .hero-tag::before {
+      content: ''; width: 7px; height: 7px;
+      border-radius: 50%; background: var(--accent);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.6; }
+    }
+    .hero-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 7vw, 6rem);
+      font-weight: 900; line-height: 1.05;
+      letter-spacing: -0.03em; margin-bottom: 1.2rem;
+      opacity: 0; animation: fadeUp 0.6s 0.35s forwards;
+    }
+    .hero-h1 em { color: var(--accent); font-style: normal; }
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--text2); line-height: 1.7;
+      max-width: 520px; margin-bottom: 2.5rem;
+      opacity: 0; animation: fadeUp 0.6s 0.5s forwards;
+    }
+    .hero-actions {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp 0.6s 0.65s forwards;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 8px;
+      background: var(--text); color: var(--bg);
+      font-weight: 600; font-size: 0.9rem;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); opacity: 0.88; }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 8px;
+      border: 1.5px solid var(--border);
+      font-weight: 600; font-size: 0.9rem; color: var(--text2);
+      transition: border-color 0.2s, color 0.2s, transform 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+    .hero-stats {
+      margin-top: 3.5rem; display: flex; gap: 2.5rem; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp 0.6s 0.8s forwards;
+    }
+    .stat-item {}
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; font-weight: 900;
+      color: var(--accent); line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.78rem; color: var(--text2);
+      text-transform: uppercase; letter-spacing: 0.07em;
+      margin-top: 4px;
+    }
 
-        <div class="container">
-          <div class="mywork"></div>
-        </div>
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        <button class="slide-controls" id="next-btn">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
-    </div>
+    /* ==================== SECTION COMMONS ==================== */
+    section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 8vw, 7rem); }
+    .sec-label {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem; color: var(--accent);
+      letter-spacing: 0.15em; text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .sec-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 900; letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+    .sec-header { margin-bottom: 3.5rem; }
+    .divider {
+      width: 48px; height: 3px; background: var(--accent);
+      border-radius: 2px; margin: 1rem 0 1.5rem;
+    }
+    .sec-desc { font-size: 1.05rem; color: var(--text2); max-width: 540px; line-height: 1.75; }
 
-    <div id="dev" class="flex">
-      <p>This website is under construction</p>
-    </div>
+    /* Reveal animation */
+    .reveal {
+      opacity: 0; transform: translateY(36px);
+      transition: opacity 0.7s, transform 0.7s;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
+    /* ==================== ABOUT ==================== */
+    #about { background: var(--surface); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: center;
+    }
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img-wrap::before {
+      content: ''; position: absolute;
+      top: 1.5rem; left: 1.5rem; right: -1.5rem; bottom: -1.5rem;
+      border: 2px solid var(--accent);
+      border-radius: 12px;
+      z-index: 0;
+    }
+    .about-img {
+      position: relative; z-index: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--surface2);
+      aspect-ratio: 4/5;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .about-img-placeholder {
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, var(--surface2), var(--bg2));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem; font-weight: 900; color: var(--border);
+    }
+    .about-text p {
+      font-size: 1.05rem; color: var(--text2); line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+    .about-highlights {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1rem; margin-top: 2rem;
+    }
+    .highlight-item {
+      padding: 1rem; border-radius: 8px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+    }
+    .highlight-item i { color: var(--accent); margin-bottom: 0.5rem; font-size: 1.1rem; }
+    .highlight-item h4 { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.2rem; }
+    .highlight-item p { font-size: 0.8rem; color: var(--text2); margin: 0; line-height: 1.5; }
 
-    <div id="contact">
-      <section>
-      <div class="color"></div>
-      <div class="color"></div>
-      <div class="color"></div>
-      <div class="fullContainer">
-        <div class="imgBoxs">
-            <h3>Contact Me</h3>
-            <p>Would you like to work together?</br> 
-                Feel free to reach me form door. </p>
-          <img src="image/character.png" alt="" />
-        </div>
-        <div class="contactDoor">
-          <img src="image/door_01.jpg" alt="" />
-          <ul>
-            <li>
-              <a href="mailto:shahbajjamil2014@gmail.com?subject=Hi, just saw your webpage!"
-              target="_blank"
-              rel="noopener noreferrer">
-                <p>Mail</p>
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/shahbajjamil"
-              target="_blank"
-              rel="noopener noreferrer">
-                <p>github</p>  
-                <i class="fab fa-github" aria-hidden="true"></i> </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/shahbaj_jamil"
-              target="_blank"
-              rel="noopener noreferrer">
-                <p>Instagram</p>
-                <i class="fab fa-instagram" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/md-shahbaj-jamil"
-              target="_blank"
-              rel="noopener noreferrer">
-                <p>Linkedin</p>
-                <i class="fab fa-linkedin" aria-hidden="true"></i> </a>
-            </li>
-            <li>
-              <a id="wp"
-              href="https://wa.me/+918252643736/?text=Hi, just saw your webpage!"
-              target="_blank"
-              rel="noopener noreferrer">
-                <p>WhatsApp</p>
-                <i class="fab fa-whatsapp" aria-hidden="true"></i> </a>
-            </li>
-          </ul>
-          <img src="image/door_02.jpg" alt="" />
-        </div>
-      </div>
-    </section>
-    </div>
+    /* ==================== SKILLS ==================== */
+    #skills { background: var(--bg); }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .skill-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.5rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .skill-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px var(--shadow); }
+    .skill-cat {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .skill-cat::before {
+      content: ''; width: 20px; height: 2px; background: var(--accent);
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .skill-tag {
+      padding: 5px 12px; border-radius: 100px;
+      background: var(--tag-bg); color: var(--tag-text);
+      font-size: 0.8rem; font-weight: 500;
+      border: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .skill-tag:hover { border-color: var(--accent); }
+    .skill-bar-wrap { margin-top: 0.8rem; }
+    .skill-bar-item { margin-bottom: 0.9rem; }
+    .skill-bar-label {
+      display: flex; justify-content: space-between;
+      font-size: 0.82rem; margin-bottom: 6px; color: var(--text2);
+    }
+    .skill-bar-label strong { color: var(--text); font-weight: 500; }
+    .skill-bar-track {
+      height: 5px; background: var(--border);
+      border-radius: 3px; overflow: hidden;
+    }
+    .skill-bar-fill {
+      height: 100%; background: var(--accent);
+      border-radius: 3px; width: 0;
+      transition: width 1.2s cubic-bezier(.4,0,.2,1);
+    }
 
-    <footer>
-      <div class="footer-container flex">
-        <div class="left-col">
-          <div class="imglogo">
-            <a href="https://shahbajjamil.github.io">
-              <img src="image/logo.png" alt="logo" class="logo"
-            /></a>
-          </div>
-          <div class="social-media">
-            <a
-              href="https://www.facebook.com/shahbaj.jamil"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/shahbaj_jamil"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a
-              href="https://twitter.com/JamilShahbaj"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a
-              href="mailto:shahbajjamil2014@gmail.com?subject=Hi, just saw your webpage!"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fa fa-envelope"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/md-shahbaj-jamil"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a
-              href="https://github.com/shahbajjamil"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-github"></i
-            ></a>
-          </div>
-        </div>
+    /* ==================== EXPERIENCE ==================== */
+    #experience { background: var(--surface); }
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before {
+      content: ''; position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 2px; background: var(--border);
+    }
+    .timeline-item {
+      position: relative; margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .timeline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .timeline-dot {
+      position: absolute; left: -2.45rem; top: 4px;
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--accent); border: 3px solid var(--surface);
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+    .timeline-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem; color: var(--accent);
+      letter-spacing: 0.1em; margin-bottom: 0.5rem;
+    }
+    .timeline-role {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 700; margin-bottom: 0.2rem;
+    }
+    .timeline-company {
+      font-size: 0.88rem; color: var(--text2); font-weight: 500; margin-bottom: 0.8rem;
+    }
+    .timeline-desc {
+      font-size: 0.95rem; color: var(--text2); line-height: 1.75;
+    }
+    .timeline-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; }
+    .tl-tag {
+      padding: 3px 10px; border-radius: 100px;
+      background: var(--surface2); color: var(--text2);
+      font-size: 0.75rem; font-weight: 500;
+      border: 1px solid var(--border);
+    }
 
-        <div class="right-col flex">
-          <p>© 2020 Created By MD Shahbaj Jamil All Right Reserved.</p>
-        </div>
-      </div>
-    </footer>
+    /* ==================== PROJECTS ==================== */
+    #projects { background: var(--bg2); }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px; overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex; flex-direction: column;
+    }
+    .project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px var(--shadow); }
+    .project-thumb {
+      height: 200px; background: linear-gradient(135deg, var(--surface2), var(--bg));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem; position: relative; overflow: hidden;
+    }
+    .project-thumb::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, var(--card-bg));
+    }
+    .project-type {
+      position: absolute; top: 1rem; right: 1rem; z-index: 1;
+      padding: 4px 10px; border-radius: 100px;
+      background: var(--accent); color: #fff;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .project-body { padding: 1.4rem; flex: 1; display: flex; flex-direction: column; }
+    .project-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;
+    }
+    .project-desc { font-size: 0.88rem; color: var(--text2); line-height: 1.7; flex: 1; }
+    .project-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 1rem 0; }
+    .stack-tag {
+      padding: 3px 9px; border-radius: 100px;
+      background: var(--surface2); color: var(--text2);
+      font-size: 0.73rem; font-family: 'DM Mono', monospace;
+      border: 1px solid var(--border);
+    }
+    .project-links { display: flex; gap: 0.8rem; margin-top: auto; }
+    .project-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.82rem; font-weight: 600; color: var(--text2);
+      transition: color 0.2s;
+    }
+    .project-link:hover { color: var(--accent); }
+    .project-link i { font-size: 0.9rem; }
 
-    <button id="movetop">
-      <span class="fa fa-angle-up"></span>
+    /* ==================== CONTACT ==================== */
+    #contact { background: var(--text); color: var(--bg); overflow: hidden; position: relative; }
+    [data-theme="dark"] #contact { background: var(--surface); color: var(--text); }
+    .contact-inner {
+      max-width: 680px; margin: 0 auto; text-align: center;
+      position: relative; z-index: 1;
+    }
+    #contact .sec-label { color: var(--accent); }
+    #contact .sec-title { color: inherit; }
+    .contact-bg-text {
+      position: absolute; bottom: -2rem; left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(4rem, 14vw, 12rem);
+      font-weight: 900; white-space: nowrap;
+      color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.05);
+      user-select: none; pointer-events: none;
+    }
+    [data-theme="dark"] .contact-bg-text { -webkit-text-stroke: 1px var(--border); }
+    .contact-desc {
+      font-size: 1.1rem; margin: 1.5rem 0 2.5rem;
+      opacity: 0.7; line-height: 1.75;
+    }
+    .contact-links {
+      display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;
+    }
+    .contact-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 22px; border-radius: 8px;
+      font-size: 0.88rem; font-weight: 600;
+      border: 1.5px solid rgba(255,255,255,0.2);
+      color: inherit;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    [data-theme="dark"] .contact-link { border-color: var(--border); }
+    .contact-link:hover {
+      background: var(--accent); border-color: var(--accent); color: #fff;
+    }
+    .contact-email {
+      margin-top: 2rem; font-family: 'DM Mono', monospace;
+      font-size: 0.9rem; opacity: 0.5;
+    }
+
+    /* ==================== FOOTER ==================== */
+    footer {
+      padding: 1.5rem clamp(1.5rem, 8vw, 7rem);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+      background: var(--bg); border-top: 1px solid var(--border);
+    }
+    .footer-copy { font-size: 0.8rem; color: var(--text2); }
+    .footer-copy span { color: var(--accent); }
+    .back-top {
+      width: 40px; height: 40px; border-radius: 8px;
+      background: var(--surface2); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text2); cursor: pointer; font-size: 0.9rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    .back-top:hover { background: var(--accent); color: #fff; }
+
+    /* ==================== RESPONSIVE ==================== */
+    @media (max-width: 768px) {
+      .nav-links, .btn-resume { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: flex; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img-wrap { max-width: 340px; margin: 0 auto; }
+      .about-highlights { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
+    }
+    @media (max-width: 520px) {
+      .hero-actions { flex-direction: column; }
+      .btn-primary, .btn-outline { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-name">SJ<span>.</span></div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-pct" id="loader-pct">0%</div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">SJ<span>.</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" class="nav-a">About</a></li>
+    <li><a href="#skills" class="nav-a">Skills</a></li>
+    <li><a href="#experience" class="nav-a">Experience</a></li>
+    <li><a href="#projects" class="nav-a">Projects</a></li>
+    <li><a href="#contact" class="nav-a">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+      <i class="fa fa-moon" id="themeIcon"></i>
     </button>
+    <a href="#" class="btn-resume" download>
+      <i class="fa fa-download"></i> Resume
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script/script.js"></script>
-  </body>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" class="mob-link">About</a>
+  <a href="#skills" class="mob-link">Skills</a>
+  <a href="#experience" class="mob-link">Experience</a>
+  <a href="#projects" class="mob-link">Projects</a>
+  <a href="#contact" class="mob-link">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-text">FLUTTER</div>
+  <div class="hero-content">
+    <div class="hero-tag">Available for Work</div>
+    <h1 class="hero-h1">
+      MD Shahbaj<br /><em>Jamil</em>
+    </h1>
+    <p class="hero-sub">
+      Flutter &amp; Mobile Developer crafting beautiful, high-performance apps.
+      Passionate about clean UI, smooth animations, and elegant code.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">
+        View My Work <i class="fa fa-arrow-right"></i>
+      </a>
+      <a href="#contact" class="btn-outline">
+        Get in Touch <i class="fa fa-envelope"></i>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">Apps Built</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Years Coding</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Projects Done</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <div class="about-img">
+        <div class="about-img-placeholder">SJ</div>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <span class="sec-label">— About Me</span>
+      <h2 class="sec-title">Building apps that<br />people love to use.</h2>
+      <div class="divider"></div>
+      <p>Hi! I'm Shahbaj — a Flutter &amp; Android developer from Jharkhand, India. I love turning ideas into polished, production-ready mobile experiences with beautiful UIs and buttery-smooth performance.</p>
+      <p>Beyond mobile, I work with HTML, CSS &amp; JavaScript for the web, and I enjoy exploring UI/UX design, solving challenging problems, and constantly leveling up my craft.</p>
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <i class="fab fa-flutter"></i>
+          <h4>Flutter First</h4>
+          <p>Cross-platform apps with native feel</p>
+        </div>
+        <div class="highlight-item">
+          <i class="fa fa-palette"></i>
+          <h4>UI/UX Design</h4>
+          <p>Clean interfaces, great experiences</p>
+        </div>
+        <div class="highlight-item">
+          <i class="fa fa-code"></i>
+          <h4>Clean Code</h4>
+          <p>Readable, scalable, maintainable</p>
+        </div>
+        <div class="highlight-item">
+          <i class="fa fa-bolt"></i>
+          <h4>Performance</h4>
+          <p>Fast, smooth, optimized builds</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sec-header reveal">
+    <span class="sec-label">— What I Know</span>
+    <h2 class="sec-title">Skills &amp; Technologies</h2>
+    <div class="divider"></div>
+    <p class="sec-desc">A mix of mobile, web, and design tools I work with regularly.</p>
+  </div>
+  <div class="skills-grid">
+    <!-- Mobile -->
+    <div class="skill-card reveal">
+      <div class="skill-cat">Mobile Development</div>
+      <div class="skill-bar-wrap" id="mobileBars"></div>
+    </div>
+    <!-- Web -->
+    <div class="skill-card reveal">
+      <div class="skill-cat">Web Development</div>
+      <div class="skill-bar-wrap" id="webBars"></div>
+    </div>
+    <!-- Tools -->
+    <div class="skill-card reveal">
+      <div class="skill-cat">Tools &amp; Design</div>
+      <div class="skill-tags" id="toolTags"></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="sec-header reveal">
+    <span class="sec-label">— My Journey</span>
+    <h2 class="sec-title">Experience &amp; Education</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="sec-header reveal">
+    <span class="sec-label">— What I've Built</span>
+    <h2 class="sec-title">Featured Projects</h2>
+    <div class="divider"></div>
+    <p class="sec-desc">A selection of apps and websites I've designed and developed.</p>
+  </div>
+  <div class="projects-grid" id="projectsGrid"></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-bg-text">HELLO</div>
+  <div class="contact-inner reveal">
+    <span class="sec-label">— Let's Talk</span>
+    <h2 class="sec-title" style="margin-top:0.4rem;">Got a project in mind?</h2>
+    <p class="contact-desc">Whether it's a mobile app, a website, or just a chat about tech — I'm always happy to connect.</p>
+    <div class="contact-links">
+      <a href="mailto:shahbajjamil2014@gmail.com" class="contact-link">
+        <i class="fa fa-envelope"></i> Email Me
+      </a>
+      <a href="https://wa.me/+918252643736" target="_blank" rel="noopener" class="contact-link">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://github.com/shahbajjamil" target="_blank" rel="noopener" class="contact-link">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/md-shahbaj-jamil" target="_blank" rel="noopener" class="contact-link">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://www.instagram.com/shahbaj_jamil" target="_blank" rel="noopener" class="contact-link">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </div>
+    <div class="contact-email">shahbajjamil2014@gmail.com</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-copy">© 2024 <span>MD Shahbaj Jamil</span>. All rights reserved.</div>
+  <button class="back-top" id="backTop" title="Back to top">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+</footer>
+
+<script>
+/* ==================== DATA ==================== */
+const mobileSkills = [
+  { name: 'Flutter', pct: 80 },
+  { name: 'Dart', pct: 75 },
+  { name: 'Android (Java)', pct: 55 },
+  { name: 'UI/UX Design', pct: 70 },
+];
+const webSkills = [
+  { name: 'HTML & CSS', pct: 85 },
+  { name: 'JavaScript', pct: 60 },
+  { name: 'Responsive Design', pct: 75 },
+  { name: 'Web Animations', pct: 65 },
+];
+const tools = [
+  'Flutter SDK','VS Code','Android Studio','Git & GitHub',
+  'Figma','Firebase','REST APIs','C / C++','Photoshop'
+];
+const timeline = [
+  {
+    date: '2022 — Present',
+    role: 'Flutter Developer',
+    company: 'Freelance / Self-employed',
+    desc: 'Designing and building cross-platform mobile applications using Flutter and Dart. Delivered multiple apps with custom animations, REST API integration, and Firebase backend.',
+    tags: ['Flutter', 'Dart', 'Firebase', 'REST API'],
+  },
+  {
+    date: '2021 — 2022',
+    role: 'Web Developer',
+    company: 'Self Projects & Open Source',
+    desc: 'Built interactive web experiences using vanilla HTML, CSS, and JavaScript. Focused on animations, responsive layouts, and clean UI patterns.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'UI/UX'],
+  },
+  {
+    date: '2020 — Present',
+    role: 'B.Tech — Computer Science',
+    company: 'University, Jharkhand',
+    desc: 'Studying Computer Science with focus on programming fundamentals, data structures, algorithms, and software engineering principles.',
+    tags: ['C++', 'Data Structures', 'Algorithms'],
+  },
+];
+const projects = [
+  {
+    emoji: '💬',
+    type: 'Flutter App',
+    title: 'WhatsApp UI Clone',
+    desc: 'A pixel-perfect Flutter clone of WhatsApp UI with animated loading screen, smooth navigation, and Material Design components.',
+    stack: ['Flutter', 'Dart', 'Material UI'],
+    apk: 'download/whatsApp-UI-Clone(1.0.1).apk',
+    github: 'https://github.com/shahbajjamil',
+  },
+  {
+    emoji: '⚡',
+    type: 'Flutter App',
+    title: 'Tap 2 Chat',
+    desc: 'Send WhatsApp messages without saving numbers, download statuses, and manage contacts — all in one slick Flutter app.',
+    stack: ['Flutter', 'Dart', 'WhatsApp API'],
+    apk: 'download/Tap2Chat.apk',
+    github: 'https://github.com/shahbajjamil',
+  },
+  {
+    emoji: '🌙',
+    type: 'Web',
+    title: 'Eid Mubarak Greeting',
+    desc: 'An animated, shareable web greeting card for Eid built with HTML, CSS animations, and vanilla JavaScript.',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    live: 'https://shahbajjamil.github.io/Eid-Mubarak-2020/',
+    github: 'https://github.com/shahbajjamil',
+  },
+  {
+    emoji: '🕌',
+    type: 'Web',
+    title: 'Ramadan Mubarak Greeting',
+    desc: 'A beautiful animated Ramadan greeting card with smooth transitions and shareable link for friends and family.',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    live: 'https://shahbajjamil.github.io/Ramadan-Mubarak-2020/',
+    github: 'https://github.com/shahbajjamil',
+  },
+];
+
+/* ==================== THEME ==================== */
+const root = document.documentElement;
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+
+function applyTheme(t) {
+  root.setAttribute('data-theme', t);
+  themeIcon.className = t === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
+  localStorage.setItem('theme', t);
+}
+
+const saved = localStorage.getItem('theme');
+const sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+applyTheme(saved || sys);
+
+themeToggle.addEventListener('click', () => {
+  applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+});
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  if (!localStorage.getItem('theme')) applyTheme(e.matches ? 'dark' : 'light');
+});
+
+/* ==================== LOADER ==================== */
+const loader = document.getElementById('loader');
+const pctEl = document.getElementById('loader-pct');
+let pct = 0;
+const iv = setInterval(() => {
+  pct = Math.min(pct + Math.floor(Math.random() * 8 + 3), 100);
+  pctEl.textContent = pct + '%';
+  if (pct >= 100) {
+    clearInterval(iv);
+    setTimeout(() => loader.classList.add('hidden'), 400);
+  }
+}, 50);
+
+/* ==================== BUILD SKILLS ==================== */
+function buildBars(containerId, data) {
+  const el = document.getElementById(containerId);
+  data.forEach(s => {
+    el.innerHTML += `
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><strong>${s.name}</strong><span>${s.pct}%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="${s.pct}"></div></div>
+      </div>`;
+  });
+}
+buildBars('mobileBars', mobileSkills);
+buildBars('webBars', webSkills);
+
+const toolEl = document.getElementById('toolTags');
+tools.forEach(t => {
+  toolEl.innerHTML += `<span class="skill-tag">${t}</span>`;
+});
+
+/* ==================== BUILD TIMELINE ==================== */
+const tlEl = document.getElementById('timeline');
+timeline.forEach(item => {
+  tlEl.innerHTML += `
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">${item.date}</div>
+      <div class="timeline-role">${item.role}</div>
+      <div class="timeline-company">${item.company}</div>
+      <p class="timeline-desc">${item.desc}</p>
+      <div class="timeline-tags">${item.tags.map(t => `<span class="tl-tag">${t}</span>`).join('')}</div>
+    </div>`;
+});
+
+/* ==================== BUILD PROJECTS ==================== */
+const pgEl = document.getElementById('projectsGrid');
+projects.forEach(p => {
+  const links = [];
+  if (p.live) links.push(`<a href="${p.live}" target="_blank" rel="noopener" class="project-link"><i class="fa fa-external-link-alt"></i> Live</a>`);
+  if (p.apk) links.push(`<a href="${p.apk}" download class="project-link"><i class="fa fa-download"></i> APK</a>`);
+  if (p.github) links.push(`<a href="${p.github}" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> GitHub</a>`);
+  pgEl.innerHTML += `
+    <div class="project-card reveal">
+      <div class="project-thumb">
+        <span>${p.emoji}</span>
+        <span class="project-type">${p.type}</span>
+      </div>
+      <div class="project-body">
+        <div class="project-title">${p.title}</div>
+        <p class="project-desc">${p.desc}</p>
+        <div class="project-stack">${p.stack.map(s => `<span class="stack-tag">${s}</span>`).join('')}</div>
+        <div class="project-links">${links.join('')}</div>
+      </div>
+    </div>`;
+});
+
+/* ==================== SCROLL REVEAL + SKILL BARS ==================== */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      // Animate skill bars inside
+      e.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
+        bar.style.width = bar.dataset.pct + '%';
+      });
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Also observe skill cards directly
+document.querySelectorAll('.skill-card').forEach(card => revealObserver.observe(card));
+
+/* ==================== NAV ACTIVE STATE ==================== */
+const sections = document.querySelectorAll('section[id]');
+const navAs = document.querySelectorAll('.nav-a');
+const scrollSpy = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navAs.forEach(a => a.classList.remove('active'));
+      const a = document.querySelector(`.nav-a[href="#${e.target.id}"]`);
+      if (a) a.classList.add('active');
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+sections.forEach(s => scrollSpy.observe(s));
+
+/* ==================== HAMBURGER ==================== */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+document.querySelectorAll('.mob-link').forEach(l => {
+  l.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  });
+});
+
+/* ==================== BACK TO TOP ==================== */
+document.getElementById('backTop').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+</body>
 </html>
