@@ -755,6 +755,9 @@
       .fl-card:nth-child(6)::before {
         background: linear-gradient(90deg, #34d399, #059669);
       }
+      .fl-card:nth-child(7)::before {
+        background: linear-gradient(90deg, #6366f1, #4f46e5);
+      }
       .fl-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 16px 48px var(--shadow);
@@ -1683,6 +1686,8 @@
           <div class="tag-cloud" id="tagCloud"></div>
           <div class="sk-title">Architecture</div>
           <div class="tag-cloud" id="tagArch"></div>
+          <div class="sk-title">DevOps &amp; Infrastructure</div>
+          <div class="tag-cloud" id="tagDevops"></div>
           <div class="sk-title">Tools, Design &amp; PM</div>
           <div class="tag-cloud" id="tagTools"></div>
           <div class="sk-title">Version Control &amp; OS</div>
@@ -1845,6 +1850,18 @@
             "Jira · Azure · Notion",
           ],
         },
+        {
+          icon: "fa fa-server",
+          title: "DevOps & Infrastructure",
+          tags: [
+            "Self-Hosted Servers",
+            "Node.js Hosting",
+            "Internet Exposure",
+            "Security Hardening",
+            "Cost-Optimized Deployment",
+            "Local Infrastructure Mgmt",
+          ],
+        },
       ];
       const skillBarsData = [
         { name: "Flutter & Dart", pct: 92 },
@@ -1853,6 +1870,7 @@
         { name: "DDD / Clean Architecture", pct: 85 },
         { name: "REST API / GraphQL / Dio", pct: 83 },
         { name: "UI/UX Design (Figma)", pct: 80 },
+        { name: "DevOps / Self-Hosting", pct: 72 },
         { name: "JavaScript / Node.js", pct: 62 },
         { name: "C / C++", pct: 70 },
       ];
@@ -1868,6 +1886,15 @@
           "WebRTC",
         ],
         arch: ["DDD", "MVVM", "Clean Architecture", "Repository Pattern"],
+        devops: [
+          "Self-Hosted Server",
+          "Node.js Hosting",
+          "Internet Exposure",
+          "Ngrok / Tunneling",
+          "Security Hardening",
+          "Cost-Optimized Infra",
+          "Local Server Mgmt",
+        ],
         tools: [
           "Android Studio",
           "Xcode",
@@ -2188,6 +2215,7 @@
       mkTags("tagLang", tagData.lang);
       mkTags("tagCloud", tagData.cloud);
       mkTags("tagArch", tagData.arch);
+      mkTags("tagDevops", tagData.devops);
       mkTags("tagTools", tagData.tools);
       mkTags("tagVcs", tagData.vcs);
 
