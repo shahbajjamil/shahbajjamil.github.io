@@ -688,11 +688,6 @@
         color: var(--accent);
         margin-bottom: 0.7rem;
       }
-      .block-item i img {
-        width: 1.6rem;
-        color: var(--accent);
-        margin-bottom: 0.7rem;
-      }
       .block-item h4 {
         font-family: "Playfair Display", serif;
         font-size: 1.2rem;
@@ -716,6 +711,10 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1.3rem;
+      }
+      /* 7th card: center it when it's alone in the last row */
+      .fl-card:last-child:nth-child(3n + 1) {
+        grid-column: 2 / 3;
       }
       .fl-card {
         background: var(--card);
@@ -754,6 +753,9 @@
       }
       .fl-card:nth-child(6)::before {
         background: linear-gradient(90deg, #34d399, #059669);
+      }
+      .fl-card:nth-child(7)::before {
+        background: linear-gradient(90deg, #6366f1, #4f46e5);
       }
       .fl-card:hover {
         transform: translateY(-5px);
@@ -1148,171 +1150,248 @@
       }
 
       /* ═══════════════════════════════════════
-   CONTACT  (door style from v1)
+   CONTACT  — exact v1 layout
 ═══════════════════════════════════════ */
       #contact {
         position: relative;
         overflow: hidden;
         background: linear-gradient(to bottom, #d8cc25, #dff1ff);
-        padding: 0;
       }
       [data-theme="dark"] #contact {
-        background: linear-gradient(to bottom, #1a1800, #001219);
+        background: linear-gradient(to bottom, #1c1900, #001825);
       }
-      .contact-blobs {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-      }
-      .contact-blobs span {
+      /* coloured blobs */
+      .ct-blob {
         position: absolute;
         border-radius: 50%;
-        filter: blur(120px);
-        opacity: 0.75;
+        filter: blur(150px);
+        pointer-events: none;
       }
-      .contact-blobs span:nth-child(1) {
-        top: -200px;
-        left: -100px;
+      .ct-blob:nth-child(1) {
+        top: -350px;
+        left: -50px;
+        width: 600px;
+        height: 600px;
+        background: #ff359b;
+        opacity: 0.85;
+      }
+      .ct-blob:nth-child(2) {
+        bottom: -150px;
+        left: 200px;
         width: 500px;
         height: 500px;
-        background: #ff359b;
-      }
-      .contact-blobs span:nth-child(2) {
-        bottom: -100px;
-        left: 150px;
-        width: 420px;
-        height: 420px;
         background: #87ff9b;
+        opacity: 0.85;
       }
-      .contact-blobs span:nth-child(3) {
+      .ct-blob:nth-child(3) {
         bottom: -50px;
-        right: 100px;
-        width: 280px;
-        height: 280px;
+        left: 400px;
+        width: 300px;
+        height: 300px;
         background: #00d2ff;
+        opacity: 0.85;
       }
-      .contact-inner {
+
+      /* two-column: left = character box, right = door */
+      .ct-wrap {
         position: relative;
         z-index: 1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        min-height: 520px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
       }
-      .contact-left {
-        padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+
+      /* LEFT — character + text */
+      .ct-left {
+        flex: 0 0 50%;
+        max-width: 50%;
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
+        padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
+        position: relative;
       }
-      .contact-left .sec-label {
-        color: var(--accent);
-      }
-      .contact-left .sec-h {
+      .ct-left h3 {
+        position: absolute;
+        top: clamp(1.2rem, 3vw, 2rem);
+        left: clamp(1.5rem, 4vw, 3rem);
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        border-bottom: 2px solid var(--accent);
+        line-height: 1;
+        padding-bottom: 0.2rem;
         color: var(--text);
       }
-      [data-theme="dark"] .contact-left .sec-h {
-        color: #f0ede6;
-      }
-      .contact-left p {
-        font-size: 1rem;
+      .ct-left p {
+        margin-top: 3.5rem;
+        text-align: center;
+        font-size: clamp(0.95rem, 1.5vw, 1.1rem);
         color: var(--text2);
-        line-height: 1.8;
-        margin-top: 1rem;
-        max-width: 400px;
+        line-height: 1.75;
+        text-shadow: 1px 3px 8px rgba(0, 0, 0, 0.1);
+        max-width: 320px;
       }
-      [data-theme="dark"] .contact-left p {
-        color: #9a9589;
+      .ct-character {
+        max-width: min(340px, 80%);
+        animation: ctFloat 5s ease-in-out infinite;
+        /* placeholder silhouette when no image */
+        min-height: 200px;
       }
-      /* door links — exactly v1 feel */
-      .contact-door {
+      @keyframes ctFloat {
+        0%,
+        100% {
+          transform: translateY(-30px);
+        }
+        50% {
+          transform: translateY(30px);
+        }
+      }
+
+      /* RIGHT — door sandwich */
+      .ct-door {
+        flex: 0 0 50%;
+        max-width: 50%;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        min-height: 520px;
       }
-      .contact-door .door-bg {
+      /* door image layers */
+      .ct-door .door-img {
         position: absolute;
         inset: 0;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        opacity: 0.18;
       }
-      .door-links {
-        position: relative;
+      .ct-door .door-back {
+        z-index: 1;
+        opacity: 0.55;
+      }
+      .ct-door .door-front {
+        z-index: 3;
+      }
+      /* placeholder gradient when images not loaded */
+      .ct-door-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: linear-gradient(160deg, #1a0a00, #0a1a2a);
+      }
+
+      /* the sliding buttons — sandwiched between door layers at z-index 2 */
+      .ct-links {
+        position: absolute;
         z-index: 2;
         display: flex;
         flex-direction: column;
         gap: 0.6rem;
       }
-      .door-link {
+      .ct-link {
         position: relative;
         right: 60px;
-        width: 280px;
-        height: 68px;
+        width: 300px;
+        height: 72px;
         display: flex;
         align-items: center;
         justify-content: center;
         color: #fff;
-        font-size: 1.6rem;
-        border: 1px solid rgba(255, 255, 255, 0.4);
+        font-size: 1.8rem;
+        border: 1px solid rgba(255, 255, 255, 0.45);
         border-right: 1px solid rgba(255, 255, 255, 0.2);
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 10px;
-        background: rgba(255, 255, 255, 0.28);
-        backdrop-filter: blur(6px);
-        box-shadow: 0 5px 32px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 5px 45px rgba(0, 0, 0, 0.12);
         overflow: hidden;
         transition:
-          right 0.55s,
-          transform 0.55s,
+          right 0.6s ease,
+          transform 0.6s ease,
           z-index 0s;
-        transition-delay: 0.55s, 0s, 0.55s;
+        transition-delay: 0.6s, 0s, 0.6s;
+        text-decoration: none;
       }
-      .door-link:hover {
-        transition-delay: 0s, 0.55s, 0.55s;
-        right: -170px;
-        transform: translateX(-170px);
-        z-index: 10;
+      .ct-link:hover {
+        transition-delay: 0s, 0.6s, 0.6s;
+        right: -185px;
+        transform: translateX(-185px);
+        z-index: 11;
       }
-      .door-link::before {
+      /* shimmer sweep */
+      .ct-link::before {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 50px;
         height: 100%;
-        background: rgba(255, 255, 255, 0.45);
+        background: rgba(255, 255, 255, 0.5);
         transform: skewX(45deg) translateX(-350px);
         transition: 1s;
       }
-      .door-link:hover::before {
+      .ct-link:hover::before {
         transform: skewX(45deg) translateX(350px);
-        transition-delay: 0.6s;
+        transition-delay: 0.65s;
       }
-      .door-link p {
+      .ct-link .cl-label {
         position: absolute;
-        left: 24px;
+        left: 28px;
         font-size: 0.9rem;
-        font-weight: 600;
+        font-weight: 700;
+        letter-spacing: 0.04em;
       }
-      .door-link i {
+      .ct-link .cl-icon {
         position: absolute;
-        right: 24px;
+        right: 28px;
+        font-size: 1.4rem;
       }
-      .door-link:nth-child(1) {
-        background: rgba(211, 6, 6, 0.68);
-      }
-      .door-link:nth-child(2) {
-        background: rgba(9, 198, 255, 0.68);
-      }
-      .door-link:nth-child(3) {
-        background: rgba(255, 0, 191, 0.68);
-      }
-      .door-link:nth-child(4) {
-        background: rgba(11, 119, 221, 0.68);
-      }
-      .door-link:nth-child(5) {
-        background: rgba(19, 141, 56, 0.68);
+
+      /* per-link colours — matching v1 exactly */
+      .ct-link:nth-child(1) {
+        background: rgba(211, 6, 6, 0.72);
+      } /* Email     — red      */
+      .ct-link:nth-child(2) {
+        background: rgba(9, 122, 255, 0.72);
+      } /* GitHub    — blue     */
+      .ct-link:nth-child(3) {
+        background: rgba(225, 0, 180, 0.72);
+      } /* Instagram — pink     */
+      .ct-link:nth-child(4) {
+        background: rgba(10, 102, 194, 0.72);
+      } /* LinkedIn  — navy     */
+      .ct-link:nth-child(5) {
+        background: rgba(19, 141, 56, 0.72);
+      } /* WhatsApp  — green    */
+
+      /* responsive */
+      @media (max-width: 860px) {
+        .ct-left,
+        .ct-door {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        .ct-door {
+          min-height: 420px;
+        }
+        .ct-link {
+          width: 240px;
+          font-size: 1.4rem;
+        }
+        .ct-link:hover {
+          right: -145px;
+          transform: translateX(-145px);
+        }
+        .ct-link .cl-label {
+          left: 20px;
+        }
+        .ct-link .cl-icon {
+          right: 20px;
+        }
       }
 
       /* ═══════════════════════════════════════
@@ -1561,7 +1640,15 @@
             </div>
             <div class="ab-row">
               <i class="fa fa-envelope"></i
-              ><span>shahbajjamil2014@gmail.com · +91 8252643736</span>
+              ><span
+                ><a
+                  href="/cdn-cgi/l/email-protection"
+                  class="__cf_email__"
+                  data-cfemail="2e5d464f464c4f44444f4347421c1e1f1a6e49434f4742004d4143"
+                  >[email&#160;protected]</a
+                >
+                · +91 8252643736</span
+              >
             </div>
           </div>
           <div class="about-chips">
@@ -1587,36 +1674,13 @@
     <div id="about-blocks">
       <div class="blocks-inner reveal">
         <div class="block-item">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 128 128"
-            width="30"
-            height="30"
-            style="margin-bottom: 0.7rem"
-          >
-            <g fill="#3FB6D3">
-              <path
-                d="M12.3 64.2L76.3 0h39.4L32.1 83.6zM76.3 128h39.4L81.6 93.9l34.1-34.8H76.3L42.2 93.5z"
-              />
-            </g>
-            <path fill="#27AACD" d="M81.6 93.9l-20-20-19.4 19.6 19.4 19.6z" />
-            <path fill="#19599A" d="M115.7 128L81.6 93.9l-20 19.2L76.3 128z" />
-            <defs>
-              <linearGradient
-                id="flg2"
-                gradientUnits="userSpaceOnUse"
-                x1="59.365"
-                y1="116.36"
-                x2="86.825"
-                y2="99.399"
-              >
-                <stop offset="0" stop-color="#1b4e94" />
-                <stop offset=".63" stop-color="#1a5497" />
-                <stop offset="1" stop-color="#195a9b" />
-              </linearGradient>
-            </defs>
-            <path fill="url(#flg2)" d="M61.6 113.1l30.8-8.4-10.8-10.8z" />
-          </svg>
+          <!-- <i class="fab fa-flutter"></i> -->
+          <i>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+              width="40"
+            />
+          </i>
           <h4>Flutter First</h4>
           <p>
             Cross-platform iOS &amp; Android with native performance and
@@ -1683,6 +1747,8 @@
           <div class="tag-cloud" id="tagCloud"></div>
           <div class="sk-title">Architecture</div>
           <div class="tag-cloud" id="tagArch"></div>
+          <div class="sk-title">DevOps &amp; Infrastructure</div>
+          <div class="tag-cloud" id="tagDevops"></div>
           <div class="sk-title">Tools, Design &amp; PM</div>
           <div class="tag-cloud" id="tagTools"></div>
           <div class="sk-title">Version Control &amp; OS</div>
@@ -1713,32 +1779,61 @@
         </p>
       </div>
       <div class="proj-filter">
-        <button class="pf-btn active" data-f="all">All (10)</button>
+        <button class="pf-btn active" data-f="all">All (11)</button>
         <button class="pf-btn" data-f="flutter">Flutter</button>
         <button class="pf-btn" data-f="web">Web</button>
+        <button class="pf-btn" data-f="devops">DevOps</button>
       </div>
       <div class="proj-grid" id="projGrid"></div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
-      <div class="contact-blobs"><span></span><span></span><span></span></div>
-      <div class="contact-inner">
-        <div class="contact-left reveal">
-          <span class="sec-label">— Let's Connect</span>
-          <h2 class="sec-h">Got a project<br />in mind?</h2>
-          <div class="sec-line"></div>
+    <div id="contact">
+      <!-- coloured blobs -->
+      <div class="ct-blob"></div>
+      <div class="ct-blob"></div>
+      <div class="ct-blob"></div>
+
+      <div class="ct-wrap">
+        <!-- LEFT: character + text -->
+        <div class="ct-left reveal">
+          <h3>Contact Me</h3>
           <p>
-            Whether it's a Flutter app, a new product idea, or just a chat about
-            tech — I'd love to hear from you. Feel free to reach me from any
+            Would you like to work together?<br />Feel free to reach me from any
             door.
           </p>
+          <!-- Replace src with your actual character/avatar image -->
+          <img
+            class="ct-character"
+            src="image/character.png"
+            alt="Character"
+            onerror="this.style.cssText = 'min-height:220px;opacity:0'"
+          />
         </div>
-        <div class="contact-door reveal">
-          <div class="door-links" id="doorLinks"></div>
+
+        <!-- RIGHT: door sandwich -->
+        <div class="ct-door reveal">
+          <!-- back door image — sits behind buttons -->
+          <img
+            class="door-img door-back"
+            src="image/door_01.jpg"
+            alt=""
+            onerror="this.style.display = 'none'"
+          />
+          <!-- fallback gradient background -->
+          <div class="ct-door-bg"></div>
+          <!-- sliding contact buttons at z-index:2 (between door layers) -->
+          <div class="ct-links" id="ctLinks"></div>
+          <!-- front door image — sits in front of buttons, creating sandwich -->
+          <img
+            class="door-img door-front"
+            src="image/door_02.jpg"
+            alt=""
+            onerror="this.style.display = 'none'"
+          />
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- FOOTER -->
     <footer>
@@ -1761,7 +1856,8 @@
           rel="noopener"
           ><i class="fab fa-instagram"></i
         ></a>
-        <a href="mailto:shahbajjamil2014@gmail.com"
+        <a
+          href="/cdn-cgi/l/email-protection#e5968d848d87848f8f84888c89d7d5d4d1a58288848c89cb868a88"
           ><i class="fa fa-envelope"></i
         ></a>
         <a href="https://wa.me/+918252643736" target="_blank" rel="noopener"
@@ -1773,11 +1869,15 @@
       </button>
     </footer>
 
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
     <script>
       /* ─── DATA ─── */
       const flutterCards = [
         {
-          icon: "flutter-svg",
+          icon: "fab fa-flutter",
           title: "State Management",
           tags: [
             "BLoC / flutter_bloc",
@@ -1845,6 +1945,18 @@
             "Jira · Azure · Notion",
           ],
         },
+        {
+          icon: "fa fa-server",
+          title: "DevOps & Infrastructure",
+          tags: [
+            "Self-Hosted Servers",
+            "Node.js Hosting",
+            "Internet Exposure",
+            "Security Hardening",
+            "Cost-Optimized Deployment",
+            "Local Infrastructure Mgmt",
+          ],
+        },
       ];
       const skillBarsData = [
         { name: "Flutter & Dart", pct: 92 },
@@ -1853,6 +1965,7 @@
         { name: "DDD / Clean Architecture", pct: 85 },
         { name: "REST API / GraphQL / Dio", pct: 83 },
         { name: "UI/UX Design (Figma)", pct: 80 },
+        { name: "DevOps / Self-Hosting", pct: 72 },
         { name: "JavaScript / Node.js", pct: 62 },
         { name: "C / C++", pct: 70 },
       ];
@@ -1868,6 +1981,15 @@
           "WebRTC",
         ],
         arch: ["DDD", "MVVM", "Clean Architecture", "Repository Pattern"],
+        devops: [
+          "Self-Hosted Server",
+          "Node.js Hosting",
+          "Internet Exposure",
+          "Ngrok / Tunneling",
+          "Security Hardening",
+          "Cost-Optimized Infra",
+          "Local Server Mgmt",
+        ],
         tools: [
           "Android Studio",
           "Xcode",
@@ -2083,6 +2205,22 @@
           stack: ["HTML", "CSS", "JavaScript"],
           live: "https://shahbajjamil.github.io/Ramadan-Mubarak-2020/",
         },
+        {
+          e: "🖥️",
+          bg: "linear-gradient(135deg,#6366F118,#6366F106)",
+          type: "devops",
+          badge: "DevOps",
+          title: "Self-Hosted Backend Server",
+          desc: "Converted an old laptop into a production-ready backend server. Hosts Node.js applications accessible over the internet, with a focus on security hardening, cost-saving, and local infrastructure management — zero cloud cost.",
+          stack: [
+            "Node.js",
+            "Self-Hosting",
+            "Linux",
+            "Security",
+            "Tunneling",
+            "Local Infra",
+          ],
+        },
       ];
       const doorData = [
         {
@@ -2152,19 +2290,11 @@
         }
       }, 45);
 
-      /* ─── Flutter SVG (FA free doesn't ship Flutter icon) ─── */
-      const FLUTTER_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="22" height="22"><g fill="#3FB6D3"><path d="M12.3 64.2L76.3 0h39.4L32.1 83.6zM76.3 128h39.4L81.6 93.9l34.1-34.8H76.3L42.2 93.5z"/></g><path fill="#27AACD" d="M81.6 93.9l-20-20-19.4 19.6 19.4 19.6z"/><path fill="#19599A" d="M115.7 128L81.6 93.9l-20 19.2L76.3 128z"/><defs><linearGradient id="flg" gradientUnits="userSpaceOnUse" x1="59.365" y1="116.36" x2="86.825" y2="99.399"><stop offset="0" stop-color="#1b4e94"/><stop offset=".63" stop-color="#1a5497"/><stop offset="1" stop-color="#195a9b"/></linearGradient></defs><path fill="url(#flg)" d="M61.6 113.1l30.8-8.4-10.8-10.8z"/></svg>`;
-
-      function getIcon(icon) {
-        if (icon === "flutter-svg") return FLUTTER_SVG;
-        return `<i class="${icon}"></i>`;
-      }
-
       /* ─── Flutter cards ─── */
       flutterCards.forEach((c) => {
         document.getElementById("flGrid").innerHTML +=
           `<div class="fl-card reveal">
-    <div class="fl-icon">${getIcon(c.icon)}</div>
+    <div class="fl-icon"><i class="${c.icon}"></i></div>
     <div class="fl-title">${c.title}</div>
     <div class="fl-tags">${c.tags.map((t) => `<span class="fl-tag">${t}</span>`).join("")}</div>
   </div>`;
@@ -2188,6 +2318,7 @@
       mkTags("tagLang", tagData.lang);
       mkTags("tagCloud", tagData.cloud);
       mkTags("tagArch", tagData.arch);
+      mkTags("tagDevops", tagData.devops);
       mkTags("tagTools", tagData.tools);
       mkTags("tagVcs", tagData.vcs);
 
@@ -2244,11 +2375,38 @@
   </div>`;
       });
 
-      /* ─── Door links ─── */
-      doorData.forEach((d) => {
-        document.getElementById("doorLinks").innerHTML +=
-          `<a href="${d.href}" target="_blank" rel="noopener" class="door-link" style="background:${d.bg}">
-    <p>${d.label}</p><i class="${d.icon}"></i>
+      /* ─── Door contact links ─── */
+      const ctLinksEl = document.getElementById("ctLinks");
+      [
+        {
+          icon: "fa fa-envelope",
+          label: "Email",
+          href: "mailto:shahbajjamil2014@gmail.com",
+        },
+        {
+          icon: "fab fa-github",
+          label: "GitHub",
+          href: "https://github.com/shahbajjamil",
+        },
+        {
+          icon: "fab fa-instagram",
+          label: "Instagram",
+          href: "https://www.instagram.com/shahbaj_jamil",
+        },
+        {
+          icon: "fab fa-linkedin",
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/md-shahbaj-jamil",
+        },
+        {
+          icon: "fab fa-whatsapp",
+          label: "WhatsApp",
+          href: "https://wa.me/+918252643736",
+        },
+      ].forEach((d) => {
+        ctLinksEl.innerHTML += `<a href="${d.href}" target="_blank" rel="noopener" class="ct-link">
+    <span class="cl-label">${d.label}</span>
+    <i class="${d.icon} cl-icon"></i>
   </a>`;
       });
 
