@@ -1156,10 +1156,6 @@
       #contact {
         position: relative;
         overflow: hidden;
-        background: var(--text);
-        color: var(--bg);
-      }
-      [data-theme="dark"] #contact {
         background: var(--surface);
         color: var(--text);
       }
@@ -1187,12 +1183,9 @@
         font-weight: 900;
         white-space: nowrap;
         color: transparent;
-        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+        -webkit-text-stroke: 1px var(--border);
         user-select: none;
         pointer-events: none;
-      }
-      [data-theme="dark"] .contact-bg-text {
-        -webkit-text-stroke: 1px var(--border);
       }
       .contact-desc {
         font-size: 1.1rem;
@@ -1214,15 +1207,12 @@
         border-radius: 8px;
         font-size: 0.88rem;
         font-weight: 600;
-        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        border: 1.5px solid var(--border);
         color: inherit;
         transition:
           background 0.2s,
           border-color 0.2s,
           color 0.2s;
-      }
-      [data-theme="dark"] .contact-link {
-        border-color: var(--border);
       }
       .contact-link:hover {
         background: var(--accent);
@@ -1648,7 +1638,6 @@
       <div class="contact-bg-text">HELLO</div>
 
       <div class="contact-inner reveal">
-        <div class="contact-left">
           <span class="sec-label">— Let's Connect</span>
           <h2 class="sec-h" style="margin-top: 0.4rem">
             Got a project in mind?
