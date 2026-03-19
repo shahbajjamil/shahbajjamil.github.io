@@ -1156,166 +1156,84 @@
       #contact {
         position: relative;
         overflow: hidden;
-        background: linear-gradient(to bottom, #d8cc25, #dff1ff);
-        padding: 0;
+        background: var(--text);
+        color: var(--bg);
       }
       [data-theme="dark"] #contact {
-        background: linear-gradient(to bottom, #1a1800, #001219);
-      }
-      .contact-blobs {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-      }
-      .contact-blobs span {
-        position: absolute;
-        border-radius: 50%;
-        filter: blur(120px);
-        opacity: 0.75;
-      }
-      .contact-blobs span:nth-child(1) {
-        top: -200px;
-        left: -100px;
-        width: 500px;
-        height: 500px;
-        background: #ff359b;
-      }
-      .contact-blobs span:nth-child(2) {
-        bottom: -100px;
-        left: 150px;
-        width: 420px;
-        height: 420px;
-        background: #87ff9b;
-      }
-      .contact-blobs span:nth-child(3) {
-        bottom: -50px;
-        right: 100px;
-        width: 280px;
-        height: 280px;
-        background: #00d2ff;
-      }
-      .contact-inner {
-        position: relative;
-        z-index: 1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        min-height: 520px;
-      }
-      .contact-left {
-        padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      .contact-left .sec-label {
-        color: var(--accent);
-      }
-      .contact-left .sec-h {
+        background: var(--surface);
         color: var(--text);
       }
-      [data-theme="dark"] .contact-left .sec-h {
-        color: #f0ede6;
-      }
-      .contact-left p {
-        font-size: 1rem;
-        color: var(--text2);
-        line-height: 1.8;
-        margin-top: 1rem;
-        max-width: 400px;
-      }
-      [data-theme="dark"] .contact-left p {
-        color: #9a9589;
-      }
-      /* door links — exactly v1 feel */
-      .contact-door {
+
+      .contact-inner {
+        max-width: 680px;
+        margin: 0 auto;
+        text-align: center;
         position: relative;
+        z-index: 1;
+      }
+      #contact .sec-label {
+        color: var(--accent);
+      }
+      #contact .sec-title {
+        color: inherit;
+      }
+      .contact-bg-text {
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Playfair Display", serif;
+        font-size: clamp(4rem, 14vw, 12rem);
+        font-weight: 900;
+        white-space: nowrap;
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+        user-select: none;
+        pointer-events: none;
+      }
+      [data-theme="dark"] .contact-bg-text {
+        -webkit-text-stroke: 1px var(--border);
+      }
+      .contact-desc {
+        font-size: 1.1rem;
+        margin: 1.5rem 0 2.5rem;
+        opacity: 0.7;
+        line-height: 1.75;
+      }
+      .contact-links {
         display: flex;
-        align-items: center;
         justify-content: center;
-        overflow: hidden;
+        gap: 1rem;
+        flex-wrap: wrap;
       }
-      .contact-door .door-bg {
-        position: absolute;
-        inset: 0;
-        object-fit: cover;
-        opacity: 0.18;
-      }
-      .door-links {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        gap: 0.6rem;
-      }
-      .door-link {
-        position: relative;
-        right: 60px;
-        width: 280px;
-        height: 68px;
-        display: flex;
+      .contact-link {
+        display: inline-flex;
         align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-size: 1.6rem;
-        border: 1px solid rgba(255, 255, 255, 0.4);
-        border-right: 1px solid rgba(255, 255, 255, 0.2);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 10px;
-        background: rgba(255, 255, 255, 0.28);
-        backdrop-filter: blur(6px);
-        box-shadow: 0 5px 32px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        transition:
-          right 0.55s,
-          transform 0.55s,
-          z-index 0s;
-        transition-delay: 0.55s, 0s, 0.55s;
-      }
-      .door-link:hover {
-        transition-delay: 0s, 0.55s, 0.55s;
-        right: -170px;
-        transform: translateX(-170px);
-        z-index: 10;
-      }
-      .door-link::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50px;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.45);
-        transform: skewX(45deg) translateX(-350px);
-        transition: 1s;
-      }
-      .door-link:hover::before {
-        transform: skewX(45deg) translateX(350px);
-        transition-delay: 0.6s;
-      }
-      .door-link p {
-        position: absolute;
-        left: 24px;
-        font-size: 0.9rem;
+        gap: 8px;
+        padding: 12px 22px;
+        border-radius: 8px;
+        font-size: 0.88rem;
         font-weight: 600;
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        color: inherit;
+        transition:
+          background 0.2s,
+          border-color 0.2s,
+          color 0.2s;
       }
-      .door-link i {
-        position: absolute;
-        right: 24px;
+      [data-theme="dark"] .contact-link {
+        border-color: var(--border);
       }
-      .door-link:nth-child(1) {
-        background: rgba(211, 6, 6, 0.68);
+      .contact-link:hover {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff;
       }
-      .door-link:nth-child(2) {
-        background: rgba(9, 198, 255, 0.68);
-      }
-      .door-link:nth-child(3) {
-        background: rgba(255, 0, 191, 0.68);
-      }
-      .door-link:nth-child(4) {
-        background: rgba(11, 119, 221, 0.68);
-      }
-      .door-link:nth-child(5) {
-        background: rgba(19, 141, 56, 0.68);
+      .contact-email {
+        margin-top: 2rem;
+        font-family: "DM Mono", monospace;
+        font-size: 0.9rem;
+        opacity: 0.5;
       }
 
       /* ═══════════════════════════════════════
@@ -1727,21 +1645,59 @@
 
     <!-- CONTACT -->
     <section id="contact">
-      <div class="contact-blobs"><span></span><span></span><span></span></div>
-      <div class="contact-inner">
-        <div class="contact-left reveal">
+      <div class="contact-bg-text">HELLO</div>
+
+      <div class="contact-inner reveal">
+        <div class="contact-left">
           <span class="sec-label">— Let's Connect</span>
-          <h2 class="sec-h">Got a project<br />in mind?</h2>
-          <div class="sec-line"></div>
+          <h2 class="sec-h" style="margin-top: 0.4rem">
+            Got a project in mind?
+          </h2>
+          <div class="contact-desc">
           <p>
             Whether it's a Flutter app, a new product idea, or just a chat about
             tech — I'd love to hear from you. Feel free to reach me from any
             door.
           </p>
         </div>
-        <div class="contact-door reveal">
-          <div class="door-links" id="doorLinks"></div>
+        <div class="contact-links">
+          <a href="mailto:shahbajjamil2014@gmail.com" class="contact-link">
+            <i class="fa fa-envelope"></i> Email Me
+          </a>
+          <a
+            href="https://wa.me/+918252643736"
+            target="_blank"
+            rel="noopener"
+            class="contact-link"
+          >
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a
+            href="https://github.com/shahbajjamil"
+            target="_blank"
+            rel="noopener"
+            class="contact-link"
+          >
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/md-shahbaj-jamil"
+            target="_blank"
+            rel="noopener"
+            class="contact-link"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a
+            href="https://www.instagram.com/shahbaj_jamil"
+            target="_blank"
+            rel="noopener"
+            class="contact-link"
+          >
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
         </div>
+        <div class="contact-email">shahbajjamil2014@gmail.com</div>
       </div>
     </section>
 
@@ -2112,38 +2068,6 @@
           live: "https://shahbajjamil.github.io/Ramadan-Mubarak-2020/",
         },
       ];
-      const doorData = [
-        {
-          icon: "fa fa-envelope",
-          bg: "rgba(211,6,6,.7)",
-          label: "Email",
-          href: "mailto:shahbajjamil2014@gmail.com",
-        },
-        {
-          icon: "fab fa-github",
-          bg: "rgba(9,198,255,.7)",
-          label: "GitHub",
-          href: "https://github.com/shahbajjamil",
-        },
-        {
-          icon: "fab fa-instagram",
-          bg: "rgba(255,0,191,.7)",
-          label: "Instagram",
-          href: "https://www.instagram.com/shahbaj_jamil",
-        },
-        {
-          icon: "fab fa-linkedin",
-          bg: "rgba(11,119,221,.7)",
-          label: "LinkedIn",
-          href: "https://www.linkedin.com/in/md-shahbaj-jamil",
-        },
-        {
-          icon: "fab fa-whatsapp",
-          bg: "rgba(19,141,56,.7)",
-          label: "WhatsApp",
-          href: "https://wa.me/+918252643736",
-        },
-      ];
 
       /* ─── THEME ─── */
       const root = document.documentElement,
@@ -2271,14 +2195,6 @@
       <div class="proj-links">${links.join("")}</div>
     </div>
   </div>`;
-      });
-
-      /* ─── Door links ─── */
-      doorData.forEach((d) => {
-        document.getElementById("doorLinks").innerHTML +=
-          `<a href="${d.href}" target="_blank" rel="noopener" class="door-link" style="background:${d.bg}">
-    <p>${d.label}</p><i class="${d.icon}"></i>
-  </a>`;
       });
 
       /* ─── Intersection observer ─── */
