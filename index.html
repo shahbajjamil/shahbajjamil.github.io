@@ -1,390 +1,402 @@
-<!-- 
-   @@@@@@   @@@  @@@   @@@@@@   @@@  @@@  @@@@@@@    @@@@@@        @@@          @@@   @@@@@@   @@@@@@@@@@   @@@  @@@
-@@@@@@@   @@@  @@@  @@@@@@@@  @@@  @@@  @@@@@@@@  @@@@@@@@       @@@          @@@  @@@@@@@@  @@@@@@@@@@@  @@@  @@@
-!@@       @@!  @@@  @@!  @@@  @@!  @@@  @@!  @@@  @@!  @@@       @@!          @@!  @@!  @@@  @@! @@! @@!  @@!  @@!
-!@!       !@!  @!@  !@!  @!@  !@!  @!@  !@   @!@  !@!  @!@       !@!          !@!  !@!  @!@  !@! !@! !@!  !@!  !@!
-!!@@!!    @!@!@!@!  @!@!@!@!  @!@!@!@!  @!@!@!@   @!@!@!@!       !!@          !!@  @!@!@!@!  @!! !!@ @!@  !!@  @!!
- !!@!!!   !!!@!!!!  !!!@!!!!  !!!@!!!!  !!!@!!!!  !!!@!!!!       !!!          !!!  !!!@!!!!  !@!   ! !@!  !!!  !!!
-     !:!  !!:  !!!  !!:  !!!  !!:  !!!  !!:  !!!  !!:  !!!       !!:          !!:  !!:  !!!  !!:     !!:  !!:  !!:
-    !:!   :!:  !:!  :!:  !:!  :!:  !:!  :!:  !:!  :!:  !:!  !!:  :!:     !!:  :!:  :!:  !:!  :!:     :!:  :!:   :!:
-:::: ::   ::   :::  ::   :::  ::   :::   :: ::::  ::   :::  ::: : ::     ::: : ::  ::   :::  :::     ::    ::   :: ::::
-:: : :     :   : :   :   : :   :   : :  :: : ::    :   : :   : :::        : :::     :   : :   :      :    :    : :: : :
-
- -->
-
-<!DOCTYPE html>
-<html class="noscroll" lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="keywords"
-      content="portfolio, shahbaj jamil, md shahbaj jamil, web developer, web designer"
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MD Shahbaj Jamil — Senior Flutter Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
     />
-
-    <title>Shahbaj Jamil</title>
-    <link rel="icon" href="image/logo2.png" type="images/png" />
-    <link rel="manifest" href="manifest.webmanifest" />
-    <meta name="theme-color" content="black" />
-    <meta name="apple-moblie-web-app-capable" content="yes" />
-    <meta name="apple-moblie-web-app-status-bar" content="black-translucent" />
-    <meta name="apple-moblie-web-app-title" content="Upr!s!ng" />
-    <link rel="apple-touch-icon" href="image/logo2.png" />
-
-    <!-- <link rel="stylesheet" href="style/style.css" /> -->
-    <style>
-      @import url("style/style.css");
-    </style>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-162844375-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-162844375-1");
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-162849464-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-162849464-1");
-    </script>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-
-  <body class="noscroll">
-    <div class="preloader">
-      <div class="scene flex">
-        <div class="rocket">
-          <img src="image/rocket.png" alt="rocket" />
-        </div>
-      </div>
-      <div class="counter flex">0</div>
-    </div>
-    <header id="top" class="mainheader">
-      <div class="hlogo">
-        <a href="https://shahbajjamil.github.io">
-          <img src="image/logo.png" alt="logo" class="logo"
-        /></a>
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li>
-            <a id="HOME-NAV" class="active" href="#top"
-              >HOME
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-          <li>
-            <a id="ABOUT-NAV" href="#about"
-              >ABOUT
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-          <li>
-            <a id="FACT-NAV" href="#MySkillHobbies"
-              >FUN FACT's
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-          <li>
-            <a id="REPO-NAV" href="#repo"
-              >REPO's
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-          <li>
-            <a id="WORK-NAV" href="#MyWork"
-              >MY WORk
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-          <li>
-            <a id="CONTACT-NAV" href="#contact"
-              >CONTACT
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-        </ul>
-        <div class="burger">
-          <div class="centerLine"></div>
-        </div>
-      </nav>
-    </header>
-
-    <div class="banner-view">
-      <div class="banner">
-        <h1>
-          <small>Hello, I'm</small><br />
-          MD Shahbaj Jamil
-        </h1>
-        <h2>
-          A
-          <span
-            class="txt-type"
-            data-wait="2500"
-            data-words='["Designer", "Web Developer", "Android Developer", "Programmer"]'
-          >
-          </span>
-        </h2>
-      </div>
-    </div>
-    <div class="containerHead" id="about">
-      <h3>About me</h3>
-      <div class="about-me">
-        <div class="card">
-          <div class="imgbx">
-            <img src="image/about.jpg" />
-          </div>
-          <div class="content">
-            <h2>Why hire me for your next project?</h2>
-            <p>
-              I love to work in User Experience & User Interface designing.
-              Because I love to solve the design problem and find easy and
-              better solutions to solve it. I always try my best to make good
-              user interface with the best user experience. I have been working
-              as a Visual designer from.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="about-grid">
-      <div class="container-about">
-        <div class="bottomgrid">
-          <div class="bottomfield">
-            <h4>Visual Design</h4>
-            <p>
-              Donec et venenatis libero. Fusceing dapibus pulvinar tincidunt.
-              Proin maximus ipsum ut scelerisque.
-            </p>
-          </div>
-          <div class="bottomfield">
-            <h4>Interactive Design</h4>
-            <p>
-              Donec et venenatis libero. Fusceing dapibus pulvinar tincidunt.
-              Proin maximus ipsum ut scelerisque.
-            </p>
-          </div>
-          <div class="bottomfield">
-            <h4>Animation</h4>
-            <p>
-              Donec et venenatis libero. Fusceing dapibus pulvinar tincidunt.
-              Proin maximus ipsum ut scelerisque.
-            </p>
-          </div>
-        </div>
-      </div>
+  <body>
+    <!-- LOADER -->
+    <div id="loader">
+      <div class="ld-name">SJ<span>.</span></div>
+      <div class="ld-track"><div class="ld-fill"></div></div>
+      <div class="ld-pct" id="ldPct">0%</div>
     </div>
 
-    <div id="MySkillHobbies" class="MySkillHobbies">
-      <div class="MySkill">
-        <h4>My Skills</h4>
-      </div>
-      <div class="MyHobbies">
-        <h4>My Hobbies</h4>
-        <div class="box flex"></div>
-      </div>
-    </div>
-
-    <div id="repo" class="page-content flex">
-      <div class="ptext flex">
-        <a
-          href="http://testfortry.epizy.com/repo.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Repo's
+    <!-- NAV -->
+    <nav id="nav">
+      <a href="#hero" class="n-logo">SJ<span>.</span></a>
+      <ul class="n-links">
+        <li><a href="#about" class="na">About</a></li>
+        <li><a href="#flutter" class="na">Flutter</a></li>
+        <li><a href="#skills" class="na">Skills</a></li>
+        <li><a href="#experience" class="na">Experience</a></li>
+        <li><a href="#projects" class="na">Projects</a></li>
+        <li><a href="#contact" class="na">Contact</a></li>
+      </ul>
+      <div class="n-right">
+        <button class="n-theme" id="themeBtn">
+          <i class="fa fa-moon" id="themeIco"></i>
+        </button>
+        <a href="MD_Shahbaj_Jamil_Resume.pdf" download class="n-resume">
+          <i class="fa fa-download"></i> Resume
         </a>
-      </div>
-    </div>
-
-    <div id="MyWork" class="WorkMain containerHead">
-      <h3>My Work</h3>
-      <div class="toggle-button">
-        <!-- <button id="allWork" class="active">All Work</button> -->
-        <!-- <button id="appWork">App Work</button>
-         <button id="webWork">Web Work</button> -->
-      </div>
-      <div class="WorkSection">
-        <button class="slide-controls" id="prev-btn">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-
-        <div class="container">
-          <div class="mywork"></div>
-        </div>
-
-        <button class="slide-controls" id="next-btn">
-          <i class="fas fa-chevron-right"></i>
+        <button class="n-burger" id="burger">
+          <span></span><span></span><span></span>
         </button>
       </div>
+    </nav>
+    <div id="drawer">
+      <a href="#about" class="dr">About</a>
+      <a href="#flutter" class="dr">Flutter</a>
+      <a href="#skills" class="dr">Skills</a>
+      <a href="#experience" class="dr">Experience</a>
+      <a href="#projects" class="dr">Projects</a>
+      <a href="#contact" class="dr">Contact</a>
     </div>
 
-    <div id="dev" class="flex">
-      <p>This website is under construction</p>
-    </div>
-
-
-    <div id="contact">
-      <section>
-      <div class="color"></div>
-      <div class="color"></div>
-      <div class="color"></div>
-      <div class="fullContainer">
-        <div class="imgBoxs">
-            <h3>Contact Me</h3>
-            <p>Would you like to work together?</br> 
-                Feel free to reach me form door. </p>
-          <img src="image/character.png" alt="" />
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-ghost">FLUTTER</div>
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fa fa-circle"></i> Open to Opportunities
         </div>
-        <div class="contactDoor">
-          <img src="image/door_01.jpg" alt="" />
-          <ul>
-            <li>
-              <a href="mailto:shahbajjamil2014@gmail.com?subject=Hi, just saw your webpage!"
-              target="_blank"
-              rel="noopener noreferrer">
-                <p>Mail</p>
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/shahbajjamil"
-              target="_blank"
-              rel="noopener noreferrer">
-                <p>github</p>  
-                <i class="fab fa-github" aria-hidden="true"></i> </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/shahbaj_jamil"
-              target="_blank"
-              rel="noopener noreferrer">
-                <p>Instagram</p>
-                <i class="fab fa-instagram" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/md-shahbaj-jamil"
-              target="_blank"
-              rel="noopener noreferrer">
-                <p>Linkedin</p>
-                <i class="fab fa-linkedin" aria-hidden="true"></i> </a>
-            </li>
-            <li>
-              <a id="wp"
-              href="https://wa.me/+918252643736/?text=Hi, just saw your webpage!"
-              target="_blank"
-              rel="noopener noreferrer">
-                <p>WhatsApp</p>
-                <i class="fab fa-whatsapp" aria-hidden="true"></i> </a>
-            </li>
-          </ul>
-          <img src="image/door_02.jpg" alt="" />
+        <h1 class="hero-h1">
+          <small>Hello, I'm</small>
+          MD Shahbaj <span class="em">Jamil</span>
+        </h1>
+        <div class="hero-role">
+          <span class="dot"></span> Senior Flutter Developer · 4+ Years
+        </div>
+        <p class="hero-bio">
+          Building high-performance, cross-platform mobile apps with Flutter
+          &amp; Dart. Specialized in BLoC, Clean Architecture, DDD, Firebase,
+          WebRTC &amp; scalable production systems.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary"
+            >View My Work <i class="fa fa-arrow-right"></i
+          ></a>
+          <a href="#contact" class="btn-outline"
+            >Get in Touch <i class="fa fa-envelope"></i
+          ></a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-n">4+</div>
+            <div class="stat-l">Years Exp.</div>
+          </div>
+          <div>
+            <div class="stat-n">7+</div>
+            <div class="stat-l">Live Apps</div>
+          </div>
+          <div>
+            <div class="stat-n">3</div>
+            <div class="stat-l">Companies</div>
+          </div>
+          <div>
+            <div class="stat-n">MCA</div>
+            <div class="stat-l">Chandigarh Univ.</div>
+          </div>
         </div>
       </div>
     </section>
-    </div>
 
-    <footer>
-      <div class="footer-container flex">
-        <div class="left-col">
-          <div class="imglogo">
-            <a href="https://shahbajjamil.github.io">
-              <img src="image/logo.png" alt="logo" class="logo"
-            /></a>
-          </div>
-          <div class="social-media">
-            <a
-              href="https://www.facebook.com/shahbaj.jamil"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/shahbaj_jamil"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a
-              href="https://twitter.com/JamilShahbaj"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a
-              href="mailto:shahbajjamil2014@gmail.com?subject=Hi, just saw your webpage!"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fa fa-envelope"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/md-shahbaj-jamil"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a
-              href="https://github.com/shahbajjamil"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><i class="fab fa-github"></i
-            ></a>
-          </div>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about-grid">
+        <div class="about-img-wrap reveal">
+          <div class="about-img"><div class="about-img-ph">SJ</div></div>
         </div>
-
-        <div class="right-col flex">
-          <p>© 2020 Created By MD Shahbaj Jamil All Right Reserved.</p>
+        <div class="reveal">
+          <span class="sec-label">— About Me</span>
+          <h2 class="sec-h">Senior Flutter Developer<br />based in India.</h2>
+          <div class="sec-line"></div>
+          <p class="sec-sub" style="margin-bottom: 1.4rem">
+            Highly skilled professional with 4+ years delivering production apps
+            at NextZen Minds, CBNITS &amp; Cognizant. Shipped apps live on App
+            Store &amp; Play Store across health, finance, wellness &amp; social
+            domains.
+          </p>
+          <div class="about-detail">
+            <div class="ab-row">
+              <i class="fa fa-briefcase"></i
+              ><span
+                ><strong>Current:</strong> Senior Flutter Developer — NextZen
+                Minds, Kolkata</span
+              >
+            </div>
+            <div class="ab-row">
+              <i class="fa fa-graduation-cap"></i
+              ><span
+                ><strong>MCA</strong> — Chandigarh University (2024, Distance
+                &amp; Online)</span
+              >
+            </div>
+            <div class="ab-row">
+              <i class="fa fa-graduation-cap"></i
+              ><span
+                ><strong>B.Tech CSE</strong> — Acharya Institute of Technology,
+                Bangalore (2021)</span
+              >
+            </div>
+            <div class="ab-row">
+              <i class="fa fa-map-marker-alt"></i
+              ><span>Jharkhand, India · Open to Remote &amp; Relocation</span>
+            </div>
+            <div class="ab-row">
+              <i class="fa fa-envelope"></i
+              ><span>shahbajjamil2014@gmail.com · +91 8252643736</span>
+            </div>
+          </div>
+          <div class="about-chips">
+            <span class="chip">Flutter</span><span class="chip">Dart</span
+            ><span class="chip">BLoC</span> <span class="chip">Firebase</span
+            ><span class="chip">DDD</span><span class="chip">MVVM</span>
+            <span class="chip">Clean Architecture</span
+            ><span class="chip">WebRTC</span> <span class="chip">GraphQL</span
+            ><span class="chip">Auth0</span>
+            <span class="chip">Google Maps API</span
+            ><span class="chip">Figma</span>
+            <span class="chip">Jira · Agile</span
+            ><span class="chip">iOS &amp; Android</span>
+            <span class="chip">Self-Hosted Server</span
+            ><span class="chip">DevOps</span
+            ><span class="chip">Node.js Infra</span>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- ABOUT BLOCKS (parallax dark strip like v1) -->
+    <div id="about-blocks">
+      <div class="blocks-inner reveal">
+        <div class="block-item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 128 128"
+            width="30"
+            height="30"
+            style="margin-bottom: 0.7rem"
+          >
+            <g fill="#3FB6D3">
+              <path
+                d="M12.3 64.2L76.3 0h39.4L32.1 83.6zM76.3 128h39.4L81.6 93.9l34.1-34.8H76.3L42.2 93.5z"
+              />
+            </g>
+            <path fill="#27AACD" d="M81.6 93.9l-20-20-19.4 19.6 19.4 19.6z" />
+            <path fill="#19599A" d="M115.7 128L81.6 93.9l-20 19.2L76.3 128z" />
+            <defs>
+              <linearGradient
+                id="flg2"
+                gradientUnits="userSpaceOnUse"
+                x1="59.365"
+                y1="116.36"
+                x2="86.825"
+                y2="99.399"
+              >
+                <stop offset="0" stop-color="#1b4e94" />
+                <stop offset=".63" stop-color="#1a5497" />
+                <stop offset="1" stop-color="#195a9b" />
+              </linearGradient>
+            </defs>
+            <path fill="url(#flg2)" d="M61.6 113.1l30.8-8.4-10.8-10.8z" />
+          </svg>
+          <h4>Flutter First</h4>
+          <p>
+            Cross-platform iOS &amp; Android with native performance and
+            Cupertino/Material fidelity.
+          </p>
+        </div>
+        <div class="block-item">
+          <i class="fa fa-sitemap"></i>
+          <h4>Clean Architecture</h4>
+          <p>
+            DDD, MVVM &amp; Repository patterns for scalable, testable,
+            maintainable codebases.
+          </p>
+        </div>
+        <div class="block-item">
+          <i class="fa fa-cloud"></i>
+          <h4>Cloud &amp; Real-time</h4>
+          <p>
+            Firebase, GraphQL, WebRTC audio/video, socket-based real-time
+            features &amp; Auth0.
+          </p>
+        </div>
+        <div class="block-item">
+          <i class="fa fa-palette"></i>
+          <h4>UI/UX Design</h4>
+          <p>
+            Translating Figma designs into pixel-perfect, animated Flutter
+            interfaces.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FLUTTER EXPERTISE -->
+    <section id="flutter">
+      <div class="sec-hd reveal">
+        <span class="sec-label">— Flutter Specialization</span>
+        <h2 class="sec-h">Flutter Expertise</h2>
+        <div class="sec-line"></div>
+        <p class="sec-sub">
+          Deep hands-on expertise across the full Flutter ecosystem — 4+ years
+          of professional development.
+        </p>
+      </div>
+      <div class="flutter-grid" id="flGrid"></div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="sec-hd reveal">
+        <span class="sec-label">— Technical Stack</span>
+        <h2 class="sec-h">Skills &amp; Technologies</h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="skills-wrap">
+        <div class="reveal">
+          <div class="sk-title">Core Proficiency</div>
+          <div class="skill-bars" id="skillBars"></div>
+        </div>
+        <div class="reveal">
+          <div class="sk-title">Languages</div>
+          <div class="tag-cloud" id="tagLang"></div>
+          <div class="sk-title">Cloud &amp; Backend</div>
+          <div class="tag-cloud" id="tagCloud"></div>
+          <div class="sk-title">Architecture</div>
+          <div class="tag-cloud" id="tagArch"></div>
+          <div class="sk-title">DevOps &amp; Infrastructure</div>
+          <div class="tag-cloud" id="tagDevops"></div>
+          <div class="sk-title">Tools, Design &amp; PM</div>
+          <div class="tag-cloud" id="tagTools"></div>
+          <div class="sk-title">Version Control &amp; OS</div>
+          <div class="tag-cloud" id="tagVcs"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="sec-hd reveal">
+        <span class="sec-label">— My Journey</span>
+        <h2 class="sec-h">Experience &amp; Education</h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="tl" id="timeline"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="sec-hd reveal">
+        <span class="sec-label">— What I've Built</span>
+        <h2 class="sec-h">Featured Projects</h2>
+        <div class="sec-line"></div>
+        <p class="sec-sub">
+          Production apps live on App Store &amp; Play Store, plus personal
+          open-source work.
+        </p>
+      </div>
+      <div class="proj-filter">
+        <button class="pf-btn active" data-f="all">All (10)</button>
+        <button class="pf-btn" data-f="flutter">Flutter</button>
+        <button class="pf-btn" data-f="web">Web</button>
+      </div>
+      <div class="proj-grid" id="projGrid"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="contact-bg-text">HELLO</div>
+
+      <div class="contact-inner reveal">
+        <span class="sec-label">— Let's Connect</span>
+        <h2 class="sec-h" style="margin-top: 0.4rem">Got a project in mind?</h2>
+        <div class="contact-desc">
+          <p>
+            Whether it's a Flutter app, a new product idea, or just a chat about
+            tech — I'd love to hear from you. Feel free to reach me from any
+            door.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:shahbajjamil2014@gmail.com" class="contact-link">
+            <i class="fa fa-envelope"></i> Email Me
+          </a>
+          <a
+            href="https://wa.me/+918252643736"
+            target="_blank"
+            rel="noopener"
+            class="contact-link"
+          >
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a
+            href="https://github.com/shahbajjamil"
+            target="_blank"
+            rel="noopener"
+            class="contact-link"
+          >
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/md-shahbaj-jamil"
+            target="_blank"
+            rel="noopener"
+            class="contact-link"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a
+            href="https://www.instagram.com/shahbaj_jamil"
+            target="_blank"
+            rel="noopener"
+            class="contact-link"
+          >
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+        <div class="contact-email">shahbajjamil2014@gmail.com</div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="ft-copy">
+        © 2026 <span>MD Shahbaj Jamil</span>. All rights reserved.
+      </div>
+      <div class="ft-social">
+        <a href="https://github.com/shahbajjamil" target="_blank" rel="noopener"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/md-shahbaj-jamil"
+          target="_blank"
+          rel="noopener"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/shahbaj_jamil"
+          target="_blank"
+          rel="noopener"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="mailto:shahbajjamil2014@gmail.com"
+          ><i class="fa fa-envelope"></i
+        ></a>
+        <a href="https://wa.me/+918252643736" target="_blank" rel="noopener"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+      </div>
+      <button class="ft-back" id="backTop">
+        <i class="fa fa-arrow-up"></i>
+      </button>
     </footer>
 
-    <button id="movetop">
-      <span class="fa fa-angle-up"></span>
-    </button>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script/script.js"></script>
+    <!-- link script -->
+    <script src="./script/script.js"></script>
   </body>
 </html>
